@@ -69,8 +69,10 @@ export default function Home() {
             Our Events
           </h2>
           
-          <div className="mt-8">
+          <div className="mt-8 w-full">
+         
             <ExpandableEventCard events={allEvents} />
+           
           </div>
           
           <div className="mt-8 text-center">
