@@ -15,7 +15,10 @@ import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 
 export default function Home() {
-  const words = `Welcome to our GCEE`;
+  const welcomeText = `Welcome to our GCEE`;
+  const aboutText = `Join us at GUSTO 2025 for a celebration of innovation and talent!
+            Experience workshops, competitions, and networking with industry
+            leaders. Something amazing awaits every participant!`;
   const allEvents = getAllEvents();
 
   const scrollToSection = (
@@ -50,14 +53,14 @@ export default function Home() {
         <div className="text-center z-20 relative w-full max-w-4xl mx-auto px-4">
           <h1
             className={cn(
-              "font-extrabold text-slate-900 dark:text-white relative z-20 text-4xl md:text-5xl lg:text-6xl"
+              "font-bold text-slate-900 dark:text-white relative z-20 text-5xl md:text-6xl lg:text-7xl"
             )}
           >
-            <TextGenerateEffect words={words} />
+            <TextGenerateEffect words={welcomeText} />
           </h1>
 
           <div className="mt-6 sm:mt-8 md:mt-10 transform scale-110 sm:scale-125 md:scale-135 lg:scale-150 relative">
-            <Cover className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl group transition-all duration-500 hover:scale-105">
+            <Cover className="text-3xl sm:text-6xl md:text-7xl lg:text-7xl group transition-all duration-500 hover:scale-105">
               <span className="inline-block transition-all duration-700 ease-in-out group-hover:scale-110">
                 GUSTO
               </span>
@@ -67,10 +70,8 @@ export default function Home() {
             </Cover>
           </div>
 
-          <div className="mt-8 px-4 sm:px-0 sm:mt-10 md:mt-12 text-slate-700 dark:text-neutral-300 relative z-20 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto">
-            Join us at GUSTO 2025 for a celebration of innovation and talent!
-            Experience workshops, competitions, and networking with industry
-            leaders. Something amazing awaits every participant!
+          <div className="mt-8 px-4 sm:px-0 sm:mt-10 md:mt-12 text-slate-700 dark:text-neutral-400 relative z-20 text-xs sm:text-base md:text-xl max-w-3xl mx-auto">
+            {aboutText}
           </div>
 
           <div className="mt-10 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
@@ -100,7 +101,6 @@ export default function Home() {
 
           <div className="mt-8">
             <ExpandableEventCard events={allEvents} />
-           
           </div>
 
           <div className="mt-8 text-center mb-16">
