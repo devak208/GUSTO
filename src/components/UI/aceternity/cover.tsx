@@ -16,7 +16,7 @@ export const Cover = ({
   const ref = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [beamPositions, setBeamPositions] = useState<number[]>([]);
-  
+
   useEffect(() => {
     if (ref.current) {
       setContainerWidth(ref.current?.clientWidth ?? 0);
@@ -84,7 +84,7 @@ export const Cover = ({
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       {beamPositions.map((position, index) => (
         <Beam
           key={index}
@@ -97,22 +97,21 @@ export const Cover = ({
           }}
         />
       ))}
-      
+
       <motion.span
         initial={{ scale: 1 }}
         animate={{
-          scale: [1, 1.1, 1],
+          scale: 1,
           textShadow: ["none", "0 0 8px rgba(255,255,255,0.5)", "none"],
           color: hovered ? "#ffffff" : "",
-          fontWeight: hovered ? 900 : 700,
-          y: [0, -5, 0]
+          y: [0, -5, 0],
         }}
         transition={{
           duration: 4,
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "loop",
-          repeatDelay: 0
+          repeatDelay: 0,
         }}
         className={cn(
           "dark:text-white text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-500 tracking-tight font-extrabold uppercase text-center",
@@ -122,7 +121,7 @@ export const Cover = ({
           textRendering: "optimizeLegibility",
           letterSpacing: "-0.025em",
           fontVariationSettings: "'wght' 800, 'opsz' 32",
-          fontStretch: "110%"
+          fontStretch: "110%",
         }}
       >
         {children}

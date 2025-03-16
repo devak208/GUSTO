@@ -10,7 +10,9 @@ import { getAllEvents } from "@/lib/events";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa";
 import { ExpandableEventCard } from "@/components/Events/ExpandableEventCard";
-import { AuroraBackground } from "@/components/UI/aurora-background";
+import { Spotlight } from "@/components/UI/aceternity/spotlight";
+import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
+import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 
 export default function Home() {
   const words = `Welcome to our GCEE`;
@@ -32,26 +34,34 @@ export default function Home() {
   };
 
   return (
-    <AuroraBackground
-      showRadialGradient={false}
-      wrapWithMain={false}
-      className="relative w-full flex flex-col items-center"
-    >
+    <div className="relative w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] flex flex-col items-center">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)]"></div>
+      <StarsBackground className="z-0 opacity-60" />
+      <ShootingStars className="z-0 fixed inset-0" />
       {/* Hero Section - Full Viewport Height */}
-      <div className="min-h-screen w-full flex flex-col items-center justify-center">
+      <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden">
+        {/* Star effects for the hero section */}
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="rgba(59, 130, 246, 0.5)"
+          darkModeFill="white"
+        />
+
         <div className="text-center z-20 relative w-full max-w-4xl mx-auto px-4">
           <h1
             className={cn(
-              "font-extrabold text-slate-900 dark:text-white relative z-20 text-4xl md:text-5xl lg:text-6xl"
+              "font-extrabold text-slate-900 dark:text-white relative z-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             )}
           >
             <TextGenerateEffect words={words} />
           </h1>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 transform scale-110 sm:scale-125 md:scale-135 lg:scale-150">
-            <Cover className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-              GUSTO
-              <span className="inline-block align-top text-sm sm:text-base md:text-lg lg:text-xl font-extrabold -mt-2 text-amber-400 dark:text-amber-300 tracking-normal drop-shadow-md px-1 rounded bg-opacity-10 italic">
+          <div className="mt-6 sm:mt-8 md:mt-10 transform scale-110 sm:scale-125 md:scale-135 lg:scale-150 relative">
+            <Cover className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl group transition-all duration-500 hover:scale-105">
+              <span className="inline-block transition-all duration-700 ease-in-out group-hover:scale-110">
+                GUSTO
+              </span>
+              <span className="inline-block align-top text-sm sm:text-base md:text-lg lg:text-xl font-extrabold -mt-2 text-amber-400 dark:text-amber-300 tracking-normal drop-shadow-md px-1 rounded bg-opacity-10 italic transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:text-amber-500 dark:group-hover:text-amber-200">
                 25
               </span>
             </Cover>
@@ -103,6 +113,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </AuroraBackground>
+    </div>
   );
 }

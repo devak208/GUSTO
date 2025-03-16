@@ -65,7 +65,7 @@ module.exports = {
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
-        aurora: "aurora 15s ease infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
       keyframes: {
         shimmer: {
@@ -76,15 +76,14 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
-        aurora: {
+        spotlight: {
           "0%": {
-            backgroundPosition: "0% 0%",
-          },
-          "50%": {
-            backgroundPosition: "100% 100%",
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
           },
           "100%": {
-            backgroundPosition: "0% 0%",
+            opacity: 0.85,
+            transform: "translate(-50%,-40%) scale(1)",
           },
         },
       },
