@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "@/components/UI/aceternity/text-generate-effect";
 import { Cover } from "@/components/UI/aceternity/cover";
 import MagicButton from "@/components/UI/aceternity/MagicButton";
-import { Banner } from "@/components/Events/Banner";
 import { getAllEvents } from "@/lib/events";
 import Link from "next/link";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa";
@@ -14,11 +13,13 @@ import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 import { Event } from "@/lib/events";
+import CountdownTimer from "@/components/Events/CountdownTimer";
+import { GustoVideo } from "@/components/Events/GustoVideo";
 
 export default function Home() {
   const [allEvents, setAllEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     async function fetchEvents() {
       try {
@@ -30,10 +31,10 @@ export default function Home() {
         setLoading(false);
       }
     }
-    
+
     fetchEvents();
   }, []);
-  
+
   const welcomeText = `Welcome to our GCEE`;
   const aboutText = `Join us at GUSTO 2025 for a celebration of innovation and talent!
             Experience workshops, competitions, and networking with industry
@@ -105,32 +106,37 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Content below the fold */}
-      <div className="w-full">
-        <Banner />
+      {/* Timer Section */}
+      <div className="w-full dark:bg-rose-950/5 mt-10 mb-44">
+        <CountdownTimer />
+      </div>
 
-        {/* Events Section */}
-        <div
-          id="events"
-          className="mt-8 sm:mt-12 md:mt-16 text-center w-full max-w-4xl mx-auto px-4"
-        >
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 text-center">
-            Our Events
-          </h2>
+      {/* Video Section */}
+      <div className="w-full mb-44">
+        <GustoVideo />
+      </div>
 
-          <div className="mt-8">
-            {loading ? (
-              <div className="flex justify-center items-center py-20">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-              </div>
-            ) : (
-              <ExpandableEventCard events={allEvents} />
-            )}
-          </div>
+      {/* Events Section */}
+      <div
+        id="events"
+        className="mt-8 sm:mt-12 md:mt-16 text-center w-full max-w-4xl mx-auto px-4"
+      >
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 text-center">
+          Our Events
+        </h2>
+
+        <div className="mt-8">
+          {loading ? (
+            <div className="flex justify-center items-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+          ) : (
+            <ExpandableEventCard events={allEvents} />
+          )}
         </div>
       </div>
-      
-      <div className="mt-16 text-center mb-20">
+
+      <div className="mb-44 text-center">
         <Link href="/events" className="inline-block">
           <MagicButton
             title="View All Events"
@@ -141,6 +147,5 @@ export default function Home() {
         </Link>
       </div>
     </div>
-    
   );
 }
