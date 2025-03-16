@@ -9,8 +9,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -38,7 +36,12 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    
+    /* Gradient colors */
+    --gradient-color-1: 103, 58, 183;
+    --gradient-color-2: 72, 209, 204;
   }
+  
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -64,10 +67,12 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    
+    /* Gradient colors for dark mode */
+    --gradient-color-1: 103, 58, 183;
+    --gradient-color-2: 16, 185, 129;
   }
 }
-
-
 
 @layer base {
   * {

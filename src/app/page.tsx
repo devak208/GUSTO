@@ -100,6 +100,7 @@ export default function Home() {
 
           <div className="mt-8">
             <ExpandableEventCard events={allEvents} />
+           
           </div>
 
           <div className="mt-8 text-center mb-16">
