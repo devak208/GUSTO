@@ -58,14 +58,14 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 pt-6 pb-10">
+    <div className="w-full max-w-4xl mx-auto px-4 pt-6 pb-10 bg-gray-300 dark:bg-gray-900">
       <h2 className="text-2xl md:text-3xl font-medium text-slate-800 dark:text-white mb-8 text-center">
         The clock is ticking away !
       </h2>
 
       <div className="flex justify-center items-end space-x-1 md:space-x-3">
         <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-xs uppercase font-bold mb-1">
+          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             DAYS
           </span>
           <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
@@ -78,7 +78,7 @@ const CountdownTimer = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-xs uppercase font-bold mb-1">
+          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             HOURS
           </span>
           <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
@@ -91,7 +91,7 @@ const CountdownTimer = () => {
         </div>
 
         <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-xs uppercase font-bold mb-1">
+          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             MINUTES
           </span>
           <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
@@ -104,7 +104,7 @@ const CountdownTimer = () => {
         </div>
 
         <div className="flex flex-col items-center relative">
-          <span className="text-rose-500 dark:text-rose-400 text-xs uppercase font-bold mb-1">
+          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             SECONDS
           </span>
           <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
@@ -112,6 +112,9 @@ const CountdownTimer = () => {
           </div>
         </div>
       </div>
+      <h2 className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
+        Every second counts
+      </h2>
     </div>
   );
 };

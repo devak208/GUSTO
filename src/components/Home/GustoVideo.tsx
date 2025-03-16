@@ -1,6 +1,6 @@
 "use client";
 
-export function GustoVideo() {
+export default function GustoVideo() {
   return (
     <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 flex flex-col overflow-hidden">
       <div className="relative w-[calc(100%-16px)] sm:w-[calc(100%-32px)] md:w-full max-w-3xl mx-auto aspect-video rounded-lg shadow-md overflow-hidden">
