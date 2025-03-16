@@ -15,6 +15,8 @@ import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 import { Event } from "@/lib/events";
 import CountdownTimer from "@/components/Home/CountdownTimer";
 import GustoVideo from "@/components/Home/GustoVideo";
+import Footer from "@/components/Home/Footer";
+import EventsTimeline from "@/components/Home/EventsTimeline";
 
 export default function HomePage() {
   const [allEvents, setAllEvents] = useState<Event[]>([]);
@@ -99,7 +101,7 @@ export default function HomePage() {
                 title="Registeration open"
                 icon={<FaArrowDown />}
                 position="right"
-                otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
+                otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
               />
             </a>
           </div>
@@ -142,9 +144,19 @@ export default function HomePage() {
             title="View All Events"
             icon={<FaArrowRight className="h-5 w-5" />}
             position="right"
-            otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
+            otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
           />
         </Link>
+      </div>
+
+      {/* TimeLine */}
+      <div className="w-full mb-44">
+        <EventsTimeline />
+      </div>
+
+      {/* Footer */}
+      <div className="w-full relative">
+        <Footer />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { finalDate } from "@/data/FinalDate";
 import React, { useState, useEffect } from "react";
 
 type TimeLeft = {
@@ -19,7 +20,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const targetDate = new Date("2025-04-22T23:59:59"); //YYYY-MM-DDTHH:MM:SS
+      const targetDate = new Date(finalDate);
       const now = new Date();
 
       const difference = targetDate.getTime() - now.getTime();
@@ -58,12 +59,12 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 pt-6 pb-10 bg-gray-300 dark:bg-gray-900">
+    <div className="w-full max-w-4xl mx-auto px-4 pt-6 pb-10 bg-gray-300 dark:bg-neutral-900 rounded-lg">
       <h2 className="text-2xl md:text-3xl font-medium text-slate-800 dark:text-white mb-8 text-center">
         The clock is ticking away !
       </h2>
 
-      <div className="flex justify-center items-end space-x-1 md:space-x-3">
+      <div className="relative flex justify-center items-end space-x-1 md:space-x-3">
         <div className="flex flex-col items-center">
           <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             DAYS
@@ -103,7 +104,7 @@ const CountdownTimer = () => {
           :
         </div>
 
-        <div className="flex flex-col items-center relative">
+        <div className="flex flex-col items-center">
           <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
             SECONDS
           </span>
