@@ -1,0 +1,104 @@
+{
+  "technicalEvents": [
+    {
+      "id": "tech-1",
+      "title": "Hackathon 2025",
+      "name": "Code Warriors",
+      "image": "/events/hackathon.jpg",
+      "description": "A 24-hour coding marathon where teams compete to build innovative solutions to real-world problems. Showcase your coding skills and creativity in this intense competition.",
+      "rules": [
+        "Teams of 2-4 members",
+        "All code must be written during the event",
+        "Use of open-source libraries is permitted",
+        "Final projects must be submitted by the deadline",
+        "Judging based on innovation, functionality, and presentation"
+      ],
+      "date": "March 15, 2025",
+      "venue": "Main Auditorium"
+    },
+    {
+      "id": "tech-2",
+      "title": "Web Development Challenge",
+      "name": "WebWizards",
+      "image": "/events/webdev.jpg",
+      "description": "Design and develop a fully functional website based on the given theme within the time limit. Show off your front-end and back-end skills.",
+      "rules": [
+        "Individual participation",
+        "Frameworks and libraries allowed",
+        "Website must be responsive",
+        "Time limit: 6 hours",
+        "Judging based on design, functionality, and code quality"
+      ],
+      "date": "March 16, 2025",
+      "venue": "Computer Lab 1"
+    }
+  ],
+  "technicalIndividualEvents": [
+    {
+      "id": "tech-ind-1",
+      "title": "Coding Competition",
+      "name": "CodeNinja",
+      "image": "/events/coding.jpg",
+      "description": "Test your programming skills in this fast-paced coding competition. Solve algorithmic problems and optimize your solutions for efficiency.",
+      "rules": [
+        "Individual participation only",
+        "Languages allowed: C, C++, Java, Python",
+        "Internet access not allowed during competition",
+        "Time limit: 3 hours",
+        "Judging based on correctness, efficiency, and time taken"
+      ],
+      "date": "March 17, 2025",
+      "venue": "Computer Lab 2"
+    },
+    {
+      "id": "tech-ind-2",
+      "title": "UI/UX Design Challenge",
+      "name": "DesignMasters",
+      "image": "/events/uiux.jpg",
+      "description": "Create stunning user interfaces and experiences for the given problem statement. Showcase your design thinking and creativity.",
+      "rules": [
+        "Individual participation only",
+        "Design tools of choice allowed",
+        "Designs must be original",
+        "Time limit: 4 hours",
+        "Judging based on creativity, usability, and presentation"
+      ],
+      "date": "March 18, 2025",
+      "venue": "Design Studio"
+    }
+  ],
+  "nonTechnicalEvents": [
+    {
+      "id": "non-tech-1",
+      "title": "Cultural Night",
+      "name": "Rhythms",
+      "image": "/events/cultural.jpg",
+      "description": "A celebration of diverse cultures through music, dance, and performances. Showcase your talents and enjoy a night of entertainment.",
+      "rules": [
+        "Group or individual performances",
+        "Maximum time limit: 10 minutes per performance",
+        "Pre-registration required",
+        "Props and costumes allowed",
+        "Judging based on creativity, skill, and audience engagement"
+      ],
+      "date": "March 19, 2025",
+      "venue": "Open Air Theater"
+    },
+    {
+      "id": "non-tech-2",
+      "title": "Debate Competition",
+      "name": "VoiceBox",
+      "image": "/events/debate.jpg",
+      "description": "Express your views and opinions on contemporary topics. Develop your public speaking and critical thinking skills.",
+      "rules": [
+        "Teams of 2 members",
+        "Topics will be announced 1 hour before the event",
+        "Each team gets 5 minutes for presentation and 2 minutes for rebuttal",
+        "English and Hindi languages allowed",
+        "Judging based on content, delivery, and rebuttals"
+      ],
+      "date": "March 20, 2025",
+      "venue": "Seminar Hall"
+    }
+  ]
+}
