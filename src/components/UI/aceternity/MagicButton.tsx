@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { cn } from "@/lib/utils"
 
 interface MagicButtonProps {
   title: string
@@ -12,17 +13,40 @@ interface MagicButtonProps {
 
 const MagicButton: React.FC<MagicButtonProps> = ({ title, icon, position, handleClick, otherClasses }) => {
   return (
-    <div className="w-full">
+    <div className="relative">
+      {/* Clean button with no horizontal glow */}
       <button
-        className={` inline-flex h-10 sm:h-11 md:h-12 animate-shimmer items-center justify-center rounded-md px-4 sm:px-5 md:px-6 font-medium transition-all duration-3=600 focus:outline-none focus:ring-2 gap-2 hover:shadow-lg
-          dark:border dark:border-slate-800 dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] dark:text-slate-300 dark:focus:ring-slate-400 dark:focus:ring-offset-2 dark:focus:ring-offset-gray-900
-          border border-blue-300 bg-[linear-gradient(110deg,#e6f2ff,45%,#ffffff,55%,#e6f2ff)] text-blue-800 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-blue-50 
-          bg-[length:200%_100%] ${otherClasses}`}
+        className={cn(
+          "relative overflow-hidden inline-flex items-center justify-center gap-2 rounded-md font-semibold",
+          "px-6 py-3 text-base",
+          "bg-black dark:bg-black",
+          "text-white dark:text-white",
+          "border border-blue-500/30 dark:border-blue-500/30",
+          "animate-pulse-subtle",
+          "transition-all duration-300",
+          "hover:-translate-y-1 active:translate-y-0",
+          otherClasses
+        )}
         onClick={handleClick}
       >
-        {position === "left" && icon}
-        <span className="text-sm sm:text-base">{title}</span>
-        {position === "right" && icon}
+        {position === "left" && (
+          <span className="mr-2">
+            {icon}
+          </span>
+        )}
+        
+        <span className="relative">
+          {title}
+        </span>
+        
+        {position === "right" && (
+          <span className="ml-2">
+            {icon}
+          </span>
+        )}
+        
+        {/* Subtle shimmer effect that loops automatically */}
+        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 animate-shimmer-auto"></span>
       </button>
     </div>
   )

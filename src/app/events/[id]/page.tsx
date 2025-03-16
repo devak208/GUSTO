@@ -5,7 +5,7 @@ import EventDetailClient from "./EventDetailClient";
 
 // Generate static paths for all events
 export async function generateStaticParams() {
-  const events = getAllEvents();
+  const events = await getAllEvents();
   return events.map((event) => ({
     id: event.id,
   }));
@@ -20,7 +20,9 @@ type PageProps = {
 };
 
 export default async function EventPage({ params }: PageProps) {
-  const event = getEventById(params.id);
+  // Ensure params is properly awaited by using Promise.resolve
+  const id = await Promise.resolve(params.id);
+  const event = await getEventById(id);
 
   if (!event) {
     notFound();

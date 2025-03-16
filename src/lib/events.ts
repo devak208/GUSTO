@@ -20,9 +20,9 @@ export type EventsData = {
   nonTechnicalEvents: Event[];
 };
 
-export function getAllEvents(): Event[] {
+export async function getAllEvents(): Promise<Event[]> {
   const data = eventsData as EventsData;
-  const categories = getAllCategories();
+  const categories = await getAllCategories();
   
   return [
     ...data.technicalEvents.map(event => ({
@@ -40,17 +40,17 @@ export function getAllEvents(): Event[] {
   ];
 }
 
-export function getEventById(id: string): Event | undefined {
-  const allEvents = getAllEvents();
+export async function getEventById(id: string): Promise<Event | undefined> {
+  const allEvents = await getAllEvents();
   return allEvents.find(event => event.id === id);
 }
 
-export function getEventsByCategory(category: keyof EventsData): Event[] {
+export async function getEventsByCategory(category: keyof EventsData): Promise<Event[]> {
   const data = eventsData as EventsData;
   return data[category];
 }
 
-export function getAllCategories(): { id: keyof EventsData; name: string }[] {
+export async function getAllCategories(): Promise<{ id: keyof EventsData; name: string }[]> {
   return [
     { id: 'technicalEvents', name: 'Technical Events' },
     { id: 'technicalIndividualEvents', name: 'Technical Individual Events' },

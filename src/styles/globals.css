@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -40,6 +33,10 @@
     /* Gradient colors */
     --gradient-color-1: 103, 58, 183;
     --gradient-color-2: 72, 209, 204;
+    
+    /* Font variables */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   }
   
   .dark {

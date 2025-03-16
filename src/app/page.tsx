@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "@/components/UI/aceternity/text-generate-effect";
 import { Cover } from "@/components/UI/aceternity/cover";
@@ -8,18 +8,36 @@ import MagicButton from "@/components/UI/aceternity/MagicButton";
 import { Banner } from "@/components/Events/Banner";
 import { getAllEvents } from "@/lib/events";
 import Link from "next/link";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight } from "react-icons/fa";
 import { ExpandableEventCard } from "@/components/Events/ExpandableEventCard";
 import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { StarsBackground } from "@/components/UI/aceternity/stars-background";
+import { Event } from "@/lib/events";
 
 export default function Home() {
+  const [allEvents, setAllEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        const events = await getAllEvents();
+        setAllEvents(events);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+        setLoading(false);
+      }
+    }
+    
+    fetchEvents();
+  }, []);
+  
   const welcomeText = `Welcome to our GCEE`;
   const aboutText = `Join us at GUSTO 2025 for a celebration of innovation and talent!
             Experience workshops, competitions, and networking with industry
             leaders. Something amazing awaits every participant!`;
-  const allEvents = getAllEvents();
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -80,6 +98,7 @@ export default function Home() {
                 title="Registeration open"
                 icon={<FaArrowDown />}
                 position="right"
+                otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
               />
             </a>
           </div>
@@ -100,20 +119,28 @@ export default function Home() {
           </h2>
 
           <div className="mt-8">
-            <ExpandableEventCard events={allEvents} />
-          </div>
-
-          <div className="mt-8 text-center mb-16">
-            <Link href="/events" className="inline-block">
-              <MagicButton
-                title="View All Events"
-                icon={null}
-                position="right"
-              />
-            </Link>
+            {loading ? (
+              <div className="flex justify-center items-center py-20">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+              </div>
+            ) : (
+              <ExpandableEventCard events={allEvents} />
+            )}
           </div>
         </div>
       </div>
+      
+      <div className="mt-16 text-center mb-20">
+        <Link href="/events" className="inline-block">
+          <MagicButton
+            title="View All Events"
+            icon={<FaArrowRight className="h-5 w-5" />}
+            position="right"
+            otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
+          />
+        </Link>
+      </div>
     </div>
+    
   );
 }

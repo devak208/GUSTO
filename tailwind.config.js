@@ -76,6 +76,9 @@ module.exports = {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         gradient: "gradient 6s linear infinite",
         "meteor-effect": "meteor 5s linear infinite",
+        "shimmer-slide": "shimmer-slide 2.5s ease-in-out infinite",
+        "shimmer-auto": "shimmer-slide 3.5s ease-in-out infinite",
+        "pulse-subtle": "pulse-subtle 4s ease-in-out infinite",
       },
       keyframes: {
         shimmer: {
@@ -107,6 +110,30 @@ module.exports = {
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
+          },
+        },
+        "shimmer-slide": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: 0,
+          },
+          "10%": {
+            opacity: 0.3,
+          },
+          "50%": {
+            opacity: 0.6,
+          },
+          "100%": {
+            transform: "translateX(100%)",
+            opacity: 0,
+          },
+        },
+        "pulse-subtle": {
+          "0%, 100%": {
+            borderColor: "rgba(59, 130, 246, 0.3)",
+          },
+          "50%": {
+            borderColor: "rgba(59, 130, 246, 0.5)",
           },
         },
       },
