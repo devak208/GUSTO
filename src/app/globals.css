@@ -1,0 +1,54 @@
+/* Import a bold, impactful font for GUSTO */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* Animated GUSTO text effect */
+.gusto-animated {
+  font-family: 'Bangers', cursive;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Individual letter animations */
+.gusto-animated span {
+  display: inline-block;
+  position: relative;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  backface-visibility: hidden;
+}
+
+/* Ensure animations are applied correctly */
+.gusto-animated span:nth-child(1) { animation-name: tumble-1; animation-delay: 0.0s; }
+.gusto-animated span:nth-child(2) { animation-name: tumble-2; animation-delay: 0.1s; }
+.gusto-animated span:nth-child(3) { animation-name: tumble-3; animation-delay: 0.2s; }
+.gusto-animated span:nth-child(4) { animation-name: tumble-4; animation-delay: 0.3s; }
+.gusto-animated span:nth-child(5) { animation-name: tumble-5; animation-delay: 0.4s; }
+
+/* Light theme styling */
+@media (prefers-color-scheme: light) {
+  .gusto-animated span {
+    color: #0000FF; /* Blue for light theme */
+    text-shadow: 
+      2px 2px 0 #333333,
+      4px 4px 0 #555555,
+      0px 0px 8px rgba(0, 0, 255, 0.3); /* Blue glow */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 255, 0.3));
+  }
+}
+
+/* Dark theme styling */
+@media (prefers-color-scheme: dark) {
+  .gusto-animated span {
+    color: #FFDF00; /* Bright gold */
+    text-shadow: 
+      2px 2px 0 #FFA500,
+      4px 4px 0 #FF8C00,
+      0px 0px 15px rgba(255, 223, 0, 0.6), /* Yellow glow */
+      0px 0px 30px rgba(255, 223, 0, 0.4);
+    filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.5));
+  }
+} 
