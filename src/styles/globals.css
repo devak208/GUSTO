@@ -9,8 +9,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -43,6 +41,7 @@
     --gradient-color-1: 103, 58, 183;
     --gradient-color-2: 72, 209, 204;
   }
+  
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -74,8 +73,6 @@
     --gradient-color-2: 16, 185, 129;
   }
 }
-
-
 
 @layer base {
   * {
