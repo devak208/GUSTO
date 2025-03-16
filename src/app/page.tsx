@@ -50,7 +50,7 @@ export default function Home() {
         <div className="text-center z-20 relative w-full max-w-4xl mx-auto px-4">
           <h1
             className={cn(
-              "font-extrabold text-slate-900 dark:text-white relative z-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              "font-extrabold text-slate-900 dark:text-white relative z-20 text-4xl md:text-5xl lg:text-6xl"
             )}
           >
             <TextGenerateEffect words={words} />
@@ -67,10 +67,10 @@ export default function Home() {
             </Cover>
           </div>
 
-          <div className="mt-8 sm:mt-10 md:mt-12 text-slate-700 dark:text-neutral-300 relative z-20 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-            nobis? Vero fugit, quidem libero blanditiis modi aut ab quo nisi
-            ipsam ratione cum et sit illo deleniti odio nostrum similique.
+          <div className="mt-8 px-4 sm:px-0 sm:mt-10 md:mt-12 text-slate-700 dark:text-neutral-300 relative z-20 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto">
+            Join us at GUSTO 2025 for a celebration of innovation and talent!
+            Experience workshops, competitions, and networking with industry
+            leaders. Something amazing awaits every participant!
           </div>
 
           <div className="mt-10 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
