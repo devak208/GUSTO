@@ -1,5 +1,7 @@
 "use client"
 
+
+
 import type React from "react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
@@ -20,6 +22,8 @@ import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
+import Footer from "@/components/Home/Footer";
+import EventsTimeline from "@/components/Home/EventsTimeline";
 
 // Custom hook for animations
 function useAnimateInView(delay = 0) {
@@ -226,7 +230,7 @@ export default function HomePage() {
                 title="Registeration open"
                 icon={<FaArrowDown />}
                 position="right"
-                otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
+                otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
               />
             </a>
           </motion.div>
@@ -269,11 +273,20 @@ export default function HomePage() {
             title="View All Events"
             icon={<FaArrowRight className="h-5 w-5" />}
             position="right"
-            otherClasses="px-8 py-3 text-lg font-semibold bg-black border-blue-500/20"
+            otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
           />
         </Link>
       </motion.div>
+            {/* TimeLine */}
+            <div className="w-full mb-44">
+        <EventsTimeline />
+      </div>
+
+      {/* Footer */}
+      <div className="w-full relative">
+        <Footer />
+      </div>
+
     </div>
   )
 }
-

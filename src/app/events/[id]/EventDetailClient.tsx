@@ -20,12 +20,12 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
   useEffect(() => {
     // Restore scroll position on back navigation
     window.scrollTo(0, 0);
-    
+
     // Scroll to rules section if hash is present
-    if (window.location.hash === '#rules') {
-      const rulesSection = document.getElementById('rules');
+    if (window.location.hash === "#rules") {
+      const rulesSection = document.getElementById("rules");
       if (rulesSection) {
-        rulesSection.scrollIntoView({ behavior: 'smooth' });
+        rulesSection.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, []);
@@ -35,13 +35,13 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)]"></div>
       <StarsBackground className="z-0 opacity-20 dark:opacity-60" />
       <ShootingStars className="z-0 fixed inset-0" />
-      
+
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="rgba(59, 130, 246, 0.3)"
         darkModeFill="white"
       />
-      
+
       <div className="container mx-auto px-4 py-12 z-10 relative max-w-5xl">
         <div className="mb-8">
           <Link href="/events">
@@ -141,8 +141,12 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="prose prose-lg max-w-none mb-8 relative z-10"
           >
-            <h2 className="text-2xl font-semibold mb-4 text-slate-900 dark:text-white">Description</h2>
-            <p className="text-slate-700 dark:text-gray-300">{event.description}</p>
+            <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+              Description
+            </h2>
+            <p className="text-slate-700 dark:text-gray-300">
+              {event.description}
+            </p>
           </motion.div>
 
           {event.registrationLink && (
@@ -162,11 +166,11 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
               </a>
             </motion.div>
           )}
-          
+
           {/* Meteor effect */}
           <Meteors number={20} />
         </motion.div>
-        
+
         {event.rules && (
           <motion.div
             id="rules"
@@ -175,7 +179,11 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-12 mb-8 relative z-10"
           >
-            <CardSpotlight className="w-full bg-white dark:bg-[#0f172a]" radius={500} color="#262626">
+            <CardSpotlight
+              className="w-full bg-white dark:bg-[#0f172a]"
+              radius={500}
+              color="#262626"
+            >
               <p className="text-2xl font-bold relative z-20 text-slate-900 dark:text-white mb-4">
                 Event Rules
               </p>
@@ -188,7 +196,8 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
                 </ul>
               </div>
               <p className="text-slate-600 dark:text-neutral-300 mt-6 relative z-20 text-sm">
-                Adhering to these rules ensures fair competition and a great experience for all participants.
+                Adhering to these rules ensures fair competition and a great
+                experience for all participants.
               </p>
             </CardSpotlight>
           </motion.div>
@@ -225,4 +234,4 @@ const CheckIcon = () => {
       />
     </svg>
   );
-}; 
+};
