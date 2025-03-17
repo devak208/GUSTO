@@ -11,6 +11,7 @@ import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { FaArrowLeft } from "react-icons/fa";
 import { CardSpotlight } from "@/components/UI/aceternity/card-spotlight";
+import { RegistrationLink } from "@/data/RegistrationLink";
 
 interface EventDetailClientProps {
   event: Event;
@@ -45,7 +46,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
       <div className="container mx-auto px-4 py-12 z-10 relative max-w-5xl">
         <div className="mb-8">
           <Link href="/events">
-            <button className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
+            <button className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-neutral-950 dark:hover:bg-neutral-950/70 text-slate-800 dark:text-white font-medium rounded-lg border">
               <FaArrowLeft className="h-3.5 w-3.5" />
               Back to Events
             </button>
@@ -56,7 +57,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="overflow-hidden bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-[#1e293b] rounded-xl p-6 md:p-8 shadow-xl relative"
+          className="overflow-hidden bg-white dark:bg-neutral-950 border border-gray-200 dark:border-[#1e293b] rounded-xl p-6 md:p-8 shadow-xl relative"
         >
           {event.image && (
             <div className="relative h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
@@ -88,7 +89,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
           >
             {event.category && (
               <div className="flex items-center text-sm">
-                <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full">
+                <span className="bg-blue-100 dark:bg-neutral-950 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full">
                   {event.category}
                 </span>
               </div>
@@ -149,23 +150,21 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             </p>
           </motion.div>
 
-          {event.registrationLink && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-8 relative z-10"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-8 relative z-10"
+          >
+            <Link
+              href={RegistrationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200"
             >
-              <a
-                href={event.registrationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200"
-              >
-                Register Now
-              </a>
-            </motion.div>
-          )}
+              Register Now
+            </Link>
+          </motion.div>
 
           {/* Meteor effect */}
           <Meteors number={20} />
@@ -180,7 +179,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             className="mt-12 mb-8 relative z-10"
           >
             <CardSpotlight
-              className="w-full bg-white dark:bg-[#0f172a]"
+              className="w-full bg-white dark:bg-neutral-950"
               radius={500}
               color="#262626"
             >

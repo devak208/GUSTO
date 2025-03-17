@@ -1,7 +1,7 @@
 "use client";
-import React from 'react';
-import { EventCard } from './EventCard';
-import { Event } from '@/lib/events';
+import React from "react";
+import { EventCard } from "./EventCard";
+import { Event } from "@/lib/events";
 import { motion } from "framer-motion";
 
 interface EventsSectionProps {
@@ -10,9 +10,19 @@ interface EventsSectionProps {
 }
 
 export function EventsSection({ title, events }: EventsSectionProps) {
+  // Generate an ID from the title for scrolling
+  const sectionId =
+    title === "Technical Events"
+      ? "tech"
+      : title === "Technical Individual Events"
+      ? "tech-ind"
+      : title === "Non-Technical Events"
+      ? "non-tech"
+      : title.toLowerCase().replace(/\s+/g, "-");
+
   return (
-    <div className="py-12 relative z-10">
-      <motion.h2 
+    <div id={sectionId} className="py-12 relative z-10">
+      <motion.h2
         className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,8 +30,8 @@ export function EventsSection({ title, events }: EventsSectionProps) {
       >
         {title}
       </motion.h2>
-      
-      <motion.div 
+
+      <motion.div
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -40,4 +50,4 @@ export function EventsSection({ title, events }: EventsSectionProps) {
       </motion.div>
     </div>
   );
-} 
+}

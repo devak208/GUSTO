@@ -2,15 +2,16 @@ import type React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import { MailIcon } from "lucide-react";
+import { RegistrationLink } from "@/data/RegistrationLink";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-neutral-950 text-gray-300 py-16">
+    <footer className="w-full bg-neutral-950 text-gray-300 py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Logo and Tagline Section */}
           <div className="lg:col-span-2">
-            <div className="mb-6 text-6xl">GUSTO ' 25</div>
+            <div className="mb-6 font-bold text-6xl">GUSTO ' 25</div>
             <p className="text-lg mb-8 max-w-md">
               Igniting minds, inspiring innovation, and creating unforgettable
               moments at the premier symposium of Information Technology.
@@ -18,6 +19,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-5 mb-8">
               <Link
                 href="#"
+                target="_blank"
                 aria-label="Instagram"
                 className="hover:text-white transition-colors"
               >
@@ -25,6 +27,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link
                 href="#"
+                target="_blank"
                 aria-label="Twitter"
                 className="hover:text-white transition-colors"
               >
@@ -33,6 +36,7 @@ const Footer: React.FC = () => {
 
               <Link
                 href="#"
+                target="_blank"
                 aria-label="YouTube"
                 className="hover:text-white transition-colors"
               >
@@ -47,7 +51,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#"
+                  href="/events#tech"
                   className="hover:text-white text-white/50 transition-colors"
                 >
                   Technical Events
@@ -55,7 +59,15 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/events#tech-ind"
+                  className="hover:text-white text-white/50 transition-colors"
+                >
+                  Technical Individual Events
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/events#non-tech"
                   className="hover:text-white text-white/50 transition-colors"
                 >
                   Non-Technical Events
@@ -78,7 +90,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#"
+                  href={RegistrationLink}
+                  target="_blank"
                   className="hover:text-white text-white/50 transition-colors"
                 >
                   Registration
@@ -87,6 +100,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   href="#"
+                  target="_blank"
                   className="hover:text-white text-white/50 transition-colors"
                 >
                   Guidelines
@@ -95,6 +109,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   href="#"
+                  target="_blank"
                   className="hover:text-white text-white/50 transition-colors"
                 >
                   FAQs
@@ -111,6 +126,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Committee
@@ -119,6 +135,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Venue
@@ -127,6 +144,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Contact
@@ -141,6 +159,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Proceedings
@@ -150,6 +169,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Media Gallery
@@ -158,6 +178,7 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
+                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Lunch & Refreshments

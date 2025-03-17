@@ -27,8 +27,8 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
 
   const handleEventClick = (eventId: string) => {
     // Store the current scroll position before navigation
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('scrollPosition', window.scrollY.toString());
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
     }
     router.push(`/events/${eventId}#rules`);
   };
@@ -42,22 +42,24 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
             {categoryEvents.map((event) => (
-              <div key={`card-${event.id}-${id}`} className="min-h-[20rem] w-full list-none">
+              <div
+                key={`card-${event.id}-${id}`}
+                className="min-h-[20rem] w-full list-none"
+              >
                 <div className="w-full relative h-full">
-                  <div className="relative shadow-xl bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-[#1e293b] px-6 py-8 h-full overflow-hidden rounded-xl flex flex-col justify-between">
+                  <div className="relative shadow-xl bg-white dark:bg-neutral-950 border border-gray-200 dark:border-[#1e293b] px-6 py-8 h-full overflow-hidden rounded-xl flex flex-col justify-between">
                     <motion.div
                       layoutId={`card-${event.id}-${id}`}
                       onClick={() => handleEventClick(event.id)}
                       className="relative flex h-full w-full flex-col justify-between gap-6 cursor-pointer z-10"
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.02,
-                        transition: { duration: 0.2 }
+                        transition: { duration: 0.2 },
                       }}
                       whileTap={{ scale: 0.98 }}
                     >
                       <div className="relative flex flex-1 flex-col justify-between gap-6">
-                        
-                        <motion.div 
+                        <motion.div
                           layoutId={`image-${event.id}-${id}`}
                           className="relative w-full aspect-[16/9] overflow-hidden rounded-lg shadow-md"
                         >
@@ -69,7 +71,7 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </motion.div>
-                        
+
                         <div className="space-y-2">
                           <motion.h3
                             layoutId={`title-${event.id}-${id}`}
@@ -77,19 +79,19 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
                           >
                             {event.title}
                           </motion.h3>
-                          
+
                           <motion.p
                             layoutId={`description-${event.id}-${id}`}
                             className="font-normal text-sm text-slate-600 dark:text-gray-400 mb-1 relative z-50"
                           >
                             {event.date}
                           </motion.p>
-                          
+
                           <p className="font-normal text-sm text-slate-600 dark:text-gray-400 mb-3 relative z-50 line-clamp-3">
                             {event.description}
                           </p>
                         </div>
-                        
+
                         <motion.div
                           layoutId={`button-${event.id}-${id}`}
                           className="mt-auto"
@@ -101,7 +103,7 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
                         </motion.div>
                       </div>
                     </motion.div>
-                    
+
                     {/* Meteor effect */}
                     <Meteors number={20} />
                   </div>
@@ -122,7 +124,7 @@ export const CloseIcon = () => {
       animate={{ opacity: 1 }}
       exit={{
         opacity: 0,
-        transition: { duration: 0.05 }
+        transition: { duration: 0.05 },
       }}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -140,5 +142,4 @@ export const CloseIcon = () => {
       <path d="M6 6l12 12" />
     </motion.svg>
   );
-}; 
-
+};

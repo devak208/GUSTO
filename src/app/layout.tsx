@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/UI/theme/theme-provider";
 import { ThemeToggle } from "@/components/UI/theme/theme-toggle";
+import Footer from "@/components/Home/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/logos/AIT/bronze.png",
+  },
   title: "GCEE - Gusto",
   description: "Welcome to the GCEE",
 };
@@ -33,7 +37,11 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="relative min-h-screen">
             <ThemeToggle />
+
             {children}
+
+            {/* Footer */}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

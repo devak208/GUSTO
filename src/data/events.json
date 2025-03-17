@@ -2,9 +2,8 @@
   "technicalEvents": [
     {
       "id": "tech-1",
-      "title": "Hackathon 2025",
-      "name": "Code Warriors",
-      "image": "/events/1450167.jpg",
+      "title": "Paper Presentation",
+      "image": "/events/tech/paper-present.png",
       "description": "A 24-hour coding marathon where teams compete to build innovative solutions to real-world problems. Showcase your coding skills and creativity in this intense competition.",
       "rules": [
         "Teams of 2-4 members",
@@ -18,9 +17,8 @@
     },
     {
       "id": "tech-2",
-      "title": "Web Development Challenge",
-      "name": "WebWizards",
-      "image": "/events/1450167.jpg",
+      "title": "Project Presentation",
+      "image": "/events/tech/project-present.png",
       "description": "Design and develop a fully functional website based on the given theme within the time limit. Show off your front-end and back-end skills.",
       "rules": [
         "Individual participation",
@@ -31,12 +29,61 @@
       ],
       "date": "March 16, 2025",
       "venue": "Computer Lab 1"
+    }
+  ],
+  "technicalIndividualEvents": [
+    {
+      "id": "tech-ind-1",
+      "title": "Code Debugging",
+      "image": "/events/tech/code-debug.png",
+      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "rules": [
+        "Teams of 1-3 members",
+        "Workshop attendance is mandatory for competition participation",
+        "Pre-trained models are allowed",
+        "Solutions must be original and ethical",
+        "Judging based on accuracy, innovation, and practical application"
+      ],
+      "date": "March 17, 2025",
+      "venue": "Research Lab",
+      "registrationLink": "https://example.com/register/aiml"
     },
     {
-      "id": "tech-3",
-      "title": "AI/ML Workshop & Competition",
-      "name": "Neural Nexus",
-      "image": "/events/1450167.jpg",
+      "id": "tech-ind-2",
+      "title": "Blind Coding",
+      "image": "/events/tech/blind-coding.png",
+      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "rules": [
+        "Teams of 1-3 members",
+        "Workshop attendance is mandatory for competition participation",
+        "Pre-trained models are allowed",
+        "Solutions must be original and ethical",
+        "Judging based on accuracy, innovation, and practical application"
+      ],
+      "date": "March 17, 2025",
+      "venue": "Research Lab",
+      "registrationLink": "https://example.com/register/aiml"
+    },
+    {
+      "id": "tech-ind-3",
+      "title": "Tech Quiz",
+      "image": "/events/tech/tech-quiz.png",
+      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "rules": [
+        "Teams of 1-3 members",
+        "Workshop attendance is mandatory for competition participation",
+        "Pre-trained models are allowed",
+        "Solutions must be original and ethical",
+        "Judging based on accuracy, innovation, and practical application"
+      ],
+      "date": "March 17, 2025",
+      "venue": "Research Lab",
+      "registrationLink": "https://example.com/register/aiml"
+    },
+    {
+      "id": "tech-ind-4",
+      "title": "Hunt Mods",
+      "image": "/events/tech/hunt-mods.png",
       "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
       "rules": [
         "Teams of 1-3 members",
@@ -50,63 +97,11 @@
       "registrationLink": "https://example.com/register/aiml"
     }
   ],
-  "technicalIndividualEvents": [
-    {
-      "id": "tech-ind-1",
-      "title": "Coding Competition",
-      "name": "CodeNinja",
-      "image": "/events/1450167.jpg",
-      "description": "Test your programming skills in this fast-paced coding competition. Solve algorithmic problems and optimize your solutions for efficiency.",
-      "rules": [
-        "Individual participation only",
-        "Languages allowed: C, C++, Java, Python",
-        "Internet access not allowed during competition",
-        "Time limit: 3 hours",
-        "Judging based on correctness, efficiency, and time taken"
-      ],
-      "date": "March 17, 2025",
-      "venue": "Computer Lab 2"
-    },
-    {
-      "id": "tech-ind-2",
-      "title": "UI/UX Design Challenge",
-      "name": "DesignMasters",
-      "image": "/events/1450167.jpg",
-      "description": "Create stunning user interfaces and experiences for the given problem statement. Showcase your design thinking and creativity.",
-      "rules": [
-        "Individual participation only",
-        "Design tools of choice allowed",
-        "Designs must be original",
-        "Time limit: 4 hours",
-        "Judging based on creativity, usability, and presentation"
-      ],
-      "date": "March 18, 2025",
-      "venue": "Design Studio"
-    },
-    {
-      "id": "tech-ind-3",
-      "title": "Cybersecurity Challenge",
-      "name": "HackShield",
-      "image": "/events/1450167.jpg",
-      "description": "Put your cybersecurity skills to the test in this CTF-style competition. Identify vulnerabilities, crack codes, and secure systems against attacks.",
-      "rules": [
-        "Individual participation only",
-        "Bring your own laptop",
-        "No actual hacking of university systems allowed",
-        "Time limit: 5 hours",
-        "Judging based on number of challenges solved and time taken"
-      ],
-      "date": "March 19, 2025",
-      "venue": "Network Security Lab",
-      "registrationLink": "https://example.com/register/cybersecurity"
-    }
-  ],
   "nonTechnicalEvents": [
     {
       "id": "non-tech-1",
-      "title": "Cultural Night",
-      "name": "Rhythms",
-      "image": "/events/1450167.jpg",
+      "title": "Meme Contest",
+      "image": "/events/non-tech/meme-contest.png",
       "description": "A celebration of diverse cultures through music, dance, and performances. Showcase your talents and enjoy a night of entertainment.",
       "rules": [
         "Group or individual performances",
@@ -120,9 +115,8 @@
     },
     {
       "id": "non-tech-2",
-      "title": "Debate Competition",
-      "name": "VoiceBox",
-      "image": "/events/1450167.jpg",
+      "title": "Photography",
+      "image": "/events/non-tech/photography.png",
       "description": "Express your views and opinions on contemporary topics. Develop your public speaking and critical thinking skills.",
       "rules": [
         "Teams of 2 members",
@@ -133,23 +127,14 @@
       ],
       "date": "March 20, 2025",
       "venue": "Seminar Hall"
-    },
+    }
+  ],
+  "culturals": [
     {
-      "id": "non-tech-3",
-      "title": "Photography Contest",
-      "name": "FrameIt",
-      "image": "/events/1450167.jpg",
-      "description": "Capture moments and tell stories through your lens. Submit your best photographs based on the theme and compete for recognition.",
-      "rules": [
-        "Individual participation only",
-        "Theme will be announced one week before submission deadline",
-        "Maximum 3 entries per participant",
-        "Basic editing allowed, but no major manipulations",
-        "Judging based on creativity, composition, and theme relevance"
-      ],
-      "date": "March 15-21, 2025",
-      "venue": "Online Submission + Gallery Exhibition",
-      "registrationLink": "https://example.com/register/photography"
+      "id": "cultural",
+      "title": "Cultural Show",
+      "image": "/events/cultural/cultural-show.png",
+      "description": "A celebration of diverse cultures through music, dance, and performances. Showcase your talents and enjoy a night of entertainment."
     }
   ]
 }
