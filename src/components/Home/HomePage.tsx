@@ -1,7 +1,5 @@
 "use client"
 
-
-
 import type React from "react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
@@ -19,34 +17,8 @@ import type { Event } from "@/lib/events"
 import CountdownTimer from "@/components/Home/CountdownTimer"
 import GustoVideo from "@/components/Home/GustoVideo"
 import { useTheme } from "next-themes"
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import Footer from "@/components/Home/Footer";
-import EventsTimeline from "@/components/Home/EventsTimeline";
-
-// Custom hook for animations
-function useAnimateInView(delay = 0) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.1 })
-
-  const variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 },
-  }
-
-  return {
-    ref,
-    variants,
-    initial: "hidden",
-    animate: isInView ? "visible" : "hidden",
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1], // Custom ease curve for smooth animation
-      delay,
-    },
-  }
-}
+import Footer from "@/components/Home/Footer"
+import EventsTimeline from "@/components/Home/EventsTimeline"
 
 export default function HomePage() {
   const { theme } = useTheme()
@@ -54,25 +26,15 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [mounted, setMounted] = useState(false)
 
-  // Animation props for different sections
-  const welcomeAnimation = useAnimateInView(0.1)
-  const gustoAnimation = useAnimateInView(0.3)
-  const aboutAnimation = useAnimateInView(0.5)
-  const buttonAnimation = useAnimateInView(0.7)
-  const timerAnimation = useAnimateInView(0.1)
-  const videoAnimation = useAnimateInView(0.1)
-  const eventsHeaderAnimation = useAnimateInView(0.1)
-  const eventsAnimation = useAnimateInView(0.3)
-  const viewAllAnimation = useAnimateInView(0.5)
-
+  // Fetch events on component mount
   useEffect(() => {
-    async function fetchEvents() {
+    const fetchEvents = async () => {
       try {
         const events = await getAllEvents()
         setAllEvents(events)
-        setLoading(false)
       } catch (error) {
         console.error("Error fetching events:", error)
+      } finally {
         setLoading(false)
       }
     }
@@ -83,6 +45,31 @@ export default function HomePage() {
   // Only run on client-side
   useEffect(() => {
     setMounted(true)
+  }, [])
+
+  // Preload critical resources
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Preload the video thumbnail
+      const preloadImage = new Image()
+      preloadImage.src = "/images/video-thumbnail.jpg"
+      
+      // Preload YouTube player (helps reduce loading time)
+      const preconnectYouTube = document.createElement('link')
+      preconnectYouTube.rel = 'preconnect'
+      preconnectYouTube.href = 'https://www.youtube.com'
+      document.head.appendChild(preconnectYouTube)
+      
+      const preconnectYouTubeStatic = document.createElement('link')
+      preconnectYouTubeStatic.rel = 'preconnect'
+      preconnectYouTubeStatic.href = 'https://i.ytimg.com'
+      document.head.appendChild(preconnectYouTubeStatic)
+      
+      return () => {
+        document.head.removeChild(preconnectYouTube)
+        document.head.removeChild(preconnectYouTubeStatic)
+      }
+    }
   }, [])
 
   const welcomeText = `Welcome to our GCEE`
@@ -175,29 +162,30 @@ export default function HomePage() {
         }
       `}</style>
 
+      {/* Background effects - conditionally rendered for mobile optimization */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)]"></div>
-      <StarsBackground className="z-0 opacity-60" />
-      <ShootingStars className="z-0 fixed inset-0" />
+      <StarsBackground className="z-0 opacity-60 hidden md:block" />
+      <ShootingStars className="z-0 fixed inset-0 hidden md:block" />
+      
       {/* Hero Section - Full Viewport Height */}
       <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden">
-        {/* Star effects for the hero section */}
+        {/* Star effects for the hero section - only on desktop */}
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="-top-40 left-0 md:left-60 md:-top-20 hidden md:block"
           fill="rgba(59, 130, 246, 0.5)"
           darkModeFill="white"
         />
 
         <div className="text-center z-20 relative w-full max-w-4xl mx-auto px-4">
-          <motion.div {...welcomeAnimation}>
+          <div>
             <h1
               className={cn("font-bold text-slate-900 dark:text-white relative z-20 text-5xl md:text-6xl lg:text-7xl")}
             >
               <TextGenerateEffect words={welcomeText} />
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...gustoAnimation}
+          <div
             className="mt-6 sm:mt-8 md:mt-10 transform scale-125 sm:scale-135 md:scale-150 lg:scale-160 relative"
           >
             <Cover className="text-6xl sm:text-6xl md:text-7xl lg:text-7xl group transition-all duration-500 hover:scale-105">
@@ -212,17 +200,15 @@ export default function HomePage() {
                 25
               </span>
             </Cover>
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...aboutAnimation}
+          <div
             className="mt-8 px-4 sm:px-0 sm:mt-10 md:mt-12 text-slate-700 dark:text-neutral-400 relative z-20 text-xs sm:text-base md:text-xl max-w-3xl mx-auto"
           >
             {aboutText}
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...buttonAnimation}
+          <div
             className="mt-10 sm:mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a href="#events" onClick={(e) => scrollToSection(e, "events")}>
@@ -233,30 +219,29 @@ export default function HomePage() {
                 otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
               />
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Timer Section */}
-      <motion.div {...timerAnimation} className="w-full dark:bg-rose-950/5 mt-10 mb-44">
+      <div className="w-full dark:bg-rose-950/5 mt-10 mb-44">
         <CountdownTimer />
-      </motion.div>
+      </div>
 
-      {/* Video Section */}
-      <motion.div {...videoAnimation} className="w-full mb-44">
+      {/* Video Section - With optimized loading */}
+      <div className="w-full mb-44">
         <GustoVideo />
-      </motion.div>
+      </div>
 
       {/* Events Section */}
       <div id="events" className="mt-8 sm:mt-12 md:mt-16 text-center w-full max-w-4xl mx-auto px-4">
-        <motion.h2
-          {...eventsHeaderAnimation}
+        <h2
           className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 text-center"
         >
           Our Events
-        </motion.h2>
+        </h2>
 
-        <motion.div {...eventsAnimation} className="mt-8">
+        <div className="mt-8">
           {loading ? (
             <div className="flex justify-center items-center py-20">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -264,10 +249,10 @@ export default function HomePage() {
           ) : (
             <ExpandableEventCard events={allEvents} />
           )}
-        </motion.div>
+        </div>
       </div>
 
-      <motion.div {...viewAllAnimation} className="mb-44 text-center">
+      <div className="mb-44 text-center">
         <Link href="/events" className="inline-block">
           <MagicButton
             title="View All Events"
@@ -276,9 +261,10 @@ export default function HomePage() {
             otherClasses="px-8 py-3 text-lg font-bold bg-black border-blue-500/20"
           />
         </Link>
-      </motion.div>
-            {/* TimeLine */}
-            <div className="w-full mb-44">
+      </div>
+      
+      {/* TimeLine */}
+      <div className="w-full mb-44">
         <EventsTimeline />
       </div>
 
@@ -286,7 +272,6 @@ export default function HomePage() {
       <div className="w-full relative">
         <Footer />
       </div>
-
     </div>
   )
 }
