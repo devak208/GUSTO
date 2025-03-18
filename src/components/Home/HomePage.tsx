@@ -17,8 +17,8 @@ import type { Event } from "@/lib/events";
 import CountdownTimer from "@/components/Home/CountdownTimer";
 import GustoVideo from "@/components/Home/GustoVideo";
 import { useTheme } from "next-themes";
-import Footer from "@/components/Home/Footer";
 import EventsTimeline from "@/components/Home/EventsTimeline";
+import GoogleMapComponent from "@/components/Home/GoogleMap";
 
 export default function HomePage() {
   const { theme } = useTheme();
@@ -324,9 +324,10 @@ export default function HomePage() {
       </div>
 
       {/* TimeLine */}
-      <div className="w-full mb-44">
-        <EventsTimeline />
-      </div>
+      <EventsTimeline />
+
+      {/* Google Map */}
+      <GoogleMapComponent />
     </div>
   );
 }

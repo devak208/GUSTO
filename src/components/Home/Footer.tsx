@@ -2,7 +2,7 @@ import type React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import { MailIcon } from "lucide-react";
-import { RegistrationLink } from "@/data/RegistrationLink";
+import { RegistrationLink } from "@/data/AllData";
 
 const Footer: React.FC = () => {
   return (

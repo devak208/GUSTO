@@ -13,15 +13,18 @@ export async function generateStaticParams() {
 
 // Define proper props type matching Next.js 15 expectations
 type PageProps = {
-  params: {
-    id: string;
-  };
+  params:
+    | {
+        id: string;
+      }
+    | Promise<{ id: string }>;
   searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default async function EventPage({ params }: PageProps) {
-  // Ensure params is properly awaited by using Promise.resolve
-  const id = await Promise.resolve(params.id);
+  // In Next.js 15, always await params to access its properties
+  const resolvedParams = await Promise.resolve(params);
+  const id = resolvedParams.id;
   const event = await getEventById(id);
 
   if (!event) {

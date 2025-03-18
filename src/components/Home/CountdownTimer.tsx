@@ -1,6 +1,6 @@
 "use client";
 
-import { finalDate } from "@/data/FinalDate";
+import { finalDate } from "@/data/AllData";
 import React, { useState, useEffect } from "react";
 
 type TimeLeft = {

@@ -30,7 +30,7 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
     if (typeof window !== "undefined") {
       sessionStorage.setItem("scrollPosition", window.scrollY.toString());
     }
-    router.push(`/events/${eventId}#rules`);
+    router.push(`/events/${eventId}`);
   };
 
   return (
