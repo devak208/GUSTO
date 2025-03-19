@@ -1,8 +1,15 @@
 import type React from "react";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
-import { MailIcon } from "lucide-react";
-import { RegistrationLink } from "@/data/AllData";
+import { MailIcon, Copyright } from "lucide-react";
+import {
+  RegistrationLink,
+  gustoMail,
+  instagram,
+  youtube,
+  Devak,
+  Sabeshragav,
+} from "@/data/AllData";
 
 const Footer: React.FC = () => {
   return (
@@ -18,7 +25,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-5 mb-8">
               <Link
-                href="#"
+                href={instagram}
                 target="_blank"
                 aria-label="Instagram"
                 className="hover:text-white transition-colors"
@@ -26,7 +33,7 @@ const Footer: React.FC = () => {
                 <FaInstagram size={24} />
               </Link>
               <Link
-                href="#"
+                href={`mailto:${gustoMail}`}
                 target="_blank"
                 aria-label="Twitter"
                 className="hover:text-white transition-colors"
@@ -35,7 +42,7 @@ const Footer: React.FC = () => {
               </Link>
 
               <Link
-                href="#"
+                href={youtube}
                 target="_blank"
                 aria-label="YouTube"
                 className="hover:text-white transition-colors"
@@ -165,12 +172,15 @@ const Footer: React.FC = () => {
 
         {/* Copyright and Developer */}
         <div className="border-t flex flex-col gap-10 sm:gap-0 sm:flex-row sm:items-center sm:justify-between border-gray-800 mt-16 pt-8">
-          <p className="text-sm">© Gusto 2025. All rights reserved.</p>
+          <p className="text-sm flex items-center">
+            <Copyright className="h-4 w-4 mr-1 inline-block" /> Gusto 2025. All
+            rights reserved.
+          </p>
           <p className="text-sm">
             Site developed by{" "}
             <Link
               target="_blank"
-              href="https://www.linkedin.com/in/devak-c-k-b53a73308"
+              href={Devak}
               className="text-blue-500 transition-colors border-b border-blue-500"
             >
               Devak
@@ -178,7 +188,7 @@ const Footer: React.FC = () => {
             &{" "}
             <Link
               target="_blank"
-              href="https://www.linkedin.com/in/sabeshragavgk"
+              href={Sabeshragav}
               className="text-blue-500 transition-colors border-b border-blue-500"
             >
               Sabeshragav

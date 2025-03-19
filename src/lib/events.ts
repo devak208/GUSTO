@@ -7,7 +7,7 @@ export type Event = {
   image: string;
   description: string;
   rules: string[];
-  date: string;
+  time: string;
   venue: string;
   location?: string;
   registrationLink?: string;
@@ -70,8 +70,8 @@ export async function getAllCategories(): Promise<
   { id: keyof EventsData; name: string }[]
 > {
   return [
-    { id: "technicalEvents", name: "Technical Events" },
-    { id: "technicalIndividualEvents", name: "Technical Individual Events" },
-    { id: "nonTechnicalEvents", name: "Non-Technical Events" },
+    { id: "technicalEvents", name: "Technical Event" },
+    { id: "technicalIndividualEvents", name: "Technical Individual Event" },
+    { id: "nonTechnicalEvents", name: "Non-Technical Event" },
   ];
 }

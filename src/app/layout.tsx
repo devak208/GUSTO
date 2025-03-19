@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/UI/theme/theme-provider";
 import { ThemeToggle } from "@/components/UI/theme/theme-toggle";
 import Footer from "@/components/Home/Footer";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,24 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="relative min-h-screen">
+            {/* AIT Logo */}
+            <Image
+              src="/logos/AIT/gold.png"
+              alt="AIT Logo"
+              width={100}
+              height={100}
+              className="absolute left-2 top-2 z-50 hidden w-[60px] h-auto sm:w-[80px] md:w-[100px] dark:block"
+              priority
+            />
+            <Image
+              src="/logos/AIT/silver.png"
+              alt="AIT Logo"
+              width={100}
+              height={100}
+              className="absolute left-2 top-2 z-50 block w-[60px] h-auto sm:w-[80px] md:w-[100px] dark:hidden"
+              priority
+            />
+
             <ThemeToggle />
 
             {children}

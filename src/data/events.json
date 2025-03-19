@@ -20,7 +20,7 @@
         "name": "Dhayanithi S",
         "phone": "9344347148"
       },
-      "date": "March 15, 2025",
+      "time": "10:00 AM",
       "venue": "Main Auditorium"
     },
     {
@@ -43,8 +43,8 @@
         "name": "Kavikumar B",
         "phone": "8870822957"
       },
-      "date": "March 16, 2025",
-      "venue": "Computer Lab 1"
+      "time": "10:00 AM",
+      "venue": "IT Computer Lab 1"
     }
   ],
   "technicalIndividualEvents": [
@@ -68,8 +68,8 @@
         "name": "Sowmiya S K",
         "phone": "7708431780"
       },
-      "date": "March 17, 2025",
-      "venue": "Research Lab",
+      "time": "10:00 AM",
+      "venue": "IT Computer Lab 2",
       "registrationLink": "https://example.com/register/aiml"
     },
     {
@@ -92,8 +92,8 @@
         "name": "Rasiga S",
         "phone": "9345128184"
       },
-      "date": "March 17, 2025",
-      "venue": "Research Lab",
+      "time": "10:00 AM",
+      "venue": "IT Computer Lab 3",
       "registrationLink": "https://example.com/register/aiml"
     },
     {
@@ -116,8 +116,8 @@
         "name": "Sanuktha A",
         "phone": "9361334075"
       },
-      "date": "March 17, 2025",
-      "venue": "Research Lab",
+      "time": "10:00 AM",
+      "venue": "Main Auditorium",
       "registrationLink": "https://example.com/register/aiml"
     },
     {
@@ -140,8 +140,8 @@
         "name": "Ganga B",
         "phone": "8072017045"
       },
-      "date": "March 17, 2025",
-      "venue": "Research Lab",
+      "time": "10:00 AM",
+      "venue": "Main Auditorium",
       "registrationLink": "https://example.com/register/aiml"
     }
   ],
@@ -166,8 +166,8 @@
         "name": "Devak C K",
         "phone": "9047021100"
       },
-      "date": "March 19, 2025",
-      "venue": "Open Air Theater"
+      "time": "10:00 AM",
+      "venue": "Main Auditorium"
     },
     {
       "id": "non-tech-2",
@@ -189,7 +189,7 @@
         "name": "Sabeshragav G K",
         "phone": "9080033226"
       },
-      "date": "March 20, 2025",
+      "time": "10:00 AM",
       "venue": "Seminar Hall"
     }
   ]

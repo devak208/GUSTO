@@ -13,6 +13,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { CardSpotlight } from "@/components/UI/aceternity/card-spotlight";
 import { RegistrationLink } from "@/data/AllData";
 import EventCoordinators from "@/components/Events/EventCoordinators";
+import { Clock } from "lucide-react";
 
 interface EventDetailClientProps {
   event: Event;
@@ -73,7 +74,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         darkModeFill="white"
       />
 
-      <div className="container mx-auto px-4 py-12 z-10 relative max-w-5xl">
+      <div className="container mt-14 mx-auto px-4 py-12 z-10 relative max-w-5xl">
         <div className="mb-8">
           <Link href="/events">
             <button className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-neutral-950 dark:hover:bg-neutral-950/70 text-slate-800 dark:text-white font-medium rounded-lg border">
@@ -119,27 +120,14 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
           >
             {event.category && (
               <div className="flex items-center text-sm">
-                <span className="bg-blue-100 dark:bg-neutral-950 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full">
+                <span className="bg-blue-100 dark:bg-blue-300 text-blue-800 dark:text-black px-3 py-1 rounded-full">
                   {event.category}
                 </span>
               </div>
             )}
             <div className="flex items-center text-sm text-slate-600 dark:text-gray-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              {event.date}
+              <Clock className="h-5 w-5 mr-1" />
+              {event.time}
             </div>
             <div className="flex items-center text-sm text-slate-600 dark:text-gray-400">
               <svg
