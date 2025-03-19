@@ -4,7 +4,7 @@
       "id": "tech-1",
       "title": "Paper Presentation",
       "image": "/events/tech/paper-present.png",
-      "description": "A 24-hour coding marathon where teams compete to build innovative solutions to real-world problems. Showcase your coding skills and creativity in this intense competition.",
+      "description": "Showcase your research and technical knowledge through a formal paper presentation. Present innovative ideas and solutions to technical challenges in this competitive academic forum.",
       "rules": [
         "Teams of 2-4 members",
         "All code must be written during the event",
@@ -12,6 +12,14 @@
         "Final projects must be submitted by the deadline",
         "Judging based on innovation, functionality, and presentation"
       ],
+      "coordinator1": {
+        "name": "Kutraleeswaran S",
+        "phone": "7010438138"
+      },
+      "coordinator2": {
+        "name": "Dhayanithi S",
+        "phone": "9344347148"
+      },
       "date": "March 15, 2025",
       "venue": "Main Auditorium"
     },
@@ -19,7 +27,7 @@
       "id": "tech-2",
       "title": "Project Presentation",
       "image": "/events/tech/project-present.png",
-      "description": "Design and develop a fully functional website based on the given theme within the time limit. Show off your front-end and back-end skills.",
+      "description": "Demonstrate your engineering skills by presenting a working project or prototype. Explain your design process, implementation challenges, and results in this showcase of technical innovation.",
       "rules": [
         "Individual participation",
         "Frameworks and libraries allowed",
@@ -27,6 +35,14 @@
         "Time limit: 6 hours",
         "Judging based on design, functionality, and code quality"
       ],
+      "coordinator1": {
+        "name": "Sathasivam C",
+        "phone": "9080687054"
+      },
+      "coordinator2": {
+        "name": "Kavikumar B",
+        "phone": "8870822957"
+      },
       "date": "March 16, 2025",
       "venue": "Computer Lab 1"
     }
@@ -36,14 +52,22 @@
       "id": "tech-ind-1",
       "title": "Code Debugging",
       "image": "/events/tech/code-debug.png",
-      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "description": "Test your problem-solving skills by identifying and fixing bugs in provided code snippets. Race against time to debug and optimize problematic code in various programming languages.",
       "rules": [
-        "Teams of 1-3 members",
-        "Workshop attendance is mandatory for competition participation",
-        "Pre-trained models are allowed",
-        "Solutions must be original and ethical",
-        "Judging based on accuracy, innovation, and practical application"
+        "Individual participation only",
+        "Participants will receive code with intentional errors",
+        "Multiple programming languages available",
+        "Time limit: 90 minutes",
+        "Judging based on accuracy, speed, and efficiency of solutions"
       ],
+      "coordinator1": {
+        "name": "Rashika R",
+        "phone": "7358854883"
+      },
+      "coordinator2": {
+        "name": "Sowmiya S K",
+        "phone": "7708431780"
+      },
       "date": "March 17, 2025",
       "venue": "Research Lab",
       "registrationLink": "https://example.com/register/aiml"
@@ -52,14 +76,22 @@
       "id": "tech-ind-2",
       "title": "Blind Coding",
       "image": "/events/tech/blind-coding.png",
-      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "description": "A challenging coding competition where participants get only one chance to execute their program correctly, testing their ability to write error-free code without immediate feedback. This unique format evaluates programming accuracy and problem-solving skills under time pressure.",
       "rules": [
-        "Teams of 1-3 members",
-        "Workshop attendance is mandatory for competition participation",
-        "Pre-trained models are allowed",
-        "Solutions must be original and ethical",
-        "Judging based on accuracy, innovation, and practical application"
+        "Individual participation only",
+        "Monitor/display will be hidden during coding",
+        "Choice of programming language: C, C++, Java, Python",
+        "Time limit: 60 minutes",
+        "Judging based on program correctness and execution"
       ],
+      "coordinator1": {
+        "name": "Rethanya S",
+        "phone": "9361399895"
+      },
+      "coordinator2": {
+        "name": "Rasiga S",
+        "phone": "9345128184"
+      },
       "date": "March 17, 2025",
       "venue": "Research Lab",
       "registrationLink": "https://example.com/register/aiml"
@@ -68,14 +100,22 @@
       "id": "tech-ind-3",
       "title": "Tech Quiz",
       "image": "/events/tech/tech-quiz.png",
-      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "description": "Test your knowledge of technology, computer science, engineering concepts, and current tech trends in this fast-paced quiz competition. Demonstrate your technical expertise across diverse domains.",
       "rules": [
-        "Teams of 1-3 members",
-        "Workshop attendance is mandatory for competition participation",
-        "Pre-trained models are allowed",
-        "Solutions must be original and ethical",
-        "Judging based on accuracy, innovation, and practical application"
+        "Teams of 2 members",
+        "Multiple rounds with increasing difficulty",
+        "Topics include programming, networking, hardware, software, AI, and current tech trends",
+        "Rapid-fire and buzzer rounds included",
+        "Top teams qualify for the final round"
       ],
+      "coordinator1": {
+        "name": "Snega B",
+        "phone": "9342515864"
+      },
+      "coordinator2": {
+        "name": "Sanuktha A",
+        "phone": "9361334075"
+      },
       "date": "March 17, 2025",
       "venue": "Research Lab",
       "registrationLink": "https://example.com/register/aiml"
@@ -84,14 +124,22 @@
       "id": "tech-ind-4",
       "title": "Hunt Mods",
       "image": "/events/tech/hunt-mods.png",
-      "description": "Learn about the latest advancements in AI and machine learning, then apply your knowledge in a competition to solve real-world problems using AI techniques.",
+      "description": "Embark on a technical treasure hunt that combines problem-solving, cryptography, and coding skills. Navigate through a series of technical puzzles and challenges to reach the final goal.",
       "rules": [
-        "Teams of 1-3 members",
-        "Workshop attendance is mandatory for competition participation",
-        "Pre-trained models are allowed",
-        "Solutions must be original and ethical",
-        "Judging based on accuracy, innovation, and practical application"
+        "Teams of 2-3 members",
+        "Multiple stages with clues leading to next challenge",
+        "Basic programming knowledge required",
+        "Time limit: 3 hours",
+        "Hints available with time penalties"
       ],
+      "coordinator1": {
+        "name": "Ramesh M",
+        "phone": "7904997763"
+      },
+      "coordinator2": {
+        "name": "Ganga B",
+        "phone": "8072017045"
+      },
       "date": "March 17, 2025",
       "venue": "Research Lab",
       "registrationLink": "https://example.com/register/aiml"
@@ -102,14 +150,22 @@
       "id": "non-tech-1",
       "title": "Meme Contest",
       "image": "/events/non-tech/meme-contest.png",
-      "description": "A celebration of diverse cultures through music, dance, and performances. Showcase your talents and enjoy a night of entertainment.",
+      "description": "Showcase your creativity and humor by creating original memes based on given themes. Express your wit and design skills in this light-hearted yet competitive event.",
       "rules": [
-        "Group or individual performances",
-        "Maximum time limit: 10 minutes per performance",
-        "Pre-registration required",
-        "Props and costumes allowed",
-        "Judging based on creativity, skill, and audience engagement"
+        "Individual participation",
+        "Memes must be original and created during the event",
+        "Themes will be announced at the start",
+        "Entries must be appropriate for all audiences",
+        "Judging based on creativity, humor, and relevance to theme"
       ],
+      "coordinator1": {
+        "name": "Dhinesh A",
+        "phone": "9361197215"
+      },
+      "coordinator2": {
+        "name": "Devak C K",
+        "phone": "9047021100"
+      },
       "date": "March 19, 2025",
       "venue": "Open Air Theater"
     },
@@ -117,24 +173,24 @@
       "id": "non-tech-2",
       "title": "Photography",
       "image": "/events/non-tech/photography.png",
-      "description": "Express your views and opinions on contemporary topics. Develop your public speaking and critical thinking skills.",
+      "description": "Capture the essence of the given theme through your camera lens. Demonstrate your photography skills, artistic vision, and ability to tell a story through images.",
       "rules": [
-        "Teams of 2 members",
-        "Topics will be announced 1 hour before the event",
-        "Each team gets 5 minutes for presentation and 2 minutes for rebuttal",
-        "English and Hindi languages allowed",
-        "Judging based on content, delivery, and rebuttals"
+        "Individual participation",
+        "Participants must use their own camera/smartphone",
+        "Theme will be announced 24 hours before submission deadline",
+        "Basic editing allowed, but no major manipulations",
+        "Judging based on composition, creativity, and relevance to theme"
       ],
+      "coordinator1": {
+        "name": "Sanjay M",
+        "phone": "6380266425"
+      },
+      "coordinator2": {
+        "name": "Sabeshragav G K",
+        "phone": "9080033226"
+      },
       "date": "March 20, 2025",
       "venue": "Seminar Hall"
-    }
-  ],
-  "culturals": [
-    {
-      "id": "cultural",
-      "title": "Cultural Show",
-      "image": "/events/cultural/cultural-show.png",
-      "description": "A celebration of diverse cultures through music, dance, and performances. Showcase your talents and enjoy a night of entertainment."
     }
   ]
 }

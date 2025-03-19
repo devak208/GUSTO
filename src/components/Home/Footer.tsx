@@ -73,14 +73,6 @@ const Footer: React.FC = () => {
                   Non-Technical Events
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-white text-white/50 transition-colors"
-                >
-                  Culturals
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -97,15 +89,7 @@ const Footer: React.FC = () => {
                   Registration
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  target="_blank"
-                  className="hover:text-white text-white/50 transition-colors"
-                >
-                  Guidelines
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="#"
@@ -156,16 +140,6 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-white font-bold text-lg mb-6">Resources</h3>
               <ul className="space-y-4">
-                <li>
-                  <Link
-                    href="#"
-                    target="_blank"
-                    className="hover:text-white text-white/50 transition-colors"
-                  >
-                    Proceedings
-                  </Link>
-                </li>
-
                 <li>
                   <Link
                     href="#"

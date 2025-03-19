@@ -233,7 +233,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         )}
 
         {/* Event Coordinators Section */}
-        <EventCoordinators />
+        <EventCoordinators event={event} />
       </div>
     </div>
   );
