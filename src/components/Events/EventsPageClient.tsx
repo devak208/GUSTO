@@ -12,40 +12,100 @@ interface EventsPageClientProps {
   initialEvents: Record<string, Event[]>;
 }
 
-export default function EventsPageClient({ 
-  initialCategories, 
-  initialEvents 
+export default function EventsPageClient({
+  initialCategories,
+  initialEvents,
 }: EventsPageClientProps) {
-  // Handle scrolling to section based on URL hash 
+  // Handle scrolling to section based on URL hash
   useEffect(() => {
     const handleHashNavigation = () => {
       // Get the hash from the URL (e.g., #tech, #tech-ind, #non-tech)
       const hash = window.location.hash.slice(1);
+      console.log("Hash navigation activated for:", hash);
 
       if (hash) {
-        // Wait for the DOM to be ready and sections to be rendered
-        setTimeout(() => {
-          const element = document.getElementById(hash);
+        // Map of potential alternative IDs to check
+        const hashMappings: Record<string, string[]> = {
+          tech: ["tech", "technical-event", "technical-events"],
+          "tech-ind": [
+            "tech-ind",
+            "technical-individual-event",
+            "technical-individual-events",
+          ],
+          "non-tech": [
+            "non-tech",
+            "non-technical-event",
+            "non-technical-events",
+          ],
+        };
+
+        // Create a function to attempt scrolling multiple times
+        const scrollToElement = (attempts = 0) => {
+          console.log(
+            `Attempt ${attempts + 1} to find element with id: ${hash}`
+          );
+
+          // First try the exact hash
+          let element = document.getElementById(hash);
+
+          // If not found, try alternative IDs based on our mapping
+          if (!element && hashMappings[hash]) {
+            for (const alternativeId of hashMappings[hash]) {
+              if (alternativeId !== hash) {
+                // Skip the one we already tried
+                console.log(`Trying alternative id: ${alternativeId}`);
+                element = document.getElementById(alternativeId);
+                if (element) break;
+              }
+            }
+          }
+
           if (element) {
+            console.log(`Found element with id: ${element.id}`);
+            // Calculate position accounting for potential fixed headers
             const headerOffset = 100;
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-            
+            const elementPosition =
+              element.getBoundingClientRect().top + window.scrollY;
+
+            // Smooth scroll to the element
             window.scrollTo({
               top: elementPosition - headerOffset,
-              behavior: "smooth"
+              behavior: "smooth",
             });
 
-            // Make it accessible without visual focus outline
+            // For accessibility
             element.setAttribute("tabindex", "-1");
+            element.focus({ preventScroll: true });
+
+            return true; // Successfully scrolled
+          } else if (attempts < 10) {
+            // Increase max attempts
+            // Retry with increasing delays
+            const delay = 300 * (attempts + 1); // Longer delays
+            console.log(`Element not found. Retrying in ${delay}ms...`);
+            setTimeout(() => scrollToElement(attempts + 1), delay);
+            return false; // Not yet successful
+          } else {
+            console.log("Failed to find element after all attempts");
           }
-        }, 500); // Increased timeout to ensure content is rendered
+
+          return false; // Failed after all attempts
+        };
+
+        // Start scroll attempts with a small initial delay
+        setTimeout(() => scrollToElement(), 300);
       }
     };
 
-    // Handle both initial load and hash changes
-    handleHashNavigation();
+    // Initial load handling
+    if (window.location.hash) {
+      console.log("Initial hash detected:", window.location.hash);
+      handleHashNavigation();
+    }
+
+    // Handle hash changes during navigation
     window.addEventListener("hashchange", handleHashNavigation);
-    
+
     return () => {
       window.removeEventListener("hashchange", handleHashNavigation);
     };
@@ -83,4 +143,4 @@ export default function EventsPageClient({
       </div>
     </div>
   );
-} 
+}

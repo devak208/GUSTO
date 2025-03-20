@@ -65,19 +65,19 @@
       "image": "/events/tech/code-debug.png",
       "description": "Test your problem-solving skills by identifying and fixing bugs in provided code snippets. Race against time to debug and optimize problematic code in various programming languages.",
       "rules": [
-     "Code debugging event with provided code.",
-    "Individual participation only.",
-    "Preferred languages: C/Java.",
-    "\"Pen and paper\" event, usage of the internet and any other electronic devices is prohibited.",
-    "Two rounds, 30 minutes each, no extra time.",
-    "Batches allocated based on registration.",
-    "Prize for first successful debugging or best debugging outcome.",
-    "Violations result in instant disqualification.",
-    "Misbehavior with volunteers leads to disqualification."
+        "Code debugging event with provided code.",
+        "Individual participation only.",
+        "Preferred languages: C/Java.",
+        "\"Pen and paper\" event, usage of the internet and any other electronic devices is prohibited.",
+        "Two rounds, 30 minutes each, no extra time.",
+        "Batches allocated based on registration.",
+        "Prize for first successful debugging or best debugging outcome.",
+        "Violations result in instant disqualification.",
+        "Misbehavior with volunteers leads to disqualification."
       ],
       "coordinator1": {
         "name": "Rashika R",
-        "phone": "7358854883"
+        "phone": "9080687054"
       },
       "coordinator2": {
         "name": "Sowmiya S K",
@@ -93,21 +93,21 @@
       "image": "/events/tech/blind-coding.png",
       "description": "A challenging coding competition where participants get only one chance to execute their program correctly, testing their ability to write error-free code without immediate feedback. This unique format evaluates programming accuracy and problem-solving skills under time pressure.",
       "rules": [
-        "eventCode debugging event with provided code.",
-        "participation Individual participation only.",
-        "preferred_languages C/Java.",
-        
-          "format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
-          "rounds Two rounds, 30 minutes each, no extra time.",
-          "batching Batches allocated based on registration.",
-          "prize Prize for first successful debugging or best debugging outcome.",
-          
-            "violations : Violations result in instant disqualification.",
-            "misbehavior : Misbehavior with volunteers leads to disqualification."
+        "EventCode debugging event with provided code.",
+        "Participation Individual participation only.",
+        "Preferred_languages C/Java.",
+
+        "Format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
+        "Rounds Two rounds, 30 minutes each, no extra time.",
+        "Batching Batches allocated based on registration.",
+        "Prize Prize for first successful debugging or best debugging outcome.",
+
+        "Violations : Violations result in instant disqualification.",
+        "Misbehavior : Misbehavior with volunteers leads to disqualification."
       ],
       "coordinator1": {
         "name": "Rethanya S",
-        "phone": "9361399895"
+        "phone": "7010438138"
       },
       "coordinator2": {
         "name": "Rasiga S",
@@ -123,21 +123,18 @@
       "image": "/events/tech/tech-quiz.png",
       "description": "Test your knowledge of technology, computer science, engineering concepts, and current tech trends in this fast-paced quiz competition. Demonstrate your technical expertise across diverse domains.",
       "rules": [
-        
-          "Online quiz based on programming languages (C, Python, Java) and SQL logic, DSA (Data Structures & Algorithms).",
-          "Conducted via an online platform in the auditorium [proctored].",
-          "Individual participation.",
-          "Section A [Easy], Section B [Medium], Section C [Hard].",
-          "Questions cover topics in specified programming languages and SQL logic.",
-          "Time limit for completing the quiz.",
-          "Rules regarding cheating, plagiarism, and code of conduct will be strictly enforced.",
-          "Submission of responses within the specified time frame.",
-          "Each question may have multiple-choice, true/false, or short answer format.",
-          "Scores will be calculated automatically by the platform.",
-          "Only legitimate attempts will be considered for scoring.",
-          "Violation of rules results in disqualification."
-        
-        
+        "Online quiz based on programming languages (C, Python, Java) and SQL logic, DSA (Data Structures & Algorithms).",
+        "Conducted via an online platform in the auditorium [proctored].",
+        "Individual participation.",
+        "Section A [Easy], Section B [Medium], Section C [Hard].",
+        "Questions cover topics in specified programming languages and SQL logic.",
+        "Time limit for completing the quiz.",
+        "Rules regarding cheating, plagiarism, and code of conduct will be strictly enforced.",
+        "Submission of responses within the specified time frame.",
+        "Each question may have multiple-choice, true/false, or short answer format.",
+        "Scores will be calculated automatically by the platform.",
+        "Only legitimate attempts will be considered for scoring.",
+        "Violation of rules results in disqualification."
       ],
       "coordinator1": {
         "name": "Harish R",
@@ -168,8 +165,6 @@
         "Participants can run the code 'N' times within the allocated time.",
         "Time is everything for the event, no extended time for participants.",
         "The participant to successfully run the program (based on time) or provide the best output will be declared the winner of the contest."
-      
-      
       ],
       "coordinator1": {
         "name": "Ramesh M",
@@ -191,15 +186,12 @@
       "image": "/events/non-tech/meme-contest.png",
       "description": "Showcase your creativity and humor by creating original memes based on given themes. Express your wit and design skills in this light-hearted yet competitive event.",
       "rules": [
-        
-          "Register within the specified date to participate.",
-          "Participants must bring their own necessary devices for the event.",
-          "Only individual participation is permitted; no group entries.",
-          "Memes must be created on the spot based on provided situations.",
-          "Winners will receive exciting prizes as rewards.",
-          "Discussion is prohibited, and plagiarism is strictly forbidden."
-        
-        
+        "Register within the specified date to participate.",
+        "Participants must bring their own necessary devices for the event.",
+        "Only individual participation is permitted; no group entries.",
+        "Memes must be created on the spot based on provided situations.",
+        "Winners will receive exciting prizes as rewards.",
+        "Discussion is prohibited, and plagiarism is strictly forbidden."
       ],
       "coordinator1": {
         "name": "Dhinesh A",
@@ -218,14 +210,11 @@
       "image": "/events/non-tech/photography.png",
       "description": "Capture the essence of the given theme through your camera lens. Demonstrate your photography skills, artistic vision, and ability to tell a story through images.",
       "rules": [
-        
-          "Participants must work alone; no group submissions permitted.",
-          "A specified theme will guide participants in creating their photo.",
-          "Only touch editing is permitted, with plagiarism leading to disqualification.",
-          "Photos must be uploaded online before the deadline via email.",
-          "Winners will be notified and rewarded with prizes."
-        
-        
+        "Participants must work alone; no group submissions permitted.",
+        "A specified theme will guide participants in creating their photo.",
+        "Only touch editing is permitted, with plagiarism leading to disqualification.",
+        "Photos must be uploaded online before the deadline via email.",
+        "Winners will be notified and rewarded with prizes."
       ],
       "coordinator1": {
         "name": "Sanjay M",
