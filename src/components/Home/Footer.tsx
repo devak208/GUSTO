@@ -116,8 +116,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-4">
                 <li>
                   <Link
-                    href="#"
-                    target="_blank"
+                    href="/committee"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Committee
@@ -126,7 +125,6 @@ const Footer: React.FC = () => {
                 <li>
                   <Link
                     href="#"
-                    target="_blank"
                     className="hover:text-white text-white/50 transition-colors"
                   >
                     Venue
