@@ -16,7 +16,7 @@ const GoogleMapComponent = () => {
       </div>
       <div className="relative flex items-center justify-center gap-1 mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-center text-sm text-gray-600 dark:text-gray-400">
         Looking for bus routes & timings?
-        <Link href="/faq" className="text-blue-500 underline">
+        <Link href="/BusRoutes" className="text-blue-500 underline">
           Click here
         </Link>
       </div>

@@ -93,7 +93,7 @@ export default function HomePage() {
 
   return (
     <div
-      className={`relative w-full ${
+      className={`relative w-full overflow-x-hidden ${
         mounted && theme === "dark" ? "dark" : "light"
       } dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] flex flex-col items-center`}
     >
@@ -231,7 +231,7 @@ export default function HomePage() {
       <ShootingStars className="z-0 fixed inset-0" />
 
       {/* Hero Section - Full Viewport Height */}
-      <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden pt-20">
         {/* Star effects for the hero section - only on desktop */}
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"

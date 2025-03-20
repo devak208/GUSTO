@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/UI/theme/theme-provider";
-import { ThemeToggle } from "@/components/UI/theme/theme-toggle";
 import Footer from "@/components/Home/Footer";
-import Image from "next/image";
+import Header from "@/components/Home/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,34 +31,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen overflow-x-hidden bg-white dark:bg-black`}
         suppressHydrationWarning
       >
         <ThemeProvider>
           <div className="relative min-h-screen">
-            {/* AIT Logo */}
-            <Image
-              src="/logos/AIT/gold.png"
-              alt="AIT Logo"
-              width={100}
-              height={100}
-              className="absolute left-2 top-2 z-50 hidden w-[60px] h-auto sm:w-[80px] md:w-[100px] dark:block"
-              priority
-            />
-            <Image
-              src="/logos/AIT/silver.png"
-              alt="AIT Logo"
-              width={100}
-              height={100}
-              className="absolute left-2 top-2 z-50 block w-[60px] h-auto sm:w-[80px] md:w-[100px] dark:hidden"
-              priority
-            />
-
-            <ThemeToggle />
-
-            {children}
-
-            {/* Footer */}
+            <Header />
+            <main>{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

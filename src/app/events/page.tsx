@@ -41,22 +41,29 @@ export default function EventsPage() {
   // Handle scrolling to section based on URL hash
   useEffect(() => {
     if (!loading) {
-      // Get the hash from the URL (e.g., #tech, #tech-individual, #non-tech)
+      // Get the hash from the URL (e.g., #tech, #tech-ind, #non-tech)
       const hash = window.location.hash.substring(1);
 
       if (hash) {
-        // Wait a bit for the DOM to fully render before scrolling
+        // Wait a bit longer for the DOM to fully render and layout to stabilize
         setTimeout(() => {
           const element = document.getElementById(hash);
           if (element) {
-            // Scroll the element into view with smooth behavior
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            // Add padding to account for fixed header
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            
+            // Scroll to the element with the header offset
+            window.scrollTo({
+              top: elementPosition - headerOffset,
+              behavior: "smooth"
+            });
 
             // No need to set focus which causes visual white border
             // Just keep it accessible without the focus outline
             element.setAttribute("tabindex", "-1");
           }
-        }, 500);
+        }, 1000); // Increased timeout to ensure content is fully rendered
       }
     }
   }, [loading]); // Re-run when loading state changes to ensure sections are rendered
@@ -73,9 +80,9 @@ export default function EventsPage() {
         darkModeFill="white"
       />
 
-      <div className="container mx-auto px-4 py-12 z-10 relative">
+      <div className="container mx-auto px-4 py-12 z-10 relative mt-16">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-slate-900 dark:text-white mb-8">
-          GUSTO ' 25 Events
+          GUSTO &apos;25 Events
         </h1>
 
         <p className="text-center text-slate-700 dark:text-gray-300 max-w-3xl mx-auto mb-12">

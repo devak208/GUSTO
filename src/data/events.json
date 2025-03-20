@@ -6,11 +6,19 @@
       "image": "/events/tech/paper-present.png",
       "description": "Showcase your research and technical knowledge through a formal paper presentation. Present innovative ideas and solutions to technical challenges in this competitive academic forum.",
       "rules": [
-        "Teams of 2-4 members",
-        "All code must be written during the event",
-        "Use of open-source libraries is permitted",
-        "Final projects must be submitted by the deadline",
-        "Judging based on innovation, functionality, and presentation"
+        "Team participation is allowed maximum up to three members.",
+
+        "Participant must submit abstract of their paper during the registration process on or before 26th March 2024.",
+
+        "Papers will be shortlisted based on the quality, relevance and originality of the abstract.",
+
+        "Author of the shortlisted paper will be notified of acceptance via mail before 28th March 2024.",
+
+        "Accepted authors will receive instructions on how to proceed with full paper submission. Registration and payment must be completed on or before 30th March 2024.",
+
+        "Author of accepted paper are asked to be ready with oral PowerPoint presentation for 7 to 10 min which will be the on-stage event.",
+
+        "Winning contestant will be rewarded by the attractive cash prizes."
       ],
       "coordinator1": {
         "name": "Kutraleeswaran S",
@@ -29,11 +37,14 @@
       "image": "/events/tech/project-present.png",
       "description": "Demonstrate your engineering skills by presenting a working project or prototype. Explain your design process, implementation challenges, and results in this showcase of technical innovation.",
       "rules": [
-        "Individual participation",
-        "Frameworks and libraries allowed",
-        "Website must be responsive",
-        "Time limit: 6 hours",
-        "Judging based on design, functionality, and code quality"
+        "The participants could be solo, a team of two or three.",
+        "The participants must upload their project abstract, along with the existing system, proposed solutions with methodology, and scope, with a maximum of five pages as a soft copy during registration.",
+        "The participants must bring their working project model and presentation slides.",
+        "Presentation will approximately take 5-10 minutes per team, followed by a live demonstration of the project.",
+        "The participants must provide their project report (hard copy).",
+        "Batches will be allocated based on registration. The last date to send the abstract is 26th March, and you will receive the shortlists on 28th March via mail.",
+        "The winners will be determined by juries.",
+        "Contestants who violate the rules and guidelines will be eliminated instantly."
       ],
       "coordinator1": {
         "name": "Sathasivam C",
@@ -54,11 +65,15 @@
       "image": "/events/tech/code-debug.png",
       "description": "Test your problem-solving skills by identifying and fixing bugs in provided code snippets. Race against time to debug and optimize problematic code in various programming languages.",
       "rules": [
-        "Individual participation only",
-        "Participants will receive code with intentional errors",
-        "Multiple programming languages available",
-        "Time limit: 90 minutes",
-        "Judging based on accuracy, speed, and efficiency of solutions"
+     "Code debugging event with provided code.",
+    "Individual participation only.",
+    "Preferred languages: C/Java.",
+    "\"Pen and paper\" event, usage of the internet and any other electronic devices is prohibited.",
+    "Two rounds, 30 minutes each, no extra time.",
+    "Batches allocated based on registration.",
+    "Prize for first successful debugging or best debugging outcome.",
+    "Violations result in instant disqualification.",
+    "Misbehavior with volunteers leads to disqualification."
       ],
       "coordinator1": {
         "name": "Rashika R",
@@ -78,11 +93,17 @@
       "image": "/events/tech/blind-coding.png",
       "description": "A challenging coding competition where participants get only one chance to execute their program correctly, testing their ability to write error-free code without immediate feedback. This unique format evaluates programming accuracy and problem-solving skills under time pressure.",
       "rules": [
-        "Individual participation only",
-        "Monitor/display will be hidden during coding",
-        "Choice of programming language: C, C++, Java, Python",
-        "Time limit: 60 minutes",
-        "Judging based on program correctness and execution"
+        "eventCode debugging event with provided code.",
+        "participation Individual participation only.",
+        "preferred_languages C/Java.",
+        
+          "format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
+          "rounds Two rounds, 30 minutes each, no extra time.",
+          "batching Batches allocated based on registration.",
+          "prize Prize for first successful debugging or best debugging outcome.",
+          
+            "violations : Violations result in instant disqualification.",
+            "misbehavior : Misbehavior with volunteers leads to disqualification."
       ],
       "coordinator1": {
         "name": "Rethanya S",
@@ -102,11 +123,21 @@
       "image": "/events/tech/tech-quiz.png",
       "description": "Test your knowledge of technology, computer science, engineering concepts, and current tech trends in this fast-paced quiz competition. Demonstrate your technical expertise across diverse domains.",
       "rules": [
-        "Teams of 2 members",
-        "Multiple rounds with increasing difficulty",
-        "Topics include programming, networking, hardware, software, AI, and current tech trends",
-        "Rapid-fire and buzzer rounds included",
-        "Top teams qualify for the final round"
+        
+          "Online quiz based on programming languages (C, Python, Java) and SQL logic, DSA (Data Structures & Algorithms).",
+          "Conducted via an online platform in the auditorium [proctored].",
+          "Individual participation.",
+          "Section A [Easy], Section B [Medium], Section C [Hard].",
+          "Questions cover topics in specified programming languages and SQL logic.",
+          "Time limit for completing the quiz.",
+          "Rules regarding cheating, plagiarism, and code of conduct will be strictly enforced.",
+          "Submission of responses within the specified time frame.",
+          "Each question may have multiple-choice, true/false, or short answer format.",
+          "Scores will be calculated automatically by the platform.",
+          "Only legitimate attempts will be considered for scoring.",
+          "Violation of rules results in disqualification."
+        
+        
       ],
       "coordinator1": {
         "name": "Snega B",
@@ -126,11 +157,19 @@
       "image": "/events/tech/hunt-mods.png",
       "description": "Embark on a technical treasure hunt that combines problem-solving, cryptography, and coding skills. Navigate through a series of technical puzzles and challenges to reach the final goal.",
       "rules": [
-        "Teams of 2-3 members",
-        "Multiple stages with clues leading to next challenge",
-        "Basic programming knowledge required",
-        "Time limit: 3 hours",
-        "Hints available with time penalties"
+        "Round 1 rules: 30 mins.",
+        "The code has a logical error in it, the participants need to alter the logic and provide the output mentioned.",
+        "Preferred programming language: C, Python, Java.",
+        "The program must be run only once, with proctoring by volunteers.",
+        "Participants can run the code 'N' times within the allocated time.",
+        "The participant to successfully run the program (based on time) or provide the best output will be shortlisted for the second round.",
+        "Round 2 rules: 30 mins.",
+        "The difficulty level of the question will be set to medium.",
+        "Participants can run the code 'N' times within the allocated time.",
+        "Time is everything for the event, no extended time for participants.",
+        "The participant to successfully run the program (based on time) or provide the best output will be declared the winner of the contest."
+      
+      
       ],
       "coordinator1": {
         "name": "Ramesh M",
@@ -152,11 +191,15 @@
       "image": "/events/non-tech/meme-contest.png",
       "description": "Showcase your creativity and humor by creating original memes based on given themes. Express your wit and design skills in this light-hearted yet competitive event.",
       "rules": [
-        "Individual participation",
-        "Memes must be original and created during the event",
-        "Themes will be announced at the start",
-        "Entries must be appropriate for all audiences",
-        "Judging based on creativity, humor, and relevance to theme"
+        
+          "Register within the specified date to participate.",
+          "Participants must bring their own necessary devices for the event.",
+          "Only individual participation is permitted; no group entries.",
+          "Memes must be created on the spot based on provided situations.",
+          "Winners will receive exciting prizes as rewards.",
+          "Discussion is prohibited, and plagiarism is strictly forbidden."
+        
+        
       ],
       "coordinator1": {
         "name": "Dhinesh A",
@@ -175,11 +218,14 @@
       "image": "/events/non-tech/photography.png",
       "description": "Capture the essence of the given theme through your camera lens. Demonstrate your photography skills, artistic vision, and ability to tell a story through images.",
       "rules": [
-        "Individual participation",
-        "Participants must use their own camera/smartphone",
-        "Theme will be announced 24 hours before submission deadline",
-        "Basic editing allowed, but no major manipulations",
-        "Judging based on composition, creativity, and relevance to theme"
+        
+          "Participants must work alone; no group submissions permitted.",
+          "A specified theme will guide participants in creating their photo.",
+          "Only touch editing is permitted, with plagiarism leading to disqualification.",
+          "Photos must be uploaded online before the deadline via email.",
+          "Winners will be notified and rewarded with prizes."
+        
+        
       ],
       "coordinator1": {
         "name": "Sanjay M",
