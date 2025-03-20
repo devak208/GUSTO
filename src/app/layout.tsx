@@ -106,9 +106,7 @@ export default function RootLayout({
             {/* AIT Logo */}
             
 
-            <div className="absolute right-2 top-2 z-50">
-              <ThemeToggle />
-            </div>
+
 
             <Header />
             <main className="flex-1 mt-12">{children}</main>

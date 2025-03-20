@@ -93,17 +93,17 @@
       "image": "/events/tech/blind-coding.png",
       "description": "A challenging coding competition where participants get only one chance to execute their program correctly, testing their ability to write error-free code without immediate feedback. This unique format evaluates programming accuracy and problem-solving skills under time pressure.",
       "rules": [
-        "eventCode debugging event with provided code.",
-        "participation Individual participation only.",
-        "preferred_languages C/Java.",
+        "EventCode debugging event with provided code.",
+        "Participation Individual participation only.",
+        "Preferred_languages C/Java.",
         
-          "format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
-          "rounds Two rounds, 30 minutes each, no extra time.",
-          "batching Batches allocated based on registration.",
-          "prize Prize for first successful debugging or best debugging outcome.",
+          "Format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
+          "Rounds Two rounds, 30 minutes each, no extra time.",
+          "Batching Batches allocated based on registration.",
+          "Prize Prize for first successful debugging or best debugging outcome.",
           
-            "violations : Violations result in instant disqualification.",
-            "misbehavior : Misbehavior with volunteers leads to disqualification."
+            "Violations : Violations result in instant disqualification.",
+            "Misbehavior : Misbehavior with volunteers leads to disqualification."
       ],
       "coordinator1": {
         "name": "Rethanya S",
