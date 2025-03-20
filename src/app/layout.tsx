@@ -1,11 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/UI/theme/theme-provider";
+import { ThemeToggle } from "@/components/UI/theme/theme-toggle";
 import Footer from "@/components/Home/Footer";
 import Header from "@/components/Home/Header";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -43,9 +53,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/logos/AIT/bronze.png",
+    shortcut: "/logos/AIT/bronze.png",
+    apple: "/logos/AIT/gold.png",
   },
   openGraph: {
     type: "website",
@@ -82,16 +92,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-white dark:bg-black overflow-x-hidden`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white dark:bg-black overflow-x-hidden`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen bg-white dark:bg-black">
+          <div className="relative flex flex-col min-h-screen bg-white dark:bg-black">
+            {/* AIT Logo */}
+            
+
+            <div className="absolute right-2 top-2 z-50">
+              <ThemeToggle />
+            </div>
+
             <Header />
-            <main className="flex-1 mt-16">{children}</main>
+            <main className="flex-1 mt-12">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

@@ -139,7 +139,68 @@ const Footer: React.FC = () => {
                   Contact Information
                 </Link>
               </li>
+              <li>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="hover:text-white text-white/50 transition-colors"
+                  >
+                    Committee
+                  </Link>
+                </li>
             </ul>
+          </div>
+
+          {/* About and Resources Columns */}
+          <div>
+{/*             <div className="mb-8">
+              <h3 className="text-white font-bold text-lg mb-6">About</h3>
+              <ul className="space-y-4">
+
+                <li>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="hover:text-white text-white/50 transition-colors"
+                  >
+                    Venue
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="hover:text-white text-white/50 transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
+
+{/*             <div>
+              <h3 className="text-white font-bold text-lg mb-6">Resources</h3>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="hover:text-white text-white/50 transition-colors"
+                  >
+                    Media Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="hover:text-white text-white/50 transition-colors"
+                  >
+                    Lunch & Refreshments
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
 
