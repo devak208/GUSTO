@@ -3,7 +3,7 @@ export const busRoutes = [
     location: "Erode Bus Stand",
     buses: [
       { time: "7:40 am", type: "Blue bus (staff bus)", destination: "IRTT" },
-      { time: "7:40 am", type: "Town bus", destination: "IRTT" },
+      { time: "7:50 am", type: "Town bus", destination: "IRTT" },
     ],
     stopName: "IRTT College (Main Campus)",
     distance: "12 km",
@@ -12,8 +12,8 @@ export const busRoutes = [
   {
     location: "Chithode",
     buses: [
-      { time: "8:10 am", type: "Blue bus (staff bus)", destination: "IRTT" },
-      { time: "8:20 am", type: "Town bus", destination: "IRTT" },
+      { time: "8:20 am", type: "Blue bus (staff bus)", destination: "IRTT" },
+      { time: "8:25 am", type: "Town bus", destination: "IRTT" },
     ],
     stopName: "IRRT College (Main Campus)",
     distance: "8 km",
@@ -23,7 +23,7 @@ export const busRoutes = [
     location: "Bhavani",
     buses: [
       { time: "7:50 am", type: "B16", destination: "IRTT" },
-      { time: "8:15 am", type: "Yellow bus", destination: "IRTT" },
+  /*     { time: "8:15 am", type: "Yellow bus", destination: "IRTT" }, */
     ],
     stopName: "IRTT College (Main Campus)",
     distance: "15 km",

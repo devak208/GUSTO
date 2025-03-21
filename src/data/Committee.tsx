@@ -62,7 +62,7 @@ export const committees: Committee[] = [
         role: "Final Year",
       },
       {
-        name: "S.Madhumida",
+        name: "S.Mathumida",
         role: "Pre-Final Year",
       },
     ],
@@ -142,7 +142,7 @@ export const committees: Committee[] = [
     ],
   },
   {
-    name: "Comparing Committee",
+    name: "Compering Committee",
     description:
       "Responsible for presenting and anchoring the symposium events.",
     staffCoordinator: {
