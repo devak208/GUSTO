@@ -4,7 +4,6 @@ export interface CommitteeMember {
 }
 
 export interface Committee {
-  id: string;
   name: string;
   description: string;
   staffCoordinator: CommitteeMember;
@@ -13,101 +12,442 @@ export interface Committee {
 
 export const committees: Committee[] = [
   {
-    id: "technical",
-    name: "Technical Committee",
-    description:
-      "Handles all technical aspects of the symposium including workshops, technical events, and competitions.",
+    name: "Hall Decoration Committee",
+    description: "Responsible for the decoration and ambiance of event venues.",
     staffCoordinator: {
-      name: "Dr. John Doe",
+      name: "Dr. K.G.Maheswari",
       role: "Professor",
     },
     studentCoordinators: [
       {
-        name: "Jane Smith",
+        name: "R.Janani",
         role: "Final Year",
       },
       {
-        name: "Mike Johnson",
+        name: "T.Kaviyarasu",
         role: "Pre-Final Year",
       },
     ],
   },
   {
-    id: "cultural",
-    name: "Cultural Committee",
+    name: "Rangoli Committee",
     description:
-      "Manages cultural events, performances, and entertainment during the symposium.",
+      "Manages the creation and display of rangoli art for the symposium.",
     staffCoordinator: {
-      name: "Dr. Sarah Wilson",
+      name: "Dr. K.G.Maheswari",
       role: "Professor",
     },
     studentCoordinators: [
       {
-        name: "Alex Brown",
+        name: "S.V.Jayasrigayathri",
         role: "Final Year",
       },
       {
-        name: "Emily Davis",
+        name: "S.Pavithra",
         role: "Pre-Final Year",
       },
     ],
   },
   {
-    id: "sponsorship",
-    name: "Sponsorship Committee",
+    name: "Reception Committee",
     description:
-      "Responsible for securing sponsorships and managing industry partnerships.",
+      "Manages the welcome and reception of guests and participants.",
     staffCoordinator: {
-      name: "Dr. Robert Chen",
+      name: "Dr. S.Thilagavathi",
       role: "Professor",
     },
     studentCoordinators: [
       {
-        name: "David Wilson",
+        name: "R.Shanmathi",
         role: "Final Year",
       },
       {
-        name: "Sarah Johnson",
+        name: "S.Madhumida",
         role: "Pre-Final Year",
       },
     ],
   },
   {
-    id: "logistics",
-    name: "Logistics Committee",
+    name: "Registration Committee",
     description:
-      "Handles venue management, accommodation, and overall event coordination.",
+      "Handles participant registration and documentation processes.",
     staffCoordinator: {
-      name: "Dr. Michael Lee",
+      name: "Dr. M.N.Sudha",
       role: "Professor",
     },
     studentCoordinators: [
       {
-        name: "James Wilson",
+        name: "M.Sathya",
         role: "Final Year",
       },
       {
-        name: "Emma Davis",
+        name: "R.Muruganandham",
         role: "Pre-Final Year",
       },
     ],
   },
   {
-    id: "catering",
+    name: "Purchasing Committee",
+    description:
+      "Responsible for procurement of all materials needed for the event.",
+    staffCoordinator: {
+      name: "Dr. B.V.Prakash",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "M.Manmadharaja",
+        role: "Final Year",
+      },
+      {
+        name: "M.Muthamilselvan",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
     name: "Catering Committee",
-    description:
-      "Handles venue management, accommodation, and overall event coordination.",
+    description: "Manages food and beverage services throughout the symposium.",
     staffCoordinator: {
-      name: "Dr. Anna Smith",
+      name: "Dr. K.Murugan & Dr. P.Thangavel",
       role: "Professor",
     },
     studentCoordinators: [
       {
-        name: "Gogul",
+        name: "B.Elangovan",
         role: "Final Year",
       },
       {
-        name: "Santhosh",
+        name: "A.Gogula kannan",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Multimedia Committee",
+    description: "Handles all audio-visual aspects of the symposium.",
+    staffCoordinator: {
+      name: "Dr. M.Sathyakala",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.Vignesh",
+        role: "Final Year",
+      },
+      {
+        name: "J.Santhoshkumar",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Comparing Committee",
+    description:
+      "Responsible for presenting and anchoring the symposium events.",
+    staffCoordinator: {
+      name: "Dr. R.Anurekha",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "M.Sifanaa Parveen",
+        role: "Final Year",
+      },
+      {
+        name: "M.Farzin",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Poster Design Committee",
+    description: "Creates promotional materials and designs for the symposium.",
+    staffCoordinator: {
+      name: "Dr. P.Thangavel",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "M.Sanjay",
+        role: "Final Year",
+      },
+      {
+        name: "M.Nigilkumar",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Discipline Committee",
+    description: "Maintains order and ensures smooth conduct of all events.",
+    staffCoordinator: {
+      name: "Dr. S.Mohanasundharam & Dr. T.Sumathi",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "K.Sunil",
+        role: "Final Year",
+      },
+      {
+        name: "R.Dhinesh",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "News Letter Committee",
+    description:
+      "Publishes and distributes news and updates about the symposium.",
+    staffCoordinator: {
+      name: "Dr. M.Poongothai",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "V.Shagina",
+        role: "Final Year",
+      },
+      {
+        name: "B.Mohamad Irfan",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Photography Committee",
+    description: "Documents the symposium through photography and videography.",
+    staffCoordinator: {
+      name: "Mrs. R.Sathyavani",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.V.Aadhithya",
+        role: "Final Year",
+      },
+      {
+        name: "R.Rajesh",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Prize Distribution Committee",
+    description: "Manages awards and prize distribution ceremonies.",
+    staffCoordinator: {
+      name: "Dr. R.Anurekha",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.Saranya",
+        role: "Final Year",
+      },
+      {
+        name: "S.Lakshanya",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Souvenir Committee",
+    description: "Creates and distributes memorabilia for the symposium.",
+    staffCoordinator: {
+      name: "Dr. B.V.Prakash",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.Dhanush",
+        role: "Final Year",
+      },
+      {
+        name: "R.S.Adhersh",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Chief Guest Committee",
+    description:
+      "Manages invitations and arrangements for chief guests and VIPs.",
+    staffCoordinator: {
+      name: "Dr. S.Thilagavathi",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "C.Sanjay Kanth",
+        role: "Pre-Final Year",
+      },
+      {
+        name: "M.Sorna Mallika",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Website Committee",
+    description:
+      "Develops and maintains the symposium website and online presence.",
+    staffCoordinator: {
+      name: "Dr. P.Thangavel",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "G.K.Sabeshragav",
+        role: "Pre-Final Year",
+      },
+      {
+        name: "C.K.Devak",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Paper Presentation Committee",
+    description: "Manages the technical paper presentation event.",
+    staffCoordinator: {
+      name: "Dr. M.Poongothai",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.Kutraleeswaran",
+        role: "Final Year",
+      },
+      {
+        name: "S.Dhayanithi",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Project Committee",
+    description: "Oversees project presentations and exhibitions.",
+    staffCoordinator: {
+      name: "Dr. M.Sathyakala",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "C.Sathasivam",
+        role: "Final Year",
+      },
+      {
+        name: "B.Kavikumar",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Code Debugging Committee",
+    description: "Organizes and manages code debugging competitions.",
+    staffCoordinator: {
+      name: "Dr. S.Mohanasundharam",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "R.Rasika",
+        role: "Final Year",
+      },
+      {
+        name: "S.K.Sowmiya",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Blind Coding Committee",
+    description: "Conducts blind coding challenges and competitions.",
+    staffCoordinator: {
+      name: "Dr. S.Mohanasundharam",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.Rethanya",
+        role: "Final Year",
+      },
+      {
+        name: "M.Rasiga",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Tech Quiz Committee",
+    description: "Prepares and conducts technical quiz competitions.",
+    staffCoordinator: {
+      name: "Dr. K.G.Maheswari",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "R.Harish",
+        role: "Final Year",
+      },
+      {
+        name: "A.Sanuktha",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Hunt Mods Committee",
+    description: "Organizes treasure hunt and similar innovative events.",
+    staffCoordinator: {
+      name: "Dr. K.G.Maheswari",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "M.Ramesh",
+        role: "Final Year",
+      },
+      {
+        name: "B.Ganga",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Meme Contest Committee",
+    description: "Manages meme creation contests and fun activities.",
+    staffCoordinator: {
+      name: "Dr. M.N.Sudha",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "A.Dhinesh",
+        role: "Final Year",
+      },
+      {
+        name: "C.K.Devak",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
+    name: "Non-Technical Project Committee",
+    description:
+      "Oversees non-technical project presentations and exhibitions.",
+    staffCoordinator: {
+      name: "Dr. M.N.Sudha",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "M.Sanjay",
+        role: "Final Year",
+      },
+      {
+        name: "G.K.Sabeshragav",
         role: "Pre-Final Year",
       },
     ],

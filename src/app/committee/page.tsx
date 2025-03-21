@@ -22,8 +22,8 @@ export default function CommitteePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {committees.map((committee) => (
-            <CommitteeCard key={committee.id} committee={committee} />
+          {committees.map((committee, index) => (
+            <CommitteeCard key={index} committee={committee} />
           ))}
         </div>
       </div>

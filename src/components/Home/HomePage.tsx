@@ -83,10 +83,11 @@ export default function HomePage() {
           const element = document.getElementById(scrollToSection);
           if (element) {
             const headerOffset = 100;
-            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const elementPosition =
+              element.getBoundingClientRect().top + window.scrollY;
             window.scrollTo({
               top: elementPosition - headerOffset,
-              behavior: "smooth"
+              behavior: "smooth",
             });
           }
           // Clear the stored navigation after processing
@@ -98,14 +99,14 @@ export default function HomePage() {
     // Handle both initial load and route changes
     handleStoredNavigation();
     window.addEventListener("load", handleStoredNavigation);
-    
+
     return () => {
       window.removeEventListener("load", handleStoredNavigation);
     };
   }, []);
 
   const welcomeText = ` Welcome to our`;
-  const aboutText = `Join us at GUSTO 2025 for a celebration of innovation and talent!
+  const aboutText = `Join us at GUSTO 2025 at April 23rd for a celebration of innovation and talent!
             Experience workshops, competitions, and networking with industry
             leaders. Something amazing awaits every participant!`;
 
@@ -263,7 +264,10 @@ export default function HomePage() {
       <ShootingStars className="z-0 fixed inset-0" />
 
       {/* Hero Section - Full Viewport Height */}
-      <div className="w-full flex flex-col items-center justify-center relative overflow-hidden" style={{ minHeight: 'calc(100vh - 0px)', marginTop: '-80px' }}>
+      <div
+        className="w-full flex flex-col items-center justify-center relative overflow-hidden"
+        style={{ minHeight: "calc(100vh - 0px)", marginTop: "-80px" }}
+      >
         {/* Star effects for the hero section */}
         <Spotlight
           className="absolute top-0 left-0 md:left-60 w-full h-full"
@@ -271,7 +275,10 @@ export default function HomePage() {
           darkModeFill="rgba(255, 255, 255, 0.3)"
         />
 
-        <div className="md:mt-20 text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center" style={{ minHeight: '100vh' }}>
+        <div
+          className="md:mt-20 text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center"
+          style={{ minHeight: "100vh" }}
+        >
           <div>
             <h1
               className={cn(
@@ -302,7 +309,7 @@ export default function HomePage() {
               Proudly Presented By
             </p>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-              Department of Information Technology
+              Association of Information Technology
             </h2>
             <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
               Government College of Engineering, Erode
@@ -314,7 +321,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#events" onClick={(e) => scrollToSection(e, "events")}> 
+            <a href="#events" onClick={(e) => scrollToSection(e, "events")}>
               <MagicButton
                 title="Registration open"
                 icon={<FaArrowDown />}

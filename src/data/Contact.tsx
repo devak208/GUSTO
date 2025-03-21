@@ -16,7 +16,7 @@ export const contacts: Contact[] = [
   },
   {
     name: "Subha Sri S",
-    role: "Joint Secretary",
+    role: "Secretary",
     phone: "+91 9994270889",
     category: "final",
   },
@@ -28,7 +28,7 @@ export const contacts: Contact[] = [
   },
   {
     name: "Santhakumaran C",
-    role: "Secretary",
+    role: "Joint Secretary",
     phone: "+91 9626202811",
     category: "prefinal",
   },
@@ -40,7 +40,7 @@ export const contacts: Contact[] = [
   },
   {
     name: "Muruganantham R",
-    role: "Treasurer",
+    role: "Joint Treasurer",
     phone: "+91 7418024057",
     category: "prefinal",
   },
