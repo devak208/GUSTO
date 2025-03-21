@@ -271,7 +271,7 @@ export default function HomePage() {
           darkModeFill="rgba(255, 255, 255, 0.3)"
         />
 
-        <div className="text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center" style={{ minHeight: '100vh' }}>
+        <div className="md:mt-20 text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center" style={{ minHeight: '100vh' }}>
           <div>
             <h1
               className={cn(
