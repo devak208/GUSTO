@@ -106,9 +106,13 @@ export default function HomePage() {
   }, []);
 
   const welcomeText = ` Welcome to our`;
-  const aboutText = `Join us at GUSTO 2025 at April 23rd for a celebration of innovation and talent!
-            Experience workshops, competitions, and networking with industry
-            leaders. Something amazing awaits every participant!`;
+  const aboutText = (
+    <>
+      Join us at GUSTO 2025 at <span className="font-bold text-amber-500 dark:text-amber-300">April 23rd</span> for a celebration of innovation and talent!
+      Experience workshops, competitions, and networking with industry
+      leaders. Something amazing awaits every participant!
+    </>
+  );
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
