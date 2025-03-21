@@ -9,21 +9,21 @@ export interface Contact {
 
 export const contacts: Contact[] = [
   {
-    name: "Sanjay Kumar",
+    name: "Dilliraj G",
     role: "Secretary",
-    phone: "+91 9876543210",
+    phone: "+91 9345816238",
     category: "final",
   },
   {
-    name: "Priya Patel",
+    name: "Subha Sri S",
     role: "Joint Secretary",
-    phone: "+91 9876543211",
+    phone: "+91 9994270889",
     category: "final",
   },
   {
-    name: "Rahul Sharma",
+    name: "Sathasivam C",
     role: "Treasurer",
-    phone: "+91 9876543212",
+    phone: "+91 9080687054",
     category: "final",
   },
   {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Phone, User } from "lucide-react";
-import { Contact, ContactCategory, contacts } from "@/data/ContactSection";
+import { Contact, ContactCategory, contacts } from "@/data/Contact";
 
 // Reusable contact card component
 const ContactCard = ({

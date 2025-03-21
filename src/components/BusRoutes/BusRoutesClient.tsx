@@ -8,59 +8,17 @@ import { cn } from "@/lib/utils";
 import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { Spotlight } from "@/components/UI/aceternity/spotlight";
-
-const busRoutes = [
-  {
-    location: "Erode Bus Stand",
-    buses: [
-      { time: "7:40 am", type: "Blue bus (staff bus)", destination: "IRTT" },
-      { time: "7:40 am", type: "Town bus", destination: "IRTT" },
-    ],
-    stopName: "IRTT College",
-    distance: "12 km",
-    duration: "25 min",
-  },
-  {
-    location: "Chithode",
-    buses: [
-      { time: "8:10 am", type: "Blue bus (staff bus)", destination: "IRTT" },
-      { time: "8:20 am", type: "Town bus", destination: "IRTT" },
-    ],
-    stopName: "IRRT College",
-    distance: "8 km",
-    duration: "15 min",
-  },
-  {
-    location: "Bhavani",
-    buses: [
-      { time: "7:50 am", type: "B16", destination: "IRTT" },
-      { time: "8:15 am", type: "Yellow bus", destination: "IRTT" },
-    ],
-    stopName: "IRTT College",
-    distance: "15 km",
-    duration: "30 min",
-  },
-  {
-    location: "Bhavani",
-    buses: [{ time: "Every 15 minutes", type: "B12,3", destination: "IRTT or Vasavi" }],
-    stopName: "IRTT or Vasavi",
-    distance: "15 km",
-    duration: "30 min",
-  },
-  {
-    location: "Chithode",
-    buses: [{ time: "Every 15 minutes", type: "B12,3", destination: "IRTT or Vasavi" }],
-    stopName: "IRTT or Vasavi",
-    distance: "8 km",
-    duration: "15 min",
-  },
-];
+import { busRoutes } from "@/data/BusTiming";
 
 const getBusTypeColor = (type: string) => {
-  if (type.toLowerCase().includes("blue")) return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-  if (type.toLowerCase().includes("town")) return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-  if (type.toLowerCase().includes("yellow")) return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-  if (type.startsWith("B")) return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
+  if (type.toLowerCase().includes("blue"))
+    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
+  if (type.toLowerCase().includes("town"))
+    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
+  if (type.toLowerCase().includes("yellow"))
+    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
+  if (type.startsWith("B"))
+    return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
   return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200";
 };
 
@@ -80,9 +38,12 @@ export default function BusRoutesClient() {
       );
 
     if (activeTab === "all") return matchesSearch;
-    if (activeTab === "erode") return matchesSearch && route.location === "Erode Bus Stand";
-    if (activeTab === "bhavani") return matchesSearch && route.location === "Bhavani";
-    if (activeTab === "chithode") return matchesSearch && route.location === "Chithode";
+    if (activeTab === "erode")
+      return matchesSearch && route.location === "Erode Bus Stand";
+    if (activeTab === "bhavani")
+      return matchesSearch && route.location === "Bhavani";
+    if (activeTab === "chithode")
+      return matchesSearch && route.location === "Chithode";
 
     return matchesSearch;
   });
@@ -92,7 +53,7 @@ export default function BusRoutesClient() {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-white dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)]"></div>
       <StarsBackground className="z-0 opacity-20 dark:opacity-60" />
       <ShootingStars className="z-0 fixed inset-0" />
-      
+
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="rgba(59, 130, 246, 0.3)"
@@ -106,10 +67,12 @@ export default function BusRoutesClient() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">Campus Bus Routes</h1>
+          <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+            Campus Bus Routes
+          </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Find the perfect bus route to get to campus on time. We&apos;ve compiled all the routes and schedules for your
-            convenience.
+            Find the perfect bus route to get to campus on time. We&apos;ve
+            compiled all the routes and schedules for your convenience.
           </p>
         </motion.div>
 
@@ -136,17 +99,25 @@ export default function BusRoutesClient() {
                           </h2>
                           <p className="text-gray-600 dark:text-gray-400 flex items-center gap-1">
                             <span>To:</span>
-                            <span className="font-medium text-gray-800 dark:text-gray-200">{route.stopName}</span>
+                            <span className="font-medium text-gray-800 dark:text-gray-200">
+                              {route.stopName}
+                            </span>
                           </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-4 text-sm">
                         <div className="flex items-center gap-1">
-                          <Clock size={16} className="text-gray-500 dark:text-gray-400" />
+                          <Clock
+                            size={16}
+                            className="text-gray-500 dark:text-gray-400"
+                          />
                           <span>{route.duration}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <ArrowRight size={16} className="text-gray-500 dark:text-gray-400" />
+                          <ArrowRight
+                            size={16}
+                            className="text-gray-500 dark:text-gray-400"
+                          />
                           <span>{route.distance}</span>
                         </div>
                       </div>
@@ -163,13 +134,24 @@ export default function BusRoutesClient() {
                               <Bus className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                             </div>
                             <div>
-                              <Badge className={cn("font-medium", getBusTypeColor(bus.type))}>{bus.type}</Badge>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">to {bus.destination}</p>
+                              <Badge
+                                className={cn(
+                                  "font-medium",
+                                  getBusTypeColor(bus.type)
+                                )}
+                              >
+                                {bus.type}
+                              </Badge>
+                              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                to {bus.destination}
+                              </p>
                             </div>
                           </div>
                           <div className="flex items-center gap-2 sm:text-right">
                             <Clock className="h-4 w-4 text-gray-500 dark:text-gray-400" />
-                            <span className="font-medium text-gray-800 dark:text-gray-200">{bus.time}</span>
+                            <span className="font-medium text-gray-800 dark:text-gray-200">
+                              {bus.time}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -179,11 +161,19 @@ export default function BusRoutesClient() {
               </motion.div>
             ))
           ) : (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-12">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
               <div className="bg-white/90 dark:bg-black/90 rounded-xl p-8 backdrop-blur-sm">
                 <Bus className="h-16 w-16 mx-auto text-gray-400 mb-4" />
-                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">No routes found</h3>
-                <p className="text-gray-500 dark:text-gray-400">Try adjusting your search or filter criteria</p>
+                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  No routes found
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Try adjusting your search or filter criteria
+                </p>
               </div>
             </motion.div>
           )}
@@ -191,4 +181,4 @@ export default function BusRoutesClient() {
       </main>
     </div>
   );
-} 
+}
