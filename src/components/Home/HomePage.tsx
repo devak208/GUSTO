@@ -108,9 +108,13 @@ export default function HomePage() {
   const welcomeText = ` Welcome to our`;
   const aboutText = (
     <>
-      Join us at GUSTO 2025 at <span className="font-bold text-amber-500 dark:text-amber-300">April 23rd</span> for a celebration of innovation and talent!
-      Experience workshops, competitions, and networking with industry
-      leaders. Something amazing awaits every participant!
+      Join us at Gusto 25 on{" "}
+      <span className="font-bold text-amber-500 dark:text-amber-300">
+        23rd of April
+      </span>{" "}
+      for a celebration of innovation and talent! Experience competitions,
+      cultural performances, and unforgettable moments of creativity and fun.
+      Something amazing awaits every participant!
     </>
   );
 

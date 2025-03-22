@@ -21,7 +21,6 @@ export default function EventsPageClient({
     const handleHashNavigation = () => {
       // Get the hash from the URL (e.g., #tech, #tech-ind, #non-tech)
       const hash = window.location.hash.slice(1);
-      console.log("Hash navigation activated for:", hash);
 
       if (hash) {
         // Map of potential alternative IDs to check
@@ -41,10 +40,6 @@ export default function EventsPageClient({
 
         // Create a function to attempt scrolling multiple times
         const scrollToElement = (attempts = 0) => {
-          console.log(
-            `Attempt ${attempts + 1} to find element with id: ${hash}`
-          );
-
           // First try the exact hash
           let element = document.getElementById(hash);
 
@@ -53,7 +48,7 @@ export default function EventsPageClient({
             for (const alternativeId of hashMappings[hash]) {
               if (alternativeId !== hash) {
                 // Skip the one we already tried
-                console.log(`Trying alternative id: ${alternativeId}`);
+
                 element = document.getElementById(alternativeId);
                 if (element) break;
               }
@@ -61,7 +56,6 @@ export default function EventsPageClient({
           }
 
           if (element) {
-            console.log(`Found element with id: ${element.id}`);
             // Calculate position accounting for potential fixed headers
             const headerOffset = 100;
             const elementPosition =
@@ -82,11 +76,10 @@ export default function EventsPageClient({
             // Increase max attempts
             // Retry with increasing delays
             const delay = 300 * (attempts + 1); // Longer delays
-            console.log(`Element not found. Retrying in ${delay}ms...`);
+
             setTimeout(() => scrollToElement(attempts + 1), delay);
             return false; // Not yet successful
           } else {
-            console.log("Failed to find element after all attempts");
           }
 
           return false; // Failed after all attempts
@@ -99,7 +92,6 @@ export default function EventsPageClient({
 
     // Initial load handling
     if (window.location.hash) {
-      console.log("Initial hash detected:", window.location.hash);
       handleHashNavigation();
     }
 

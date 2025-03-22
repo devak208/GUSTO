@@ -65,15 +65,15 @@
       "image": "/events/tech/code-debug.png",
       "description": "Test your problem-solving skills by identifying and fixing bugs in provided code snippets. Race against time to debug and optimize problematic code in various programming languages.",
       "rules": [
-        "Code debugging event with provided code.",
         "Individual participation only.",
+        "Code debugging event with provided code.",
         "Preferred languages: C/Java.",
         "\"Pen and paper\" event, usage of the internet and any other electronic devices is prohibited.",
         "Two rounds, 30 minutes each, no extra time.",
         "Batches allocated based on registration.",
-        "Prize for first successful debugging or best debugging outcome.",
         "Violations result in instant disqualification.",
-        "Misbehavior with volunteers leads to disqualification."
+        "Misbehavior with volunteers leads to disqualification.",
+        "Prize for first successful debugging or best debugging outcome."
       ],
       "coordinator1": {
         "name": "Rashika R",
@@ -93,10 +93,9 @@
       "image": "/events/tech/blind-coding.png",
       "description": "A challenging coding competition where participants get only one chance to execute their program correctly, testing their ability to write error-free code without immediate feedback. This unique format evaluates programming accuracy and problem-solving skills under time pressure.",
       "rules": [
+        "Individual participation only.",
         "EventCode debugging event with provided code.",
-        "Participation Individual participation only.",
         "Preferred_languages C/Java.",
-
         "Format Pen and paper event, usage of internet and any other electronic devices were prohibited.",
         "Rounds Two rounds, 30 minutes each, no extra time.",
         "Batching Batches allocated based on registration.",
@@ -123,9 +122,9 @@
       "image": "/events/tech/tech-quiz.png",
       "description": "Test your knowledge of technology, computer science, engineering concepts, and current tech trends in this fast-paced quiz competition. Demonstrate your technical expertise across diverse domains.",
       "rules": [
+        "Individual participation as already mentioned.",
         "Online quiz based on programming languages (C, Python, Java) and SQL logic, DSA (Data Structures & Algorithms).",
         "Conducted via an online platform in the auditorium [proctored].",
-        "Individual participation.",
         "Section A [Easy], Section B [Medium], Section C [Hard].",
         "Questions cover topics in specified programming languages and SQL logic.",
         "Time limit for completing the quiz.",
@@ -154,6 +153,7 @@
       "image": "/events/tech/hunt-mods.png",
       "description": "Embark on a technical treasure hunt that combines problem-solving, cryptography, and coding skills. Navigate through a series of technical puzzles and challenges to reach the final goal.",
       "rules": [
+        "Individual participation only.",
         "Round 1 rules: 30 mins.",
         "The code has a logical error in it, the participants need to alter the logic and provide the output mentioned.",
         "Preferred programming language: C, Python, Java.",
@@ -186,12 +186,12 @@
       "image": "/events/non-tech/meme-contest.png",
       "description": "Showcase your creativity and humor by creating original memes based on given themes. Express your wit and design skills in this light-hearted yet competitive event.",
       "rules": [
+        "Online Event",
         "Register within the specified date to participate.",
-        "Participants must bring their own necessary devices for the event.",
         "Only individual participation is permitted; no group entries.",
-        "Memes must be created on the spot based on provided situations.",
-        "Winners will receive exciting prizes as rewards.",
-        "Discussion is prohibited, and plagiarism is strictly forbidden."
+        "Memes must be created only based on provided situations.",
+        "Created memes must be uploaded online before the deadline via email (will be provided later).",
+        "Winners will receive exciting prizes as rewards."
       ],
       "coordinator1": {
         "name": "Dhinesh A",
@@ -201,7 +201,7 @@
         "name": "Devak C K",
         "phone": "9047021100"
       },
-      "time": "10:00 AM",
+      "time": "Online Event",
       "venue": "Main Auditorium"
     },
     {
@@ -210,10 +210,11 @@
       "image": "/events/non-tech/photography.png",
       "description": "Capture the essence of the given theme through your camera lens. Demonstrate your photography skills, artistic vision, and ability to tell a story through images.",
       "rules": [
+        "Online Event",
         "Participants must work alone; no group submissions permitted.",
         "A specified theme will guide participants in creating their photo.",
         "Only touch editing is permitted, with plagiarism leading to disqualification.",
-        "Photos must be uploaded online before the deadline via email.",
+        "Photos must be uploaded online before the deadline via email (will be provided later).",
         "Winners will be notified and rewarded with prizes."
       ],
       "coordinator1": {
@@ -224,7 +225,7 @@
         "name": "Sabeshragav G K",
         "phone": "9080033226"
       },
-      "time": "10:00 AM",
+      "time": "Online Event",
       "venue": "Seminar Hall"
     }
   ]

@@ -1,93 +1,273 @@
-# Gusto-Gcee-2025
+# Section Navigation Components
 
+This directory contains reusable components for navigating to different sections across the website with smooth scrolling.
 
+## ScrollToSection
 
-## Getting started
+A generic component that handles navigation to any section on any page.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Usage
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+```jsx
+import ScrollToSection from "@/components/UI/ScrollToSection";
 
-## Add your files
+// Basic usage with sessionStorage approach
+<ScrollToSection
+  targetPage="/about"
+  sectionId="team"
+  className="your-custom-classes"
+>
+  Our Team
+</ScrollToSection>
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+// Using hash navigation in URL
+<ScrollToSection
+  targetPage="/events"
+  sectionId="workshops"
+  className="text-blue-500"
+  useHashInUrl={true}
+>
+  Workshops
+</ScrollToSection>
 
+// With additional onClick handler
+<ScrollToSection
+  targetPage="/events"
+  sectionId="workshops"
+  className="text-blue-500"
+  onClick={() => console.log('Workshops link clicked')}
+>
+  Workshops
+</ScrollToSection>
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/Devakck/gusto-gcee-2025.git
-git branch -M main
-git push -uf origin main
+
+### Props
+
+| Prop         | Type     | Default   | Description                                                         |
+| ------------ | -------- | --------- | ------------------------------------------------------------------- |
+| targetPage   | string   | Required  | The page to navigate to (e.g., "/", "/events")                      |
+| sectionId    | string   | Required  | The ID of the section to scroll to                                  |
+| className    | string   | ""        | CSS classes to apply to the link                                    |
+| onClick      | function | undefined | Additional click handler                                            |
+| useHashInUrl | boolean  | false     | Whether to use hash navigation (#) in URL instead of sessionStorage |
+
+## ScrollToContact
+
+A specialized component that navigates to the contact section on the homepage.
+
+### Usage
+
+```jsx
+import ScrollToContact from "@/components/UI/ScrollToContact";
+
+// Basic usage
+<ScrollToContact className="your-custom-classes">
+  Contact Us
+</ScrollToContact>
+
+// With custom element and styling
+<ScrollToContact className="text-blue-500 hover:underline">
+  <div className="flex items-center gap-2">
+    <Phone size={16} />
+    <span>Get in touch</span>
+  </div>
+</ScrollToContact>
+
+// With additional onClick handler
+<ScrollToContact
+  className="text-blue-500"
+  onClick={() => console.log('Contact link clicked')}
+>
+  Contact Us
+</ScrollToContact>
 ```
 
-## Integrate with your tools
+## ScrollToEvent
 
-- [ ] [Set up project integrations](https://gitlab.com/Devakck/gusto-gcee-2025/-/settings/integrations)
+A specialized component that navigates to specific event sections on the events page.
 
-## Collaborate with your team
+### Usage
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+```jsx
+import ScrollToEvent from "@/components/UI/ScrollToEvent";
 
-## Test and Deploy
+// Navigate to technical events section
+<ScrollToEvent eventType="tech" className="hover:underline">
+  Technical Events
+</ScrollToEvent>
 
-Use the built-in continuous integration in GitLab.
+// Navigate to technical individual events section
+<ScrollToEvent eventType="tech-ind" className="text-blue-500">
+  Technical Individual Events
+</ScrollToEvent>
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+// Navigate to non-technical events section
+<ScrollToEvent eventType="non-tech" className="hover:text-blue-600">
+  Non-Technical Events
+</ScrollToEvent>
+```
 
-***
+## ScrollToTimeline
 
-# Editing this README
+A specialized component that navigates to the timeline section on the homepage.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Usage
 
-## Suggestions for a good README
+```jsx
+import ScrollToTimeline from "@/components/UI/ScrollToTimeline";
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+// Basic usage
+<ScrollToTimeline className="your-custom-classes">
+  View Timeline
+</ScrollToTimeline>
 
-## Name
-Choose a self-explaining name for your project.
+// With custom styling
+<ScrollToTimeline className="text-blue-500 hover:underline">
+  <div className="flex items-center gap-2">
+    <Calendar size={16} />
+    <span>Event Timeline</span>
+  </div>
+</ScrollToTimeline>
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+// With additional onClick handler
+<ScrollToTimeline
+  className="text-blue-500"
+  onClick={() => console.log('Timeline clicked')}
+>
+  Timeline
+</ScrollToTimeline>
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## ContactButton
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+A pre-styled button component for contacting, built on top of ScrollToContact.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Usage
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```jsx
+import ContactButton from "@/components/UI/ContactButton";
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+// Default usage (primary blue button with icon)
+<ContactButton />
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+// Secondary style
+<ContactButton variant="secondary" />
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+// Text only style
+<ContactButton variant="text" />
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+// Custom label
+<ContactButton label="Get in Touch" />
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+// Without icon
+<ContactButton showIcon={false} />
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+// With custom classes (using Tailwind)
+<ContactButton className="mt-4 w-full" />
+```
 
-## License
-For open source projects, say how it is licensed.
+## Integration with Header & Footer
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+The navigation components can be easily integrated into your site's header and footer:
+
+```jsx
+// In Header.tsx
+import ScrollToEvent from "@/components/UI/ScrollToEvent";
+import ScrollToTimeline from "@/components/UI/ScrollToTimeline";
+
+// Create a navigation item renderer
+const renderNavItem = (item) => {
+  if (item.navType === "event") {
+    return (
+      <ScrollToEvent eventType={item.eventType} className="your-nav-classes">
+        {item.name}
+      </ScrollToEvent>
+    );
+  } else if (item.navType === "timeline") {
+    return (
+      <ScrollToTimeline className="your-nav-classes">
+        {item.name}
+      </ScrollToTimeline>
+    );
+  }
+
+  // Regular links...
+};
+```
+
+## How It Works
+
+These components provide two different approaches to section navigation:
+
+1. **SessionStorage approach** (default, useHashInUrl=false):
+
+   - Stores the target section ID in sessionStorage
+   - Navigates to the target page
+   - The target page's useEffect hook detects the stored section and scrolls to it
+
+2. **Hash navigation approach** (useHashInUrl=true):
+   - Appends the section ID as a hash fragment to the URL (e.g., /events#tech)
+   - For same-page navigation, directly updates window.location.hash
+   - Relies on the browser's native hash change behavior and the page's hash change handlers
+
+Choose the appropriate approach based on how the target page handles section navigation.
+
+## Same-Page Navigation
+
+These components handle several navigation scenarios:
+
+1. **Different page to target section**: Navigates to the new page and then scrolls
+2. **Same page, different section**: Directly updates window.location.hash which:
+   - Updates the URL
+   - Triggers native hash change handling
+   - Falls back to manual scrolling if needed
+3. **Already at the section**: No action needed
+
+## Troubleshooting
+
+If you encounter issues with section navigation:
+
+### Common Issues
+
+1. **First navigation works, but subsequent ones don't**:
+
+   - This typically happens when the page has its own hash change handler
+   - Solution: Use the EventNavTester's "Direct Navigation" buttons which use window.location.hash directly
+
+2. **Can't find the section**:
+
+   - Check if section IDs match exactly (case-sensitive)
+   - Verify that sections are not dynamically added after initial load
+   - Try increasing the retry attempts in ScrollToSection.tsx
+
+3. **No smooth scrolling**:
+   - Try adjusting the headerOffset value in ScrollToSection.tsx
+   - Check if the page has CSS that might interfere with scroll behavior
+
+### Debugging
+
+The components include debugging console logs that can help identify issues:
+
+- "ScrollToEvent component mounted for X section" - Confirms the component mounted
+- "Found X section in the DOM" - Confirms the section exists
+- "Warning: X section does not exist in the DOM yet" - Indicates the section might be dynamically loaded
+- "Navigating to event section: X" - Triggered when a link is clicked
+- "Current path:" and "Current hash:" - Shows the current URL information
+
+## Testing
+
+The `EventNavTester` component provides a simple way to test and verify the navigation functionality:
+
+```jsx
+import EventNavTester from "@/components/UI/EventNavTester";
+
+// Add this component to any page to test navigation
+<EventNavTester />;
+```
+
+This component offers two navigation methods:
+
+1. **Component Navigation**: Uses the ScrollToEvent components
+2. **Direct Navigation**: Uses window.location.hash directly as a fallback method
+
+It also displays the current hash to help with debugging.

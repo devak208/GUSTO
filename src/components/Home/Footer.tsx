@@ -10,6 +10,8 @@ import {
   Devak,
   Sabeshragav,
 } from "@/data/AllData";
+import ScrollToContact from "@/components/UI/scroll/ScrollToContact";
+import ScrollToEvent from "@/components/UI/scroll/ScrollToEvent";
 
 const Footer: React.FC = () => {
   return (
@@ -57,28 +59,28 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold text-lg mb-6">Events</h3>
             <ul className="space-y-4">
               <li>
-                <Link
-                  href="/events#tech"
-                  className="hover:text-white text-white/50 transition-colors"
+                <ScrollToEvent
+                  eventType="tech"
+                  className="hover:text-white text-white/50 transition-colors cursor-pointer"
                 >
                   Technical Events
-                </Link>
+                </ScrollToEvent>
               </li>
               <li>
-                <Link
-                  href="/events#tech-ind"
-                  className="hover:text-white text-white/50 transition-colors"
+                <ScrollToEvent
+                  eventType="tech-ind"
+                  className="hover:text-white text-white/50 transition-colors cursor-pointer"
                 >
                   Technical Individual Events
-                </Link>
+                </ScrollToEvent>
               </li>
               <li>
-                <Link
-                  href="/events#non-tech"
-                  className="hover:text-white text-white/50 transition-colors"
+                <ScrollToEvent
+                  eventType="non-tech"
+                  className="hover:text-white text-white/50 transition-colors cursor-pointer"
                 >
                   Non-Technical Events
-                </Link>
+                </ScrollToEvent>
               </li>
             </ul>
           </div>
@@ -114,13 +116,9 @@ const Footer: React.FC = () => {
                 </li>
 
                 <li>
-                  <Link
-                    href="#"
-                    target="_blank"
-                    className="hover:text-white text-white/50 transition-colors"
-                  >
+                  <ScrollToContact className="hover:text-white text-white/50 transition-colors cursor-pointer">
                     Contact
-                  </Link>
+                  </ScrollToContact>
                 </li>
               </ul>
             </div>

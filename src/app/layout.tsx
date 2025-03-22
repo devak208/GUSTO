@@ -2,10 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/UI/theme/theme-provider";
-import { ThemeToggle } from "@/components/UI/theme/theme-toggle";
 import Footer from "@/components/Home/Footer";
 import Header from "@/components/Home/Header";
-import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +22,8 @@ export const viewport: Viewport = {
   userScalable: false,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
-  ]
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -34,7 +32,8 @@ export const metadata: Metadata = {
     template: "%s | GUSTO '25",
     default: "GUSTO '25 | National Level Technical Symposium",
   },
-  description: "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
+  description:
+    "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
   keywords: [
     "GUSTO",
     "Technical Symposium",
@@ -62,14 +61,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://gusto.gcee.ac.in",
     title: "GUSTO '25 | National Level Technical Symposium",
-    description: "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
+    description:
+      "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
     siteName: "GUSTO '25",
     images: ["/logos/AIT/gold.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "GUSTO '25 | National Level Technical Symposium",
-    description: "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
+    description:
+      "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
     images: ["/logos/AIT/gold.png"],
   },
   robots: {
@@ -104,9 +105,6 @@ export default function RootLayout({
         >
           <div className="relative flex flex-col min-h-screen bg-white dark:bg-black">
             {/* AIT Logo */}
-            
-
-
 
             <Header />
             <main className="flex-1 mt-12">{children}</main>
