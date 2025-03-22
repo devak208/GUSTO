@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gusto.gcee.ac.in"),
+  metadataBase: new URL("https://gustogcee.in"),
   title: {
     template: "%s | GUSTO '25",
     default: "GUSTO '25 | National Level Technical Symposium",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://gusto.gcee.ac.in",
+    url: "https://gustogcee.in",
     title: "GUSTO '25 | National Level Technical Symposium",
     description:
       "GUSTO '25 - A National Level Technical Symposium organized by the Department of Information Technology at Government College of Engineering, Erode.",
