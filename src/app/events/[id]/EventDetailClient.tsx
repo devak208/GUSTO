@@ -221,7 +221,9 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         )}
 
         {/* Event Coordinators Section */}
-        <EventCoordinators event={event} />
+        {event.title !== "Meme Contest" && event.title !== "Photography" && (
+          <EventCoordinators event={event} />
+        )}
       </div>
     </div>
   );

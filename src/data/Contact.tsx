@@ -1,4 +1,4 @@
-export type ContactCategory = "final" | "prefinal";
+export type ContactCategory = "final" | "prefinal" | "event";
 
 export interface Contact {
   name: string;
@@ -20,17 +20,17 @@ export const contacts: Contact[] = [
     phone: "+91 9994270889",
     category: "final",
   },
-  {
-    name: "Sathasivam C",
-    role: "Treasurer",
-    phone: "+91 9080687054",
-    category: "final",
-  },
+  // {
+  //   name: "Sathasivam C",
+  //   role: "Treasurer",
+  //   phone: "+91 9080687054",
+  //   category: "final",
+  // },
   {
     name: "Santhakumaran C",
     role: "Joint Secretary",
     phone: "+91 9626202811",
-    category: "prefinal",
+    category: "final",
   },
   {
     name: "Sorna Mallika M",
@@ -43,5 +43,17 @@ export const contacts: Contact[] = [
     role: "Joint Treasurer",
     phone: "+91 7418024057",
     category: "prefinal",
+  },
+  {
+    name: "Ayyanar S",
+    role: "Technical Coordinator",
+    phone: "+91 9363446454",
+    category: "event",
+  },
+  {
+    name: "Santhakumaran C",
+    role: "Non-Technical Coordinator",
+    phone: "+91 9626202811",
+    category: "event",
   },
 ];

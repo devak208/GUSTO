@@ -88,7 +88,7 @@ export default function ContactSection() {
       acc[contact.category].push(contact);
       return acc;
     },
-    { final: [], prefinal: [] }
+    { final: [], prefinal: [], event: [] }
   );
 
   return (
@@ -110,15 +110,21 @@ export default function ContactSection() {
         </motion.div>
 
         <ContactCategorySection
-          title="Final Year Coordinators"
+          title="Coordinators"
           contacts={contactsByCategory.final}
+          isLastSection={true}
+        />
+
+        {/* <ContactCategorySection
+          title="Prefinal Year Coordinators"
+          contacts={contactsByCategory.prefinal}
         />
 
         <ContactCategorySection
-          title="Prefinal Year Coordinators"
-          contacts={contactsByCategory.prefinal}
+          title="Overall Event Coordinators"
+          contacts={contactsByCategory.event}
           isLastSection={true}
-        />
+        /> */}
       </div>
     </div>
   );

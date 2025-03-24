@@ -84,7 +84,7 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
                             layoutId={`description-${event.id}-${id}`}
                             className="font-normal text-sm text-slate-600 dark:text-gray-400 mb-1 relative z-50"
                           >
-                            {event.date}
+                            {event.time}
                           </motion.p>
 
                           <p className="font-normal text-sm text-slate-600 dark:text-gray-400 mb-3 relative z-50 line-clamp-3">

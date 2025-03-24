@@ -7,17 +7,11 @@
       "description": "Showcase your research and technical knowledge through a formal paper presentation. Present innovative ideas and solutions to technical challenges in this competitive academic forum.",
       "rules": [
         "Team participation is allowed maximum up to three members.",
-
         "Participant must submit abstract of their paper during the registration process on or before 26th March 2024.",
-
         "Papers will be shortlisted based on the quality, relevance and originality of the abstract.",
-
         "Author of the shortlisted paper will be notified of acceptance via mail before 28th March 2024.",
-
         "Accepted authors will receive instructions on how to proceed with full paper submission. Registration and payment must be completed on or before 30th March 2024.",
-
         "Author of accepted paper are asked to be ready with oral PowerPoint presentation for 7 to 10 min which will be the on-stage event.",
-
         "Winning contestant will be rewarded by the attractive cash prizes."
       ],
       "coordinator1": {
@@ -143,7 +137,7 @@
         "name": "Sanuktha A",
         "phone": "9361334075"
       },
-      "time": "10:00 AM",
+      "time": "10:45 AM",
       "venue": "Main Auditorium",
       "registrationLink": "https://example.com/register/aiml"
     },
@@ -174,8 +168,8 @@
         "name": "Ganga B",
         "phone": "8072017045"
       },
-      "time": "10:00 AM",
-      "venue": "Main Auditorium",
+      "time": "12:20 AM",
+      "venue": "IT Computer Lab 2",
       "registrationLink": "https://example.com/register/aiml"
     }
   ],
