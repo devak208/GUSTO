@@ -24,7 +24,7 @@ export const committees: Committee[] = [
         role: "Final Year",
       },
       {
-        name: "T.Kaviyarasu",
+        name: "V.Sakthi devi",
         role: "Pre-Final Year",
       },
     ],
@@ -283,7 +283,7 @@ export const committees: Committee[] = [
         role: "Pre-Final Year",
       },
       {
-        name: "M.Sorna Mallika",
+        name: "C.Suvetharani",
         role: "Pre-Final Year",
       },
     ],

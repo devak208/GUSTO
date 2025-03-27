@@ -97,15 +97,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white dark:bg-black overflow-x-hidden`}
         suppressHydrationWarning
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider disableTransitionOnChange>
           <div className="relative flex flex-col min-h-screen bg-white dark:bg-black">
-            {/* AIT Logo */}
-
             <Header />
             <main className="flex-1 mt-12">{children}</main>
             <Footer />
