@@ -195,8 +195,7 @@
         "name": "Devak C K",
         "phone": "9047021100"
       },
-      "time": "Online Event",
-      "venue": "Main Auditorium"
+      "time": "Online Event"
     },
     {
       "id": "non-tech-2",
@@ -219,8 +218,7 @@
         "name": "Sabeshragav G K",
         "phone": "9080033226"
       },
-      "time": "Online Event",
-      "venue": "Seminar Hall"
+      "time": "Online Event"
     }
   ]
 }

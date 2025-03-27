@@ -1,7 +1,11 @@
 "use client";
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
-import React, { MouseEvent as ReactMouseEvent, useState } from "react";
+import React, {
+  MouseEvent as ReactMouseEvent,
+  useState,
+  useEffect,
+} from "react";
 import { CanvasRevealEffect } from "@/components/UI/aceternity/canvas-reveal-effect";
 import { cn } from "@/lib/utils";
 
@@ -18,11 +22,44 @@ export const CardSpotlight = ({
 } & React.HTMLAttributes<HTMLDivElement>) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Always compute the mask image regardless of dark mode to maintain hooks order
+  const maskImage = useMotionTemplate`
+    radial-gradient(
+      ${radius}px circle at ${mouseX}px ${mouseY}px,
+      white,
+      transparent 80%
+    )
+  `;
+
+  useEffect(() => {
+    // Check if dark mode is active
+    const isDark = document.documentElement.classList.contains("dark");
+    setIsDarkMode(isDark);
+
+    // Optional: Listen for changes in dark mode
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const isDark = document.documentElement.classList.contains("dark");
+          setIsDarkMode(isDark);
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
+
   function handleMouseMove({
     currentTarget,
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
+    if (!isDarkMode) return;
+
     const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
@@ -30,8 +67,9 @@ export const CardSpotlight = ({
   }
 
   const [isHovering, setIsHovering] = useState(false);
-  const handleMouseEnter = () => setIsHovering(true);
+  const handleMouseEnter = () => isDarkMode && setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
+
   return (
     <div
       className={cn(
@@ -43,20 +81,19 @@ export const CardSpotlight = ({
       onMouseLeave={handleMouseLeave}
       {...props}
     >
+      {/* Always render the motion.div but conditionally show it */}
       <motion.div
-        className="pointer-events-none absolute z-0 -inset-px rounded-md opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
+        className={`pointer-events-none absolute z-0 -inset-px rounded-md opacity-0 transition duration-300 ${
+          isDarkMode ? "group-hover/spotlight:opacity-100" : ""
+        }`}
         style={{
           backgroundColor: color,
-          maskImage: useMotionTemplate`
-            radial-gradient(
-              ${radius}px circle at ${mouseX}px ${mouseY}px,
-              white,
-              transparent 80%
-            )
-          `,
+          maskImage: maskImage,
+          opacity: isDarkMode ? undefined : 0,
+          pointerEvents: isDarkMode ? undefined : "none",
         }}
       >
-        {isHovering && (
+        {isHovering && isDarkMode && (
           <CanvasRevealEffect
             animationSpeed={5}
             containerClassName="bg-transparent absolute inset-0 pointer-events-none"

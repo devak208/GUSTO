@@ -48,9 +48,11 @@ export function EventCard({ event }: EventCardProps) {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full">
-                    {event.venue}
-                  </span>
+                  {event?.venue && (
+                    <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full">
+                      {event.venue}
+                    </span>
+                  )}
                   {event.category && (
                     <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-1 rounded-full">
                       {event.category}

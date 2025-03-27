@@ -28,7 +28,7 @@ export function EventsSection({ title, events }: EventsSectionProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {title}
+        {title}s
       </motion.h2>
 
       <motion.div

@@ -1,8 +1,8 @@
 export const gustoMail = "gustoreg25gcee@gmail.com";
 export const finalDate = "2025-04-22T23:59:59"; //YYYY-MM-DDTHH:MM:SS
+export const videoId = "DuqtksAqkiI";
 export const RegistrationLink = "https://forms.gle/DLmMjeybxsgkUeEQ7";
 export const instagram = "https://www.instagram.com/gcee_gusto_";
-export const youtube =
-  "https://www.youtube.com/channel/UCafTnNmbNfoXKwYSR9EdfSg";
+export const youtube = "https://www.youtube.com/@gusto-25";
 export const Devak = "https://www.linkedin.com/in/devak-c-k-b53a73308";
 export const Sabeshragav = "https://www.linkedin.com/in/sabeshragavgk";

@@ -38,7 +38,7 @@ export function ExpandableEventCard({ events }: ExpandableEventCardProps) {
       {Object.entries(eventsByCategory).map(([category, categoryEvents]) => (
         <div key={category} className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white border-b pb-3 border-slate-200 dark:border-slate-700">
-            {category}
+            {category}s
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
             {categoryEvents.map((event) => (

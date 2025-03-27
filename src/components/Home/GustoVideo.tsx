@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { videoId } from "@/data/AllData";
 
 export default function GustoVideo() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,7 +16,6 @@ export default function GustoVideo() {
     setIsClient(true);
 
     // Set video URL only on client side
-    const videoId = "iiWIcgjcspI"; // Updated to the correct video ID
     const origin =
       typeof window !== "undefined"
         ? encodeURIComponent(window.location.origin)

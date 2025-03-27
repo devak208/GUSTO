@@ -2,6 +2,30 @@ import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { StarsBackground } from "@/components/UI/aceternity/stars-background";
 import CommitteeCard from "@/components/committee/CommitteeCard";
 import { committees } from "@/data/Committee";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Committee",
+  description:
+    "Meet the dedicated team behind Gusto '25. Each committee plays a crucial role in making this symposium a success.",
+  keywords: [
+    "Gusto",
+    "committee",
+    "symposium",
+    "team",
+    "IT symposium",
+    "Gusto 2025",
+  ],
+  openGraph: {
+    title: "Committee",
+    description:
+      "Meet the dedicated team behind Gusto '25. Each committee plays a crucial role in making this symposium a success.",
+    url: "/committee",
+    siteName: "Gusto ' 25",
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function CommitteePage() {
   return (
