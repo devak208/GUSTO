@@ -318,7 +318,7 @@ export default function HomePage() {
               Proudly Presented By
             </p>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-              Association of Information Technology
+              Association of Information Technologists
             </h2>
             <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
               Government College of Engineering, Erode

@@ -64,7 +64,7 @@ const CountdownTimer = () => {
         <div className="h-60 flex flex-col text-4xl md:text-5xl font-bold text-slate-900 dark:text-white justify-center items-center">
           <h1 className="relative">Registration Closed!</h1>
           <div className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
-            We'll see you at our next event
+            We'll see you at our next celebration
           </div>
         </div>
       ) : (
@@ -123,8 +123,8 @@ const CountdownTimer = () => {
             </div>
           </div>
 
-          <h2 className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
-            Every second counts
+          <h2 className="text-lg md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
+            Registration closes on 20th April 2025
           </h2>
         </>
       )}
