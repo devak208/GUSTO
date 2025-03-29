@@ -1,6 +1,6 @@
 "use client";
 
-import { finalDate } from "@/data/AllData";
+import { finalDate, isClosed } from "@/data/AllData";
 import React, { useState, useEffect } from "react";
 
 type TimeLeft = {
@@ -60,62 +60,74 @@ const CountdownTimer = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 pt-6 pb-10 bg-gray-300 dark:bg-neutral-900 rounded-lg">
-      <h2 className="text-2xl md:text-3xl font-medium text-slate-800 dark:text-white mb-8 text-center">
-        The clock is ticking away !
-      </h2>
-
-      <div className="relative flex justify-center items-end space-x-1 md:space-x-3">
-        <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
-            DAYS
-          </span>
-          <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
-            {formatNumber(timeLeft.days)}
+      {isClosed ? (
+        <div className="h-60 flex flex-col text-4xl md:text-5xl font-bold text-slate-900 dark:text-white justify-center items-center">
+          <h1 className="relative">Registration Closed!</h1>
+          <div className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
+            We'll see you at our next event
           </div>
         </div>
+      ) : (
+        <>
+          <h2 className="text-2xl md:text-3xl font-medium text-slate-800 dark:text-white mb-8 text-center">
+            The clock is ticking away !
+          </h2>
 
-        <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
-          :
-        </div>
+          <div className="relative flex justify-center items-end space-x-1 md:space-x-3">
+            <div className="flex flex-col items-center">
+              <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
+                DAYS
+              </span>
+              <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
+                {formatNumber(timeLeft.days)}
+              </div>
+            </div>
 
-        <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
-            HOURS
-          </span>
-          <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
-            {formatNumber(timeLeft.hours)}
+            <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
+              :
+            </div>
+
+            <div className="flex flex-col items-center">
+              <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
+                HOURS
+              </span>
+              <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
+                {formatNumber(timeLeft.hours)}
+              </div>
+            </div>
+
+            <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
+              :
+            </div>
+
+            <div className="flex flex-col items-center">
+              <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
+                MINUTES
+              </span>
+              <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
+                {formatNumber(timeLeft.minutes)}
+              </div>
+            </div>
+
+            <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
+              :
+            </div>
+
+            <div className="flex flex-col items-center">
+              <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
+                SECONDS
+              </span>
+              <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
+                {formatNumber(timeLeft.seconds)}
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
-          :
-        </div>
-
-        <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
-            MINUTES
-          </span>
-          <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
-            {formatNumber(timeLeft.minutes)}
-          </div>
-        </div>
-
-        <div className="text-4xl md:text-8xl font-bold text-slate-900 dark:text-white mb-1 sm:mb-3 mx-1">
-          :
-        </div>
-
-        <div className="flex flex-col items-center">
-          <span className="text-rose-500 dark:text-rose-400 text-sm uppercase font-bold mb-1">
-            SECONDS
-          </span>
-          <div className="text-5xl md:text-9xl font-bold text-slate-900 dark:text-white leading-none">
-            {formatNumber(timeLeft.seconds)}
-          </div>
-        </div>
-      </div>
-      <h2 className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
-        Every second counts
-      </h2>
+          <h2 className="text-xl md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
+            Every second counts
+          </h2>
+        </>
+      )}
     </div>
   );
 };

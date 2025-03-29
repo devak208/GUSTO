@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/logos/AIT/bronze.png",
-    shortcut: "/logos/AIT/bronze.png",
+    icon: "/logos/AIT/gold.png",
+    shortcut: "/logos/AIT/gold.png",
     apple: "/logos/AIT/gold.png",
   },
   openGraph: {

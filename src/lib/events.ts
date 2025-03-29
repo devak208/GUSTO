@@ -6,7 +6,18 @@ export type Event = {
   name: string;
   image: string;
   description: string;
-  rules: string[];
+  rules:
+    | string[]
+    | {
+        round1: {
+          title: string;
+          rules: string[];
+        };
+        round2: {
+          title: string;
+          rules: string[];
+        };
+      };
   time: string;
   venue: string;
   location?: string;

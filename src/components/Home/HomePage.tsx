@@ -8,7 +8,7 @@ import { Cover } from "@/components/UI/aceternity/cover";
 import MagicButton from "@/components/UI/aceternity/MagicButton";
 import { getAllEvents } from "@/lib/events";
 import Link from "next/link";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { ExpandableEventCard } from "@/components/Events/ExpandableEventCard";
 import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
@@ -20,6 +20,7 @@ import { useTheme } from "next-themes";
 import EventsTimeline from "@/components/Home/EventsTimeline";
 import GoogleMapComponent from "@/components/Home/GoogleMap";
 import ContactSection from "@/components/Home/ContactSection";
+import { isClosed } from "@/data/AllData";
 
 export default function HomePage() {
   const { theme } = useTheme();
@@ -329,14 +330,25 @@ export default function HomePage() {
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#events" onClick={(e) => scrollToSection(e, "events")}>
-              <MagicButton
-                title="Registration open"
-                icon={<FaArrowDown />}
-                position="right"
-                otherClasses="px-6 py-2 text-base font-bold bg-black border-blue-500/20"
-              />
-            </a>
+            {isClosed ? (
+              <div>
+                <MagicButton
+                  title="Registration Closed"
+                  icon={<FaCheckCircle />}
+                  position="right"
+                  otherClasses="px-6 py-2 text-base font-bold bg-black border-blue-500/20"
+                />
+              </div>
+            ) : (
+              <a href="#events" onClick={(e) => scrollToSection(e, "events")}>
+                <MagicButton
+                  title="Registration open"
+                  icon={<FaArrowDown />}
+                  position="right"
+                  otherClasses="px-6 py-2 text-base font-bold bg-black border-blue-500/20"
+                />
+              </a>
+            )}
           </div>
         </div>
       </div>

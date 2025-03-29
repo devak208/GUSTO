@@ -11,7 +11,7 @@ import { ShootingStars } from "@/components/UI/aceternity/shooting-stars";
 import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { FaArrowLeft } from "react-icons/fa";
 import { CardSpotlight } from "@/components/UI/aceternity/card-spotlight";
-import { RegistrationLink } from "@/data/AllData";
+import { isClosed, RegistrationLink } from "@/data/AllData";
 import EventCoordinators from "@/components/Events/EventCoordinators";
 import { Clock } from "lucide-react";
 
@@ -170,27 +170,36 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-8 relative z-10"
-          >
-            <Link
-              href={RegistrationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200"
+          {isClosed ? (
+            <div className="mt-8 relative z-10">
+              <div className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
+                Registration Closed
+              </div>
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-8 relative z-10"
             >
-              Register Now
-            </Link>
-          </motion.div>
+              <Link
+                href={RegistrationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200"
+              >
+                Register Now
+              </Link>
+            </motion.div>
+          )}
 
           {/* Meteor effect */}
           <Meteors number={20} />
         </motion.div>
 
-        {event.rules && (
+        {/* Rules section with type checking */}
+        {Array.isArray(event.rules) ? (
           <motion.div
             id="rules"
             initial={{ opacity: 0, y: 20 }}
@@ -209,9 +218,56 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
               <div className="text-slate-700 dark:text-neutral-200 mt-4 relative z-20">
                 Follow these rules to participate in the event:
                 <ul className="list-none mt-4 space-y-3">
-                  {event.rules.map((rule, index) => (
+                  {event.rules.map((rule: string, index: number) => (
                     <RuleStep key={index} title={rule} />
                   ))}
+                </ul>
+              </div>
+              <p className="text-slate-600 dark:text-neutral-300 mt-6 relative z-20 text-sm">
+                Adhering to these rules ensures fair competition and a great
+                experience for all participants.
+              </p>
+            </CardSpotlight>
+          </motion.div>
+        ) : (
+          <motion.div
+            id="rules"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-12 mb-8 relative z-10"
+          >
+            <CardSpotlight
+              className="w-full bg-white dark:bg-neutral-950"
+              radius={500}
+              color="#262626"
+            >
+              <p className="text-2xl font-bold relative z-20 text-slate-900 dark:text-white mb-4">
+                Event Rules
+              </p>
+              <div className="text-slate-700 dark:text-neutral-200 mt-4 relative z-20">
+                Follow these rules to participate in the event:
+                <h1 className="text-2xl font-bold mt-4">
+                  {event.rules.round1.title}
+                </h1>
+                <ul className="list-none mt-4 space-y-3">
+                  {event.rules.round1.rules.map(
+                    (rule: string, index: number) => (
+                      <RuleStep key={index} title={rule} />
+                    )
+                  )}
+                </ul>
+              </div>
+              <div className="text-slate-700 dark:text-neutral-200 mt-4 relative z-20">
+                <h1 className="text-2xl font-bold mt-8">
+                  {event.rules.round2.title}
+                </h1>
+                <ul className="list-none mt-4 space-y-3">
+                  {event.rules.round2.rules.map(
+                    (rule: string, index: number) => (
+                      <RuleStep key={index} title={rule} />
+                    )
+                  )}
                 </ul>
               </div>
               <p className="text-slate-600 dark:text-neutral-300 mt-6 relative z-20 text-sm">

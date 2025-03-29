@@ -9,6 +9,7 @@ import {
   youtube,
   Devak,
   Sabeshragav,
+  isClosed,
 } from "@/data/AllData";
 import ScrollToContact from "@/components/UI/scroll/ScrollToContact";
 import ScrollToEvent from "@/components/UI/scroll/ScrollToEvent";
@@ -95,13 +96,19 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-4">
               <li>
-                <Link
-                  href={RegistrationLink}
-                  target="_blank"
-                  className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-                >
-                  Registration Form
-                </Link>
+                {isClosed ? (
+                  <div className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                    Registration Form
+                  </div>
+                ) : (
+                  <Link
+                    href={RegistrationLink}
+                    target="_blank"
+                    className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Registration Form
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
