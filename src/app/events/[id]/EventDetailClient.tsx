@@ -157,18 +157,29 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="prose prose-lg max-w-none mb-8 relative z-10"
-          >
-            <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-              Description
-            </h2>
-            <p className="text-slate-700 dark:text-gray-300">
-              {event.description}
-            </p>
-          </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.3 }}
+  className="prose prose-lg max-w-none mb-8 relative z-10"
+>
+  <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+    Description
+  </h2>
+  <p className="text-slate-700 dark:text-gray-300">{event.description}</p>
+  {event.submission_Email && (
+    <div className="my-4">
+      <p className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+        Abstract Submission Email
+      </p>
+      <a
+        className="text-blue-600 font-medium dark:text-blue-400 hover:underline text-xl"
+        href={`mailto:${event.submission_Email}`}
+      >
+        {event.submission_Email}
+      </a>
+    </div>
+  )}
+</motion.div>
 
           {isClosed ? (
             <div className="mt-8 relative z-10">
@@ -220,6 +231,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
                 <ul className="list-none mt-4 space-y-3">
                   {event.rules.map((rule: string, index: number) => (
                     <RuleStep key={index} title={rule} />
+
                   ))}
                 </ul>
               </div>

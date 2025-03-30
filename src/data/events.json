@@ -23,7 +23,8 @@
         "phone": "9344347148"
       },
       "time": "10:00 AM",
-      "venue": "Main Auditorium"
+      "venue": "Main Auditorium",
+      "submission_Email": "gustosubmission@gmail.com"
     },
     {
       "id": "tech-2",
@@ -49,7 +50,8 @@
         "phone": "8870822957"
       },
       "time": "10:00 AM",
-      "venue": "IT Computer Lab 1"
+      "venue": "IT Computer Lab 1",
+      "submission_Email": "gustosubmission@gmail.com"
     }
   ],
   "technicalIndividualEvents": [
