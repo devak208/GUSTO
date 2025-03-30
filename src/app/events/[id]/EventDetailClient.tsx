@@ -172,7 +172,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         Abstract Submission Email
       </p>
       <a
-        className="text-blue-600 font-medium dark:text-blue-400 hover:underline text-xl"
+        className="text-blue-600 font-medium dark:text-blue-400 hover:underline text-lg"
         href={`mailto:${event.submission_Email}`}
       >
         {event.submission_Email}
@@ -291,9 +291,9 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         )}
 
         {/* Event Coordinators Section */}
-        {event.title !== "Meme Contest" && event.title !== "Photography" && (
+     
           <EventCoordinators event={event} />
-        )}
+      
       </div>
     </div>
   );
