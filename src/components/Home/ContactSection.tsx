@@ -20,7 +20,7 @@ const ContactCard = ({
     className="bg-white/90 dark:bg-black rounded-xl p-6 shadow-lg backdrop-blur-sm border border-gray-200 dark:border-gray-800"
   >
     <div className="flex flex-col items-center text-center">
-      <div className="bg-gray-100 dark:bg-black p-3 rounded-full mb-4">
+      <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded-full mb-4">
         <User className="h-6 w-6 text-gray-700 dark:text-gray-300" />
       </div>
       <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
