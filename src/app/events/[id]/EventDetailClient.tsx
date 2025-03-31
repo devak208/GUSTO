@@ -12,7 +12,7 @@ import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { FaArrowLeft } from "react-icons/fa";
 import { CardSpotlight } from "@/components/UI/aceternity/card-spotlight";
 import { isClosed, RegistrationLink } from "@/data/AllData";
-import EventCoordinators from "@/components/Events/EventCoordinators";
+// import EventCoordinators from "@/components/Events/EventCoordinators";
 import { Clock } from "lucide-react";
 
 interface EventDetailClientProps {
@@ -74,8 +74,8 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         darkModeFill="white"
       />
 
-      <div className="container mt-14 mx-auto px-4 py-12 z-10 relative max-w-5xl">
-        <div className="mb-8">
+      <div className="container mx-auto px-4 py-12 z-10 relative max-w-5xl">
+        <div className="mb-4">
           <Link href="/events">
             <button className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-neutral-950 dark:hover:bg-neutral-950/70 text-slate-800 dark:text-white font-medium rounded-lg border">
               <FaArrowLeft className="h-3.5 w-3.5" />
@@ -157,33 +157,35 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
           </motion.div>
 
           <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, delay: 0.3 }}
-  className="prose prose-lg max-w-none mb-8 relative z-10"
->
-  <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-    Description
-  </h2>
-  <p className="text-slate-700 dark:text-gray-300">{event.description}</p>
-  {event.submission_Email && (
-    <div className="my-4">
-      <p className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-        Abstract Submission Email
-      </p>
-      <a
-        className="text-blue-600 font-medium dark:text-blue-400 hover:underline text-lg"
-        href={`mailto:${event.submission_Email}`}
-      >
-        {event.submission_Email}
-      </a>
-    </div>
-  )}
-</motion.div>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="prose prose-lg max-w-none mb-8 relative z-10"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+              Description
+            </h2>
+            <p className="text-slate-700 dark:text-gray-300">
+              {event.description}
+            </p>
+            {event.submission_Email && (
+              <div className="my-6">
+                <p className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+                  Abstract Submission Email
+                </p>
+                <a
+                  className="text-blue-600 font-medium dark:text-blue-400 hover:underline"
+                  href={`mailto:${event.submission_Email}`}
+                >
+                  {event.submission_Email}
+                </a>
+              </div>
+            )}
+          </motion.div>
 
           {isClosed ? (
             <div className="mt-8 relative z-10">
-              <div className="inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
+              <div className="hover:cursor-not-allowed inline-flex items-center justify-center gap-2 px-8 py-2 bg-slate-100 dark:bg-[#1e293b] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
                 Registration Closed
               </div>
             </div>
@@ -216,7 +218,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 mb-8 relative z-10"
+            className="mt-4 mb-8 relative z-10"
           >
             <CardSpotlight
               className="w-full bg-white dark:bg-neutral-950"
@@ -231,7 +233,6 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
                 <ul className="list-none mt-4 space-y-3">
                   {event.rules.map((rule: string, index: number) => (
                     <RuleStep key={index} title={rule} />
-
                   ))}
                 </ul>
               </div>
@@ -291,9 +292,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         )}
 
         {/* Event Coordinators Section */}
-     
-          <EventCoordinators event={event} />
-      
+        {/* <EventCoordinators event={event} /> */}
       </div>
     </div>
   );

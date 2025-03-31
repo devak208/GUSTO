@@ -1,4 +1,4 @@
-export type ContactCategory = "final" | "prefinal" | "event";
+export type ContactCategory = "overall" | "registration" | "tech" | "nonTech";
 
 export interface Contact {
   name: string;
@@ -12,13 +12,13 @@ export const contacts: Contact[] = [
     name: "Dilliraj G",
     role: "Secretary",
     phone: "+91 9345816238",
-    category: "final",
+    category: "overall",
   },
   {
     name: "Subha Sri S",
     role: "Secretary",
     phone: "+91 9994270889",
-    category: "final",
+    category: "overall",
   },
   // {
   //   name: "Sathasivam C",
@@ -26,34 +26,40 @@ export const contacts: Contact[] = [
   //   phone: "+91 9080687054",
   //   category: "final",
   // },
-  //{
-  //  name: "Santhakumaran C",
-  //  role: "Joint Secretary",
-  //  phone: "+91 9626202811",
-   /// category: "final",
-  //},
-  {
-    name: "Sorna Mallika M",
-    role: "Joint Secretary",
-    phone: "+91 8015754245",
-    category: "prefinal",
-  },
-  {
-    name: "Muruganantham R",
-    role: "Joint Treasurer",
-    phone: "+91 7418024057",
-    category: "prefinal",
-  },
   {
     name: "Ayyanar S",
     role: "Technical Coordinator",
     phone: "+91 9363446454",
-    category: "event",
+    category: "tech",
+  },
+  {
+    name: "Sanjay Kanth C",
+    role: "Technical Coordinator",
+    phone: "+91 7904546645",
+    category: "tech",
   },
   {
     name: "Santhakumaran C",
-    role: "Non-Technical Coordinator",
+    role: "Joint Secretary",
     phone: "+91 9626202811",
-    category: "event",
+    category: "nonTech",
+  },
+  {
+    name: "Sorna Mallika M",
+    role: "Joint Secretary",
+    phone: "+91 8015754245",
+    category: "nonTech",
+  },
+  {
+    name: "Sathya M",
+    role: "Registration Coordinator",
+    phone: "+91 73051 90935",
+    category: "registration",
+  },
+  {
+    name: "Muruganantham R",
+    role: "Registration Coordinator",
+    phone: "+91 7418024057",
+    category: "registration",
   },
 ];

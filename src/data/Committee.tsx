@@ -271,7 +271,8 @@ export const committees: Committee[] = [
   },
   {
     name: "Culturals",
-    description: "Plans and coordinates cultural events, providing a stage for artistic and creative performances.",
+    description:
+      "Plans and coordinates cultural events, providing a stage for artistic and creative performances.",
     staffCoordinator: {
       name: "Dr.K.G.Maheswari & Dr.M.N.Sudha",
       role: "Professor",
@@ -453,8 +454,7 @@ export const committees: Committee[] = [
   },
   {
     name: "Photography Contest Committee",
-    description:
-      "Organizes and manages photography contests, ensuring a platform for creative expression and showcasing talent.",
+    description: "Oversees photography contests and talent showcase.",
     staffCoordinator: {
       name: "Dr. M.N.Sudha",
       role: "Professor",

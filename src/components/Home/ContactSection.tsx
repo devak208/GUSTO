@@ -63,7 +63,7 @@ const ContactCategorySection = ({
         </motion.h3>
 
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto ${
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto ${
             !isLastSection ? "mb-12" : ""
           }`}
         >
@@ -88,7 +88,7 @@ export default function ContactSection() {
       acc[contact.category].push(contact);
       return acc;
     },
-    { final: [], prefinal: [], event: [] }
+    { overall: [], registration: [], tech: [], nonTech: [] }
   );
 
   return (
@@ -110,21 +110,25 @@ export default function ContactSection() {
         </motion.div>
 
         <ContactCategorySection
-          title="Coordinators"
-          contacts={contactsByCategory.final}
-          isLastSection={true}
-        />
-
-        {/* <ContactCategorySection
-          title="Prefinal Year Coordinators"
-          contacts={contactsByCategory.prefinal}
+          title="Overall Coordinators"
+          contacts={contactsByCategory.overall}
         />
 
         <ContactCategorySection
-          title="Overall Event Coordinators"
-          contacts={contactsByCategory.event}
+          title="Technical Coordinators"
+          contacts={contactsByCategory.tech}
+        />
+
+        <ContactCategorySection
+          title="Non-Technical Coordinators"
+          contacts={contactsByCategory.nonTech}
+        />
+
+        <ContactCategorySection
+          title="Registration Coordinators"
+          contacts={contactsByCategory.registration}
           isLastSection={true}
-        /> */}
+        />
       </div>
     </div>
   );
