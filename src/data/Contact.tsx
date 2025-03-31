@@ -53,7 +53,7 @@ export const contacts: Contact[] = [
   {
     name: "Sathya M",
     role: "Registration Coordinator",
-    phone: "+91 73051 90935",
+    phone: "+91 7305190935",
     category: "registration",
   },
   {
