@@ -15,7 +15,7 @@ export const busRoutes = [
       { time: "8:20 am", type: "Blue bus (staff bus)", destination: "IRTT" },
       { time: "8:25 am", type: "Town bus", destination: "IRTT" },
     ],
-    stopName: "IRRT College (Main Campus)",
+    stopName: "IRTT College (Main Campus)",
     distance: "8 km",
     duration: "15 min",
   },

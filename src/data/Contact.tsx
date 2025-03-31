@@ -26,12 +26,12 @@ export const contacts: Contact[] = [
   //   phone: "+91 9080687054",
   //   category: "final",
   // },
-  {
-    name: "Santhakumaran C",
-    role: "Joint Secretary",
-    phone: "+91 9626202811",
-    category: "final",
-  },
+  //{
+  //  name: "Santhakumaran C",
+  //  role: "Joint Secretary",
+  //  phone: "+91 9626202811",
+   /// category: "final",
+  //},
   {
     name: "Sorna Mallika M",
     role: "Joint Secretary",
