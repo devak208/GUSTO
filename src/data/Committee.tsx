@@ -24,7 +24,7 @@ export const committees: Committee[] = [
         role: "Final Year",
       },
       {
-        name: "V.Sakthi devi",
+        name: "V.Sakthi Devi",
         role: "Pre-Final Year",
       },
     ],
@@ -228,7 +228,7 @@ export const committees: Committee[] = [
         role: "Final Year",
       },
       {
-        name: "R.Rajesh",
+        name: "N.Prasad",
         role: "Pre-Final Year",
       },
     ],
@@ -270,11 +270,29 @@ export const committees: Committee[] = [
     ],
   },
   {
+    name: "Culturals",
+    description: "Plans and coordinates cultural events, providing a stage for artistic and creative performances.",
+    staffCoordinator: {
+      name: "Dr.K.G.Maheswari & Dr.M.N.Sudha",
+      role: "Professor",
+    },
+    studentCoordinators: [
+      {
+        name: "S.V.Aadhithya",
+        role: "Final Year",
+      },
+      {
+        name: "G.L.Jeevika",
+        role: "Pre-Final Year",
+      },
+    ],
+  },
+  {
     name: "Chief Guest Committee",
     description:
       "Manages invitations and arrangements for chief guests and VIPs.",
     staffCoordinator: {
-      name: "Dr. S.Thilagavathi",
+      name: "Dr. B.V.Prakash",
       role: "Professor",
     },
     studentCoordinators: [
@@ -352,7 +370,7 @@ export const committees: Committee[] = [
     },
     studentCoordinators: [
       {
-        name: "R.Rasika",
+        name: "R.Rashika",
         role: "Final Year",
       },
       {
@@ -434,9 +452,9 @@ export const committees: Committee[] = [
     ],
   },
   {
-    name: "Non-Technical Project Committee",
+    name: "Photography Contest Committee",
     description:
-      "Oversees non-technical project presentations and exhibitions.",
+      "Organizes and manages photography contests, ensuring a platform for creative expression and showcasing talent.",
     staffCoordinator: {
       name: "Dr. M.N.Sudha",
       role: "Professor",
