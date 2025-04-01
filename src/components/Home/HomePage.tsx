@@ -107,7 +107,7 @@ export default function HomePage() {
     };
   }, []);
 
-  const welcomeText = ` Welcome to our`;
+  const GCEENAME = `Government College of Engineering, Erode`;
   const aboutText = (
     <>
       Join us at Gusto 25 on{" "}
@@ -304,8 +304,9 @@ export default function HomePage() {
               priority
             />
           </Link>
-          <div className="text-2xl md:text-2xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-            Government College of Engineering, Erode
+          <div className="text-2xl md:text-2xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
+           
+            <TextGenerateEffect words={GCEENAME} />
           </div>
           <div>
             <h1
@@ -313,7 +314,7 @@ export default function HomePage() {
                 "my-5 font-bold text-slate-900 dark:text-white relative z-20 text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               )}
             >
-              <TextGenerateEffect words={welcomeText} />
+              
             </h1>
           </div>
 
@@ -337,9 +338,9 @@ export default function HomePage() {
               Proudly Presented By
             </p>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-            Department of Information Technologists
+            Department of Information Technology
             </h2>
-          </div>
+          </div>  
 
           <div className="mt-4 text-slate-700 dark:text-neutral-400 relative z-20 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
             {aboutText}
