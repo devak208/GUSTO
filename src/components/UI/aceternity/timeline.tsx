@@ -41,8 +41,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
       </div>
 
+      <div className="text-center text-3xl font-bold pb-20">
+        Will be updated soon!
+      </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      {/* <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
             key={index}
@@ -79,7 +82,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
-      </div> 
+      </div>  */}
     </div>
   );
 };

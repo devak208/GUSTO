@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const timeLineData = [
   {
-    title: "9.30 AM",
+    title: "9.00 AM",
     content: (
       <div>
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">

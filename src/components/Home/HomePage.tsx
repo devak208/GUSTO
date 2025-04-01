@@ -289,7 +289,7 @@ export default function HomePage() {
           className="md:mt-20 text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center"
           style={{ minHeight: "100vh" }}
         >
-          <Link href="/" className="relative group flex items-center justify-center w-full mb-4">
+          <div className="relative group flex items-center justify-center w-full">
             <div className="absolute inset-0 rounded-full bg-gray-100/5 dark:bg-gray-800/5 scale-0  transition-transform duration-300" />
             <Image
               src={
@@ -303,9 +303,8 @@ export default function HomePage() {
               className="w-[80px] sm:w-[120px] md:w-[150px] lg:w-[180px] h-auto transition-all duration-300 relative z-10 mx-auto"
               priority
             />
-          </Link>
+          </div>
           <div className="text-2xl md:text-2xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-           
             <TextGenerateEffect words={GCEENAME} />
           </div>
           <div>
@@ -313,9 +312,7 @@ export default function HomePage() {
               className={cn(
                 "my-5 font-bold text-slate-900 dark:text-white relative z-20 text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               )}
-            >
-              
-            </h1>
+            ></h1>
           </div>
 
           <div className="transform scale-110 sm:scale-125 md:scale-150 lg:scale-175 relative">
@@ -338,9 +335,9 @@ export default function HomePage() {
               Proudly Presented By
             </p>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-            Department of Information Technology
+              Department of Information Technology
             </h2>
-          </div>  
+          </div>
 
           <div className="mt-4 text-slate-700 dark:text-neutral-400 relative z-20 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
             {aboutText}
