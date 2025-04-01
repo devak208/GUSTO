@@ -21,13 +21,14 @@ import EventsTimeline from "@/components/Home/EventsTimeline";
 import GoogleMapComponent from "@/components/Home/GoogleMap";
 import ContactSection from "@/components/Home/ContactSection";
 import { isClosed } from "@/data/AllData";
+import Image from "next/image";
 
 export default function HomePage() {
   const { theme } = useTheme();
   const [allEvents, setAllEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
-
+  const currentTheme = mounted ? theme : "dark";
   // Fetch events on component mount
   useEffect(() => {
     const fetchEvents = async () => {
@@ -53,7 +54,7 @@ export default function HomePage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Preload the video thumbnail
-      const preloadImage = new Image();
+      const preloadImage = document.createElement("img");
       preloadImage.src = "/placeholder/video-thumbnail.png";
 
       // Preload YouTube player (helps reduce loading time)
@@ -135,7 +136,7 @@ export default function HomePage() {
 
   return (
     <div
-      className={`relative w-full overflow-x-hidden ${
+      className={`relative w-full ${
         mounted && theme === "dark" ? "dark" : "light"
       } dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] flex flex-col items-center`}
     >
@@ -288,6 +289,24 @@ export default function HomePage() {
           className="md:mt-20 text-center z-20 relative w-full max-w-7xl mx-auto px-4 flex flex-col items-center justify-center"
           style={{ minHeight: "100vh" }}
         >
+          <Link href="/" className="relative group flex items-center justify-center w-full mb-4">
+            <div className="absolute inset-0 rounded-full bg-gray-100/5 dark:bg-gray-800/5 scale-0  transition-transform duration-300" />
+            <Image
+              src={
+                currentTheme === "dark"
+                  ? "/logos/GCEE/white.png"
+                  : "/logos/GCEE/bronze.png"
+              }
+              alt="GCEE Logo"
+              width={400}
+              height={400}
+              className="w-[80px] sm:w-[120px] md:w-[150px] lg:w-[180px] h-auto transition-all duration-300 relative z-10 mx-auto"
+              priority
+            />
+          </Link>
+          <div className="text-2xl md:text-2xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
+            Government College of Engineering, Erode
+          </div>
           <div>
             <h1
               className={cn(
@@ -318,11 +337,8 @@ export default function HomePage() {
               Proudly Presented By
             </p>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
-              Association of Information Technologists
+            Department of Information Technologists
             </h2>
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
-              Government College of Engineering, Erode
-            </p>
           </div>
 
           <div className="mt-4 text-slate-700 dark:text-neutral-400 relative z-20 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
