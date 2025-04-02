@@ -310,24 +310,24 @@ export const timeLineData = [
       </div>
     ),
   },
-  {
-    title: "3:00 PM",
-    icon: <FaMusic className="h-6 w-6 text-purple-500" />,
-    content: (
-      <div>
-        <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
-            CULTURAL PERFORMANCES
-          </span>
-        </div>
+  // {
+  //   title: "3:00 PM",
+  //   icon: <FaMusic className="h-6 w-6 text-purple-500" />,
+  //   content: (
+  //     <div>
+  //       <div className="flex items-center gap-3 mb-4">
+  //         <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+  //           CULTURAL PERFORMANCES
+  //         </span>
+  //       </div>
 
-        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
-          End the day on a high note with captivating performances showcasing
-          the artistic talents of our students.
-        </p>
-      </div>
-    ),
-  },
+  //       <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+  //         End the day on a high note with captivating performances showcasing
+  //         the artistic talents of our students.
+  //       </p>
+  //     </div>
+  //   ),
+  // },
   {
     title: "5:00 PM",
     icon: <FaFlag className="h-6 w-6 text-purple-500" />,
