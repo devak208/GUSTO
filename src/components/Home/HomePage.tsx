@@ -304,9 +304,14 @@ export default function HomePage() {
               priority
             />
           </div>
-          <div className="text-2xl md:text-2xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 dark:from-amber-200 dark:via-yellow-400 dark:to-orange-400 mb-1">
+
+          <Link
+            href="https://gcee.ac.in/index.php"
+            target="_blank"
+            className="text-2xl lg:text-5xl mb-1"
+          >
             <TextGenerateEffect words={GCEENAME} />
-          </div>
+          </Link>
           <div>
             <h1
               className={cn(
