@@ -193,8 +193,13 @@ export const timeLineData = [
         </p>
 
         {/* Menu Highlights */}
-        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
-          <h3 className="font-bold text-white dark:text-white mb-2">
+        <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <h3 className="text-white dark:text-white mb-2">
+            Complimentary refreshments and meals will be served with vegetarian
+            and non-vegetarian options available
+          </h3>
+
+          {/* <h3 className="font-bold text-white dark:text-white mb-2">
             Menu Highlights
           </h3>
           <div className="grid grid-cols-2 gap-3 text-sm">
@@ -222,8 +227,8 @@ export const timeLineData = [
                 Dessert Selection
               </span>
             </div>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
       </div>
     ),
   },
@@ -239,12 +244,16 @@ export const timeLineData = [
         </div>
 
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
-          The technical events conclude with recognition of outstanding
-          achievements and innovative solutions.
+          The technical and non-technical events conclude with recognition of
+          outstanding achievements and innovative solutions.
         </p>
 
-        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
-          <h3 className="font-bold text-white dark:text-white mb-3">
+        <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <h3 className="font-bold text-white dark:text-white mb-2">
+            Exciting cash prizes awaits the winners.
+          </h3>
+
+          {/* <h3 className="font-bold text-white dark:text-white mb-3">
             Technical Award Categories
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -296,8 +305,8 @@ export const timeLineData = [
                 Hunt Mods Champion
               </span>
             </div>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
       </div>
     ),
   },
@@ -316,70 +325,6 @@ export const timeLineData = [
           End the day on a high note with captivating performances showcasing
           the artistic talents of our students.
         </p>
-
-        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
-          <h3 className="font-bold text-white dark:text-white mb-3">
-            Performance Schedule
-          </h3>
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
-                <span className="text-white dark:text-white text-xs">3:00</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white dark:text-white">
-                  Dance Performance
-                </h4>
-                <p className="text-xs text-white/90 dark:text-gray-200">
-                  Classical and contemporary fusion dance by the college dance
-                  team
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
-                <span className="text-white dark:text-white text-xs">3:30</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white dark:text-white">
-                  Music Band
-                </h4>
-                <p className="text-xs text-white/90 dark:text-gray-200">
-                  Live performance by the college band featuring popular hits
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
-                <span className="text-white dark:text-white text-xs">4:00</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white dark:text-white">
-                  Theatrical Act
-                </h4>
-                <p className="text-xs text-white/90 dark:text-gray-200">
-                  A short play highlighting social awareness themes
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
-                <span className="text-white dark:text-white text-xs">4:30</span>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white dark:text-white">
-                  Special Performance
-                </h4>
-                <p className="text-xs text-white/90 dark:text-gray-200">
-                  Surprise guest performance to conclude the cultural showcase
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     ),
   },
