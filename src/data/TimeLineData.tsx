@@ -124,10 +124,7 @@ export const timeLineData = [
                 </div>
                 <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
                   A challenging coding competition where participants get only
-                  one chance to execute their program correctly, testing their
-                  ability to write error-free code without immediate feedback.
-                  This unique format evaluates programming accuracy and
-                  problem-solving skills under time pressure.
+                  one chance to execute their program correctly.
                 </p>
               </div>
             </div>
