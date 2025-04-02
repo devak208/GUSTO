@@ -121,18 +121,17 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-4">
                 <li>
+                  <ScrollToContact className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                    Contact Us
+                  </ScrollToContact>
+                </li>
+                <li>
                   <Link
                     href="/committee"
                     className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                   >
                     Committee
                   </Link>
-                </li>
-
-                <li>
-                  <ScrollToContact className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors cursor-pointer">
-                    Contact Us
-                  </ScrollToContact>
                 </li>
               </ul>
             </div>
