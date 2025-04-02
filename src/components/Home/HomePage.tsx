@@ -414,7 +414,7 @@ export default function HomePage() {
       </div>
 
       {/* TimeLine */}
-      <EventsTimeline />
+      <EventsTimeline isLast={false} />
 
       {/* Google Map */}
       <GoogleMapComponent />

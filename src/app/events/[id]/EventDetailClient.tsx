@@ -12,8 +12,9 @@ import { Spotlight } from "@/components/UI/aceternity/spotlight";
 import { FaArrowLeft } from "react-icons/fa";
 import { CardSpotlight } from "@/components/UI/aceternity/card-spotlight";
 import { isClosed, RegistrationLink } from "@/data/AllData";
-// import EventCoordinators from "@/components/Events/EventCoordinators";
+import EventCoordinators from "@/components/Events/EventCoordinators";
 import { Clock } from "lucide-react";
+import EventsTimeline from "@/components/Home/EventsTimeline";
 
 interface EventDetailClientProps {
   event: Event;
@@ -292,7 +293,11 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         )}
 
         {/* Event Coordinators Section */}
-        {/* <EventCoordinators event={event} /> */}
+        <EventCoordinators event={event} />
+      </div>
+      {/* Timeline Section */}
+      <div className="container mx-auto px-4 max-w-5xl">
+        <EventsTimeline isLast={true} />
       </div>
     </div>
   );

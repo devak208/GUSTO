@@ -15,7 +15,7 @@ export const committees: Committee[] = [
     name: "Hall Decoration Committee",
     description: "Responsible for the decoration and ambiance of event venues.",
     staffCoordinator: {
-      name: "Dr. K.G.Maheswari",
+      name: "Dr. B.V.Prakash",
       role: "Professor",
     },
     studentCoordinators: [
@@ -53,7 +53,7 @@ export const committees: Committee[] = [
     description:
       "Manages the welcome and reception of guests and participants.",
     staffCoordinator: {
-      name: "Dr. S.Thilagavathi",
+      name: "Dr. K.G.Maheswari",
       role: "Professor",
     },
     studentCoordinators: [
@@ -182,7 +182,7 @@ export const committees: Committee[] = [
     name: "Discipline Committee",
     description: "Maintains order and ensures smooth conduct of all events.",
     staffCoordinator: {
-      name: "Dr. S.Mohanasundharam & Dr. T.Sumathi",
+      name: "Dr. S.Mohanasundharam & Dr. S.Thilagavathi",
       role: "Professor",
     },
     studentCoordinators: [

@@ -13,7 +13,7 @@ export default function EventCoordinators({ event }: EventCoordinatorsProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="mt-4 mb-12 relative z-10"
+      className="my-4 relative z-10"
     >
       <CardSpotlight
         className="w-full bg-white dark:bg-neutral-950"

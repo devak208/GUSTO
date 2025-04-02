@@ -1,155 +1,419 @@
-import Image from "next/image";
+import {
+  FaMicrophone,
+  FaCode,
+  FaUtensils,
+  FaTrophy,
+  FaMusic,
+  FaFlag,
+} from "react-icons/fa";
 
 export const timeLineData = [
   {
-    title: "9.00 AM",
+    title: "9:10 AM",
+    icon: <FaMicrophone className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            OPENING CEREMONY
+          </span>
+        </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          The grand inauguration ceremony officially kickstarts GUSTO '25,
+          setting the tone for an extraordinary day of innovation and
+          collaboration.
         </p>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+      </div>
+    ),
+  },
+  {
+    title: "10:30 AM",
+    icon: <FaCode className="h-6 w-6 text-purple-500" />,
+    content: (
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            TECHNICAL EVENTS (PARALLEL TRACKS)
+          </span>
+        </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          Witness brilliant minds showcase their technical prowess across
+          multiple events happening simultaneously.
+        </p>
+
+        <div className="grid grid-cols-1 gap-6 mb-8">
+          {/* Track 1 */}
+          <div className="bg-blue-900/70 dark:bg-blue-950/70 p-5 rounded-xl text-white">
+            <h3 className="font-bold text-white dark:text-white mb-3 text-lg border-b border-blue-400/70 dark:border-blue-700/70 pb-2">
+              Track 1
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      01
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Paper Presentation
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Present your research findings and innovative solutions to
+                  technical challenges.
+                </p>
+              </div>
+
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      02
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Project Exposition
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Showcase your innovative projects and engineering solutions
+                  with live demonstrations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Track 2 */}
+          <div className="bg-blue-900/70 dark:bg-blue-950/70 p-5 rounded-xl text-white">
+            <h3 className="font-bold text-white dark:text-white mb-3 text-lg border-b border-blue-400/70 dark:border-blue-700/70 pb-2">
+              Track 2
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      03
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Code Debugging
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Test your problem-solving skills by identifying and fixing
+                  bugs in complex code.
+                </p>
+              </div>
+
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      04
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Blind Coding
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Challenge yourself to code without seeing the output until
+                  your submission is complete.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Track 3 */}
+          <div className="bg-blue-900/70 dark:bg-blue-950/70 p-5 rounded-xl text-white">
+            <h3 className="font-bold text-white dark:text-white mb-3 text-lg border-b border-blue-400/70 dark:border-blue-700/70 pb-2">
+              Track 3
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      05
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Technical Quiz
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Put your technical knowledge to the test in this fast-paced
+                  quiz competition.
+                </p>
+              </div>
+
+              <div className="bg-white/15 dark:bg-black/20 p-4 rounded-lg backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="h-10 w-10 rounded-full bg-blue-200/80 dark:bg-blue-800/80 flex items-center justify-center">
+                    <span className="text-blue-700 dark:text-blue-200 font-bold">
+                      06
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-white dark:text-white">
+                    Hunt Mods
+                  </h4>
+                </div>
+                <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
+                  Navigate through technical challenges in this treasure
+                  hunt-style competition.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     ),
   },
   {
-    title: "10.30 AM",
+    title: "1:00 PM",
+    icon: <FaUtensils className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          I usually run out of copy, but when I see content this big, I try to
-          integrate lorem ipsum.
-        </p>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Lorem ipsum is for people who are too lazy to write copy. But we are
-          not. Here are some more example of beautiful designs I built.
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            LUNCH BREAK
+          </span>
         </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          Take a well-deserved break to refuel and network with fellow
+          participants, judges, and our esteemed guests.
+        </p>
+
+        {/* Menu Highlights */}
+        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <h3 className="font-bold text-white dark:text-white mb-2">
+            Menu Highlights
+          </h3>
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-white/90"></div>
+              <span className="text-white dark:text-gray-200">
+                Vegetable Biryani
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-white/90"></div>
+              <span className="text-white dark:text-gray-200">
+                Paneer Tikka
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-white/90"></div>
+              <span className="text-white dark:text-gray-200">
+                Fresh Salads
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-white/90"></div>
+              <span className="text-white dark:text-gray-200">
+                Dessert Selection
+              </span>
+            </div>
+          </div>
+        </div> */}
       </div>
     ),
   },
   {
-    title: "11.30 AM",
+    title: "2:00 PM",
+    icon: <FaTrophy className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-          Deployed 5 new components on Aceternity today
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            PRIZE DISTRIBUTION
+          </span>
+        </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          The technical events conclude with recognition of outstanding
+          achievements and innovative solutions.
         </p>
-        <div className="mb-8">
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Card grid component
+
+        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <h3 className="font-bold text-white dark:text-white mb-3">
+            Technical Award Categories
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Best Project Exposition
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Best Paper Presentation
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Code Debugging Champion
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Blind Coding Master
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Technical Quiz Winner
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex-shrink-0 h-8 w-8 rounded-full bg-blue-800/90 flex items-center justify-center">
+                <span className="text-white text-xs">1st</span>
+              </div>
+              <span className="text-sm text-white dark:text-gray-200">
+                Hunt Mods Champion
+              </span>
+            </div>
           </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Startup template Aceternity
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Random file upload lol
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Himesh Reshammiya Music CD
-          </div>
-          <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-            ✅ Salman Bhai Fan Club registrations open
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <Image
-            src="/events/tech/paper-present.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-        </div>
+        </div> */}
       </div>
     ),
   },
   {
-    title: "End",
+    title: "3:00 PM",
+    icon: <FaMusic className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          End of the amazing day
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            CULTURAL PERFORMANCES
+          </span>
+        </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          End the day on a high note with captivating performances showcasing
+          the artistic talents of our students.
         </p>
+
+        {/* <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <h3 className="font-bold text-white dark:text-white mb-3">
+            Performance Schedule
+          </h3>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
+                <span className="text-white dark:text-white text-xs">3:00</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white dark:text-white">
+                  Dance Performance
+                </h4>
+                <p className="text-xs text-white/90 dark:text-gray-200">
+                  Classical and contemporary fusion dance by the college dance
+                  team
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
+                <span className="text-white dark:text-white text-xs">3:30</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white dark:text-white">
+                  Music Band
+                </h4>
+                <p className="text-xs text-white/90 dark:text-gray-200">
+                  Live performance by the college band featuring popular hits
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
+                <span className="text-white dark:text-white text-xs">4:00</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white dark:text-white">
+                  Theatrical Act
+                </h4>
+                <p className="text-xs text-white/90 dark:text-gray-200">
+                  A short play highlighting social awareness themes
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-700/80 dark:bg-blue-800/80 flex items-center justify-center mt-0.5">
+                <span className="text-white dark:text-white text-xs">4:30</span>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white dark:text-white">
+                  Special Performance
+                </h4>
+                <p className="text-xs text-white/90 dark:text-gray-200">
+                  Surprise guest performance to conclude the cultural showcase
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> */}
+      </div>
+    ),
+  },
+  {
+    title: "5:00 PM",
+    icon: <FaFlag className="h-6 w-6 text-purple-500" />,
+    content: (
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+            CLOSING CEREMONY
+          </span>
+        </div>
+
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
+          As we conclude GUSTO '25, we express our gratitude to all
+          participants, and volunteers who made this event a grand success.
+        </p>
+
+        <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
+          <div className="text-center mb-3">
+            <h3 className="font-bold text-white dark:text-white">
+              VENUE: AUDITORIUM
+            </h3>
+            <p className="text-sm text-white/90 dark:text-gray-200">
+              FRIDAY, 05 APRIL
+            </p>
+          </div>
+
+          <div className="text-center text-xs text-white/90 dark:text-gray-200 italic">
+            "Thank you for being part of this incredible journey. We hope to see
+            you again at GUSTO '26!"
+          </div>
+        </div>
       </div>
     ),
   },

@@ -57,9 +57,9 @@ export const contacts: Contact[] = [
     category: "registration",
   },
   {
-    name: "Muruganantham R",
+    name: "Dhinesh R",
     role: "Registration Coordinator",
-    phone: "+91 7418024057",
+    phone: "+91 7603962920",
     category: "registration",
   },
 ];
