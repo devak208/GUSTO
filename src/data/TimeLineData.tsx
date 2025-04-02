@@ -123,8 +123,11 @@ export const timeLineData = [
                   </h4>
                 </div>
                 <p className="text-xs text-white/90 dark:text-gray-200 mt-2">
-                  Challenge yourself to code without seeing the output until
-                  your submission is complete.
+                  A challenging coding competition where participants get only
+                  one chance to execute their program correctly, testing their
+                  ability to write error-free code without immediate feedback.
+                  This unique format evaluates programming accuracy and
+                  problem-solving skills under time pressure.
                 </p>
               </div>
             </div>
@@ -405,7 +408,7 @@ export const timeLineData = [
               VENUE: AUDITORIUM
             </h3>
             <p className="text-sm text-white/90 dark:text-gray-200">
-              FRIDAY, 05 APRIL
+              WEDNESDAY, 23 APRIL
             </p>
           </div>
 
