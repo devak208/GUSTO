@@ -347,10 +347,10 @@ export const timeLineData = [
         <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
           <div className="text-center mb-3">
             <h3 className="font-bold text-white dark:text-white">
-              VENUE: AUDITORIUM
+              VENUE: GCEE AUDITORIUM
             </h3>
             <p className="text-sm text-white/90 dark:text-gray-200">
-              WEDNESDAY, 23 APRIL
+              WEDNESDAY, 23rd APRIL
             </p>
           </div>
 
