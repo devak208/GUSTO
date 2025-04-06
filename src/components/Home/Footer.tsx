@@ -13,6 +13,7 @@ import {
 } from "@/data/AllData";
 import ScrollToContact from "@/components/UI/scroll/ScrollToContact";
 import ScrollToEvent from "@/components/UI/scroll/ScrollToEvent";
+import ScrollToTimeline from "../UI/scroll/ScrollToTimeline";
 
 const Footer: React.FC = () => {
   return (
@@ -142,9 +143,12 @@ const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-4">
                 <li>
-                  <div className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                  <ScrollToTimeline
+                    sectionId="lunch"
+                    className="text-gray-600 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                  >
                     Lunch & Refreshments
-                  </div>
+                  </ScrollToTimeline>
                 </li>
               </ul>
             </div>

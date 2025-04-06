@@ -24,6 +24,7 @@
       },
       "time": "10:30 AM",
       "venue": "Main Auditorium",
+      "submission_name": "Abstract Submission Email",
       "submission_Email": "kutraleeswar2k2@gmail.com"
     },
     {
@@ -51,6 +52,7 @@
       },
       "time": "10:30 AM",
       "venue": "IT Computer Lab 1",
+      "submission_name": "Abstract Submission Email",
       "submission_Email": "smsathasivam93@gmail.com"
     }
   ],
@@ -203,7 +205,7 @@
         "Register within the specified date to participate.",
         "Only individual participation is permitted; no group entries.",
         "Memes must be created only based on provided situations.",
-        "Created memes must be uploaded online before the deadline via email (will be provided later).",
+        "Created memes must be uploaded online before the deadline via meme submission email.",
         "Winners will receive exciting prizes as rewards."
       ],
       "coordinator1": {
@@ -214,7 +216,9 @@
         "name": "Devak C K",
         "phone": "9047021100"
       },
-      "time": "Online Event"
+      "time": "Online Event",
+      "submission_name": "Meme Submission Email",
+      "submission_Email": "adhineshinfotech10@gmail.com"
     },
     {
       "id": "non-tech-2",
@@ -226,7 +230,7 @@
         "Participants must work alone; no group submissions permitted.",
         "A specified theme will guide participants in creating their photo.",
         "Only touch editing is permitted, with plagiarism leading to disqualification.",
-        "Photos must be uploaded online before the deadline via email (will be provided later).",
+        "Photos must be uploaded online before the deadline via photo submission email.",
         "Winners will be notified and rewarded with prizes."
       ],
       "coordinator1": {
@@ -237,7 +241,9 @@
         "name": "Sabeshragav G K",
         "phone": "9080033226"
       },
-      "time": "Online Event"
+      "time": "Online Event",
+      "submission_name": "Photography Submission Email",
+      "submission_Email": "gustophotography2k25@gmail.com"
     }
   ]
 }

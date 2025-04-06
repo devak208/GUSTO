@@ -180,7 +180,7 @@ export const timeLineData = [
     title: "1:00 PM",
     icon: <FaUtensils className="h-6 w-6 text-purple-500" />,
     content: (
-      <div>
+      <div id="lunch">
         <div className="flex items-center gap-3 mb-4">
           <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
             LUNCH BREAK
@@ -188,8 +188,8 @@ export const timeLineData = [
         </div>
 
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-6">
-          Take a well-deserved break to refuel and network with fellow
-          participants, judges, and our esteemed guests.
+          Take a well-deserved break to refuel and network with our fellow
+          participants and students.
         </p>
 
         {/* Menu Highlights */}
@@ -199,35 +199,66 @@ export const timeLineData = [
             and non-vegetarian options available
           </h3>
 
-          {/* <h3 className="font-bold text-white dark:text-white mb-2">
-            Menu Highlights
+          <h3 className="font-black text-lg text-white dark:text-white mb-2">
+            Menu Highlights :
           </h3>
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-white/90"></div>
-              <span className="text-white dark:text-gray-200">
-                Vegetable Biryani
-              </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            {/* Vegetarian Options */}
+            <div>
+              <h4 className="font-bold text-white dark:text-white mb-2">
+                Vegetarian
+              </h4>
+              <div className="grid grid-cols-1 gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">
+                    Mushroom Biryani (with sides)
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">Gobi 65</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">
+                    Fresh Sweet
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-white/90"></div>
-              <span className="text-white dark:text-gray-200">
-                Paneer Tikka
-              </span>
+
+            {/* Non-Vegetarian Options */}
+            <div>
+              <h4 className="font-bold text-white dark:text-white mb-2">
+                Non-Vegetarian
+              </h4>
+              <div className="grid grid-cols-1 gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">
+                    Chicken Biryani (with sides)
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">Egg</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">
+                    Chicken 65
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-2 w-2 rounded-full bg-white/90"></div>
+                  <span className="text-white dark:text-gray-200">
+                    Fresh Sweet
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-white/90"></div>
-              <span className="text-white dark:text-gray-200">
-                Fresh Salads
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-white/90"></div>
-              <span className="text-white dark:text-gray-200">
-                Dessert Selection
-              </span>
-            </div>
-          </div> */}
+          </div>
         </div>
       </div>
     ),

@@ -2,6 +2,7 @@ import eventsData from "@/data/events.json";
 
 export type Event = {
   submission_Email: any;
+  submission_name: any;
   id: string;
   title: string;
   name: string;

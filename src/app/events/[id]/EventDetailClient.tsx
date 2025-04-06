@@ -172,7 +172,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             {event.submission_Email && (
               <div className="my-6">
                 <p className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-                  Abstract Submission Email
+                  {event.submission_name}
                 </p>
                 <a
                   className="text-blue-600 font-medium dark:text-blue-400 hover:underline"
