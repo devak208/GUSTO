@@ -175,7 +175,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
                   {event.submission_name}
                 </p>
                 <a
-                  className="text-blue-600 font-medium dark:text-blue-400 hover:underline"
+                  className="text-blue-600 text-sm md:text-xl font-medium dark:text-blue-400 hover:underline"
                   href={`mailto:${event.submission_Email}`}
                 >
                   {event.submission_Email}
