@@ -3,18 +3,18 @@ import {
   FaCode,
   FaUtensils,
   FaTrophy,
-  FaMusic,
+  // FaMusic,
   FaFlag,
 } from "react-icons/fa";
 
 export const timeLineData = [
   {
     title: "9:10 AM",
-    icon: <FaMicrophone className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+          <span className="timeline_heading">
+            <FaMicrophone className="timeline_icon" />
             OPENING CEREMONY
           </span>
         </div>
@@ -29,11 +29,11 @@ export const timeLineData = [
   },
   {
     title: "10:30 AM",
-    icon: <FaCode className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+          <span className="timeline_heading">
+            <FaCode className="timeline_icon" />
             TECHNICAL EVENTS (PARALLEL TRACKS)
           </span>
         </div>
@@ -178,11 +178,11 @@ export const timeLineData = [
   },
   {
     title: "1:00 PM",
-    icon: <FaUtensils className="h-6 w-6 text-purple-500" />,
     content: (
       <div id="lunch">
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+          <span className="timeline_heading">
+            <FaUtensils className="timeline_icon" />
             LUNCH BREAK
           </span>
         </div>
@@ -194,7 +194,7 @@ export const timeLineData = [
 
         {/* Menu Highlights */}
         <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
-          <h3 className="text-white dark:text-white mb-2">
+          <h3 className="text-white dark:text-white mb-4">
             Complimentary refreshments and meals will be served with vegetarian
             and non-vegetarian options available
           </h3>
@@ -265,11 +265,11 @@ export const timeLineData = [
   },
   {
     title: "2:00 PM",
-    icon: <FaTrophy className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+          <span className="timeline_heading">
+            <FaTrophy className="timeline_icon" />
             PRIZE DISTRIBUTION
           </span>
         </div>
@@ -280,9 +280,14 @@ export const timeLineData = [
         </p>
 
         <div className="bg-blue-900/70 dark:bg-blue-950/70 p-4 rounded-xl mb-6 text-white">
-          <h3 className="font-bold text-white dark:text-white mb-2">
-            Exciting cash prizes awaits the winners.
-          </h3>
+          <div className="grid grid-cols-1 gap-3">
+            <h3 className="font-bold text-white dark:text-white mb-2">
+              Exciting cash prizes awaits the winners.
+            </h3>
+            <h3 className="font-bold text-white dark:text-white">
+              Participation certificates will also be provided.
+            </h3>
+          </div>
 
           {/* <h3 className="font-bold text-white dark:text-white mb-3">
             Technical Award Categories
@@ -343,11 +348,11 @@ export const timeLineData = [
   },
   // {
   //   title: "3:00 PM",
-  //   icon: <FaMusic className="h-6 w-6 text-purple-500" />,
   //   content: (
   //     <div>
   //       <div className="flex items-center gap-3 mb-4">
-  //         <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+  //         <span className="timeline_heading">
+  //           <FaMusic className="timeline_icon" />
   //           CULTURAL PERFORMANCES
   //         </span>
   //       </div>
@@ -361,11 +366,11 @@ export const timeLineData = [
   // },
   {
     title: "5:00 PM",
-    icon: <FaFlag className="h-6 w-6 text-purple-500" />,
     content: (
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <span className="bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">
+          <span className="timeline_heading">
+            <FaFlag className="timeline_icon" />
             CLOSING CEREMONY
           </span>
         </div>
