@@ -12,7 +12,10 @@ interface EventCardProps {
 
 export function EventCard({ event }: EventCardProps) {
   return (
-    <div className="min-h-[24rem] w-full list-none">
+    <Link
+      href={`/events/${event.id}`}
+      className="min-h-[24rem] w-full list-none"
+    >
       <div className="w-full relative h-full">
         <div className="relative shadow-xl bg-white dark:bg-neutral-950 border border-gray-200 dark:border-[#1e293b] px-6 py-8 h-full overflow-hidden rounded-xl flex flex-col justify-between">
           <motion.div
@@ -62,11 +65,9 @@ export function EventCard({ event }: EventCardProps) {
               </div>
 
               <div className="mt-auto">
-                <Link href={`/events/${event.id}`}>
-                  <button className="w-full px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
-                    Explore
-                  </button>
-                </Link>
+                <button className="w-full px-6 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-[#1e293b] dark:hover:bg-[#2d3748] text-slate-800 dark:text-white font-medium rounded-lg transition-colors duration-200">
+                  Explore
+                </button>
               </div>
             </div>
           </motion.div>
@@ -75,6 +76,6 @@ export function EventCard({ event }: EventCardProps) {
           <Meteors number={20} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

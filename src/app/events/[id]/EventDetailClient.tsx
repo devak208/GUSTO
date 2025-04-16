@@ -295,10 +295,13 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
         {/* Event Coordinators Section */}
         <EventCoordinators event={event} />
       </div>
+
       {/* Timeline Section */}
-      <div className="container mx-auto px-4 max-w-5xl">
-        <EventsTimeline isLast={true} />
-      </div>
+      {event.title !== "Meme Contest" && event.title !== "Photography" && (
+        <div className="container mx-auto px-4 max-w-5xl">
+          <EventsTimeline isLast={true} />
+        </div>
+      )}
     </div>
   );
 }

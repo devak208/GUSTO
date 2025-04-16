@@ -29,16 +29,18 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    
+
     /* Gradient colors */
     --gradient-color-1: 103, 58, 183;
     --gradient-color-2: 72, 209, 204;
-    
+
     /* Font variables */
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
   }
-  
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -64,10 +66,19 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    
+
     /* Gradient colors for dark mode */
     --gradient-color-1: 103, 58, 183;
     --gradient-color-2: 16, 185, 129;
+  }
+}
+
+@layer components {
+  .timeline_heading {
+    @apply flex items-center gap-2 bg-purple-100 dark:bg-blue-900/70 text-purple-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  .timeline_icon {
+    @apply h-3 sm:h-4 w-3 sm:w-4 text-purple-500 dark:text-blue-400;
   }
 }
 
