@@ -124,7 +124,7 @@ const CountdownTimer = () => {
           </div>
 
           <h2 className="text-lg md:text-2xl font-medium text-slate-800 dark:text-white mt-8 text-center">
-            Registration closes on 20th April 2025
+            Registration closes on 22nd April 2025
           </h2>
         </>
       )}
