@@ -20,8 +20,8 @@ This repository contains the codebase for the GUSTO GCEE 2025 website, a Next.js
 
 ```
 gusto-gcee-2025/
-├── .git                     # Git repository
-├── .next                    # Next.js build output
+├── .git                    # Git repository
+├── .next                   # Next.js build output
 ├── node_modules            # Dependencies
 ├── public                  # Static assets
 ├── src/                    # Source code
@@ -91,7 +91,7 @@ The project implements a sophisticated section navigation system that enables sm
 
    ```
    git clone [repository-url]
-   cd gusto-gcee-2025
+   cd [repository-name]
    ```
 
 2. **Install dependencies**:
