@@ -169,7 +169,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
             <p className="text-slate-700 dark:text-gray-300">
               {event.description}
             </p>
-            {event.submission_Email && (
+            {event.submission_Email && !isClosed && (
               <div className="my-6">
                 <p className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
                   {event.submission_name}

@@ -209,7 +209,6 @@
         "Winners will receive exciting prizes as rewards.",
         "Theme can be related to General College Life, Students struggles, fun & fest themes (Eg : hostel life, monday mood, online vs offline classes, That one professor, college crush, Seniors advice be Like ) ",
         "Memes containing adult content or depicting violence are strictly prohibited and will not be considered."
-        
       ],
       "coordinator1": {
         "name": "Dhinesh A",
@@ -228,7 +227,7 @@
       "title": "Photography",
       "image": "/events/non-tech/photography.png",
       "description": "Capture the essence of the given theme through your camera lens. Demonstrate your photography skills, artistic vision, and ability to tell a story through images.",
-"rules": [
+      "rules": [
         "Online Event",
         "Allowed Themes: Nature and Landscapes, Animals, The Color Green (Elements of Design), I Want to Go There (Travel/Place), Flowers, Details/Macro.",
         "Participants are required to work independently; group submissions are not permitted. The use of AI-generated content is strictly prohibited. Collages are not allowed; submissions must consist of a single photograph.",
