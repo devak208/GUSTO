@@ -130,3 +130,4 @@ The website is optimized for modern browsers with support for the latest JavaScr
 ## Contributing
 
 Please follow the established code style and component structure when contributing to this project. Ensure all components are properly typed and documented.
+
